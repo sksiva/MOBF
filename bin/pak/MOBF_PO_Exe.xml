@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MOBF FIRST DEMO TEST SUITE" verbose="1" >
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="MOBF TestName" >
+    <classes>
+       <class name="pak.MOBF_PO">
+    </class>
+    </classes>
+  </test>
+</suite>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="MOBF FIRST DEMO TEST SUITE" duration-ms="36991" started-at="2015-12-28T10:03:53Z" finished-at="2015-12-28T10:04:30Z">
+    <groups>
+    </groups>
+    <test name="MOBF TestName" duration-ms="36991" started-at="2015-12-28T10:03:53Z" finished-at="2015-12-28T10:04:30Z">
+      <class name="pak.MOBF_PO">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:pak.MOBF_PO@67b6d4ae]" name="beforeTest" is-config="true" duration-ms="1949" started-at="2015-12-28T15:33:53Z" finished-at="2015-12-28T15:33:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="ScrollOrder()[pri:49, instance:pak.MOBF_PO@67b6d4ae]" name="ScrollOrder" duration-ms="34199" started-at="2015-12-28T15:33:54Z" finished-at="2015-12-28T15:34:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ScrollOrder -->
+        <test-method status="PASS" signature="ViewOrder()[pri:50, instance:pak.MOBF_PO@67b6d4ae]" name="ViewOrder" duration-ms="750" started-at="2015-12-28T15:34:29Z" finished-at="2015-12-28T15:34:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ViewOrder -->
+        <test-method status="PASS" signature="UrgentOrder()[pri:51, instance:pak.MOBF_PO@67b6d4ae]" name="UrgentOrder" duration-ms="74" started-at="2015-12-28T15:34:29Z" finished-at="2015-12-28T15:34:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UrgentOrder -->
+        <test-method status="PASS" signature="TestOrder()[pri:52, instance:pak.MOBF_PO@67b6d4ae]" name="TestOrder" duration-ms="1" started-at="2015-12-28T15:34:30Z" finished-at="2015-12-28T15:34:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestOrder -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:pak.MOBF_PO@67b6d4ae]" name="afterTest" is-config="true" duration-ms="1" started-at="2015-12-28T15:34:30Z" finished-at="2015-12-28T15:34:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- pak.MOBF_PO -->
+    </test> <!-- MOBF TestName -->
+  </suite> <!-- MOBF FIRST DEMO TEST SUITE -->
+</testng-results>
