@@ -1,4 +1,4 @@
-package pak;
+package Test;
 
 import java.util.HashMap;
 import java.util.List;
@@ -26,12 +26,11 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class MOBF_PO {
+public class TestSample {
   public WebDriver dr;
   
   @BeforeTest
   public void beforeTest() {
-	  //Mobile Emulator in Chrome
 		Map<String, String> mobileEmulation = new HashMap<String, String>();
 		mobileEmulation.put("deviceName", "Apple iPhone 6 Plus");
 		Map<String, Object> chromeOptions = new HashMap<String, Object>();
@@ -44,7 +43,6 @@ public class MOBF_PO {
 
   @Test (priority = '1')
   public void ScrollOrder() throws InterruptedException {
-	  
 	  dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
 	  
 	  for (int second = 0;; second++) {
@@ -59,9 +57,10 @@ public class MOBF_PO {
 	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
 	  System.out.println("Scroll Completed "+"&"+" Number of Orders are : "+WB1.size());
   }
-  
+    
   @Test (priority = '2')
   public void ViewOrder() throws InterruptedException {
+	  
 	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));
 	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
 	  //Random Selection to PDP
@@ -70,43 +69,39 @@ public class MOBF_PO {
 	  System.out.println("***** Rand Val ***** ");
 	  System.out.println(W2.getText());
 	  W2.click();
+	  
+	  WebDriverWait wait = new WebDriverWait(dr, 30);
 	 
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
-	//Go to Item Details page
 	  WebElement ele1 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.id("id_skMobff_productDetails_0")));
 	  dr.findElement(By.id("id_skMobff_productDetails_0")).click();
-	// Back to PO Items
+	
 	  WebElement ele2 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 	  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
-	// Back to PO
+	 
 	  WebElement ele3 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
-	  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();	  
-  }
-  
-  @Test (priority = '3')
-  public void UrgentOrder() {
+	  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
+	  /*try{
+	  //View Items
+	  WebElement W3 = dr.findElement(By.xpath(".//*[@class='skMobff_pendingOrderItems']"));
+	  List<WebElement> WB3 = W3.findElements(By.xpath(".//*[@class='skMobff_productDetails']"));
+	  //Random Selection to PDP
+	  Random rand3 = new Random(System.currentTimeMillis());
+	  WebElement WW3 = WB3.get(rand.nextInt(WB3.size()));
+	  System.out.println("***** Rand Items ***** ");
+	  System.out.println(WW3.getText());
+	  W2.click();
+	  }catch(WebDriverException e) {
+			
+		  System.out.println("Anyway Complete the script & display the Exception: "+e);
+		}*/
 	  
-	  if(dr.findElements(By.xpath("//*[@id='id_skMobff_ordersList_0']/div[4]")).size() != 0){
-		  System.out.println("Urgent Order");
-		  }
-	  else{
-		  System.out.println("Not An Urgent Order");
-		  }
+	
   }
-  
-  @Test (enabled = false)
-  public void TestOrder1() throws InterruptedException {
-	  		
-	    }
-  
-  @Test (priority = '4')
-  public void TestOrder2() throws InterruptedException {
-	  
-  }
-  
+   
   @AfterTest
   public void afterTest() {
 	  System.out.println("Scenario Completed Successfully");
