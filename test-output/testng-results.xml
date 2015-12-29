@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="MOBF FIRST DEMO TEST SUITE" duration-ms="47355" started-at="2015-12-29T10:14:21Z" finished-at="2015-12-29T10:15:08Z">
+  <suite name="Default suite" duration-ms="48223" started-at="2015-12-29T10:26:30Z" finished-at="2015-12-29T10:27:18Z">
     <groups>
     </groups>
-    <test name="MOBF TestName" duration-ms="47355" started-at="2015-12-29T10:14:21Z" finished-at="2015-12-29T10:15:08Z">
+    <test name="Default test" duration-ms="48223" started-at="2015-12-29T10:26:30Z" finished-at="2015-12-29T10:27:18Z">
       <class name="pak.MOBF_PO">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:pak.MOBF_PO@67b6d4ae]" name="beforeTest" is-config="true" duration-ms="1923" started-at="2015-12-29T15:44:21Z" finished-at="2015-12-29T15:44:23Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:pak.MOBF_PO@4b6995df]" name="beforeTest" is-config="true" duration-ms="2213" started-at="2015-12-29T15:56:30Z" finished-at="2015-12-29T15:56:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="ScrollOrder()[pri:49, instance:pak.MOBF_PO@67b6d4ae]" name="ScrollOrder" duration-ms="34051" started-at="2015-12-29T15:44:23Z" finished-at="2015-12-29T15:44:57Z">
+        <test-method status="PASS" signature="ScrollOrder()[pri:49, instance:pak.MOBF_PO@4b6995df]" name="ScrollOrder" duration-ms="34505" started-at="2015-12-29T15:56:32Z" finished-at="2015-12-29T15:57:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ScrollOrder -->
-        <test-method status="PASS" signature="ViewOrder()[pri:50, instance:pak.MOBF_PO@67b6d4ae]" name="ViewOrder" duration-ms="1961" started-at="2015-12-29T15:44:57Z" finished-at="2015-12-29T15:44:59Z">
+        <test-method status="PASS" signature="ViewOrder()[pri:50, instance:pak.MOBF_PO@4b6995df]" name="ViewOrder" duration-ms="1985" started-at="2015-12-29T15:57:07Z" finished-at="2015-12-29T15:57:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ViewOrder -->
-        <test-method status="PASS" signature="UrgentOrder()[pri:51, instance:pak.MOBF_PO@67b6d4ae]" name="UrgentOrder" duration-ms="69" started-at="2015-12-29T15:44:59Z" finished-at="2015-12-29T15:44:59Z">
+        <test-method status="PASS" signature="UrgentOrder()[pri:51, instance:pak.MOBF_PO@4b6995df]" name="UrgentOrder" duration-ms="73" started-at="2015-12-29T15:57:09Z" finished-at="2015-12-29T15:57:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- UrgentOrder -->
-        <test-method status="PASS" signature="Ordervalidation()[pri:52, instance:pak.MOBF_PO@67b6d4ae]" name="Ordervalidation" duration-ms="9335" started-at="2015-12-29T15:44:59Z" finished-at="2015-12-29T15:45:08Z">
+        <test-method status="PASS" signature="Ordervalidation()[pri:52, instance:pak.MOBF_PO@4b6995df]" name="Ordervalidation" duration-ms="9433" started-at="2015-12-29T15:57:09Z" finished-at="2015-12-29T15:57:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Ordervalidation -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:pak.MOBF_PO@67b6d4ae]" name="afterTest" is-config="true" duration-ms="1" started-at="2015-12-29T15:45:08Z" finished-at="2015-12-29T15:45:08Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:pak.MOBF_PO@4b6995df]" name="afterTest" is-config="true" duration-ms="1" started-at="2015-12-29T15:57:18Z" finished-at="2015-12-29T15:57:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- pak.MOBF_PO -->
-    </test> <!-- MOBF TestName -->
-  </suite> <!-- MOBF FIRST DEMO TEST SUITE -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

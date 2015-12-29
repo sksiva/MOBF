@@ -128,6 +128,12 @@ public class MOBF_PO {
 	  {
 		  System.out.println("Selected Order in PO screen is: "+Str1+" Opened Order is : "+Str2);
 	  }
+	  
+	// Back to PO
+	  WebDriverWait wait2 = new WebDriverWait(dr, 30);
+		  WebElement ele3 = wait2.until(ExpectedConditions.
+					presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
+		  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
 	    }
   
   @Test (enabled = false)

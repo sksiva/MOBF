@@ -4,13 +4,13 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="45.416">
+           time="47.131">
   <properties />
   
   
-            <testcase name="UrgentOrder" time="0.069" classname="pak.MOBF_PO" />
-                <testcase name="ScrollOrder" time="34.051" classname="pak.MOBF_PO" />
-                <testcase name="Ordervalidation" time="9.335" classname="pak.MOBF_PO" />
-                <testcase name="ViewOrder" time="1.961" classname="pak.MOBF_PO" />
+            <testcase name="ScrollOrder" time="35.166" classname="pak.MOBF_PO" />
+                <testcase name="UrgentOrder" time="0.070" classname="pak.MOBF_PO" />
+                <testcase name="Ordervalidation" time="9.345" classname="pak.MOBF_PO" />
+                <testcase name="ViewOrder" time="2.550" classname="pak.MOBF_PO" />
       
 </testsuite>
