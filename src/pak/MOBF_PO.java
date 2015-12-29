@@ -98,7 +98,7 @@ public class MOBF_PO {
   }
   
   @Test (priority = '4')
-  public void Ordervalidation() throws InterruptedException {
+  public void ORDERvalidation() throws InterruptedException {
 	  //dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
 	  dr.findElement(By.xpath(".//*[@class='skMobff_headerMenuIcon']")).click();
 	  Thread.sleep(3000);
@@ -136,8 +136,50 @@ public class MOBF_PO {
 		  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
 	    }
   
-  @Test (enabled = false)
-  public void TestOrder2() throws InterruptedException {
+  @Test (priority = '5')
+  public void QTYvalidation() throws InterruptedException{
+	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));	
+	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
+	  //Random Selection to PDP
+	  Random rand = new Random(System.currentTimeMillis());
+	  WebElement W2 = WB1.get(rand.nextInt(WB1.size()));
+	  String Str1 = W2.findElement(By.className("skMobff_ItemCount")).getText();
+	  	  
+	  System.out.println("***** Qty1 ***** ");
+	  System.out.println(Str1);
+	  W2.click();	  
+	  Thread.sleep(3000);
+	  WebElement WM1 = dr.findElement(By.className("skMobff_orderItems"));
+	  List<WebElement> LL1 = dr.findElements(By.className("skMobff_productDetails"));
+	  int i = LL1.size();
+	  String Str2 = String.valueOf(i);
+	  
+	  //String Str2 = dr.findElement(By.id("skMobff_orderQty")).getText();
+	  System.out.println("***** Qty2 ***** ");
+	  System.out.println(Str2);
+	  if(Str1.contains(Str2))
+	  {
+		  System.out.println("Order Items Qty are Same in PLP & PO Items page: "+Str1);
+	  }
+	  else
+	  {
+		  System.out.println("Qty in PLP is : "+Str1+" Qty in PO Items page : "+Str2+" item(s)");
+	  }
+	  
+	// Back to PO
+		  WebDriverWait wait2 = new WebDriverWait(dr, 30);
+			  WebElement ele3 = wait2.until(ExpectedConditions.
+						presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
+			  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
+  }
+  
+  @Test (enabled = true)
+  public void TestOrder3(){
+	  
+  }
+  
+  @Test (enabled = true)
+  public void TestOrder4(){
 	  
   }
   

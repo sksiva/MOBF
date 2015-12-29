@@ -61,29 +61,32 @@ public class TestSample {
   @Test (priority = '2')
   public void ViewOrder() throws InterruptedException {
 	  
-	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));	//skMobff_ordersList 
+	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));	
 	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
 	  //Random Selection to PDP
 	  Random rand = new Random(System.currentTimeMillis());
 	  WebElement W2 = WB1.get(rand.nextInt(WB1.size()));
-	  String Str1 = W2.findElement(By.className("skMobff_OrderId")).getText();
-	  //String Str1 = W2.getText();
-	  
-	  System.out.println("***** Str1 ***** ");
+	  String Str1 = W2.findElement(By.className("skMobff_ItemCount")).getText();
+	  	  
+	  System.out.println("***** Qty1 ***** ");
 	  System.out.println(Str1);
-	  W2.click();
-	  
+	  W2.click();	  
 	  Thread.sleep(3000);
-	  String Str2 = dr.findElement(By.id("skMobff_orderId")).getText();
-	  System.out.println("***** Str2 ***** ");
+	  WebElement WM1 = dr.findElement(By.className("skMobff_orderItems"));
+	  List<WebElement> LL1 = dr.findElements(By.className("skMobff_productDetails"));
+	  int i = LL1.size();
+	  String Str2 = String.valueOf(i);
+	  
+	  //String Str2 = dr.findElement(By.id("skMobff_orderQty")).getText();
+	  System.out.println("***** Qty2 ***** ");
 	  System.out.println(Str2);
-	  if(Str2.contains(Str1))
+	  if(Str1.contains(Str2))
 	  {
-		  System.out.println("Your Selected Order is Opened : "+Str1);
+		  System.out.println("Order Items Qty are Same in PLP & PO Items page: "+Str1);
 	  }
 	  else
 	  {
-		  System.out.println("Selected Order in PO screen is: "+Str1+" Opened Order is : "+Str2);
+		  System.out.println("Qty in PLP is : "+Str1+" Qty in PO Items page : "+Str2);
 	  }
   }
    
