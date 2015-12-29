@@ -61,45 +61,30 @@ public class TestSample {
   @Test (priority = '2')
   public void ViewOrder() throws InterruptedException {
 	  
-	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));
+	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));	//skMobff_ordersList 
 	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
 	  //Random Selection to PDP
 	  Random rand = new Random(System.currentTimeMillis());
 	  WebElement W2 = WB1.get(rand.nextInt(WB1.size()));
-	  System.out.println("***** Rand Val ***** ");
-	  System.out.println(W2.getText());
+	  String Str1 = W2.findElement(By.className("skMobff_OrderId")).getText();
+	  //String Str1 = W2.getText();
+	  
+	  System.out.println("***** Str1 ***** ");
+	  System.out.println(Str1);
 	  W2.click();
 	  
-	  WebDriverWait wait = new WebDriverWait(dr, 30);
-	 
-	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
-	  WebElement ele1 = wait1.until(ExpectedConditions.
-				presenceOfElementLocated(By.id("id_skMobff_productDetails_0")));
-	  dr.findElement(By.id("id_skMobff_productDetails_0")).click();
-	
-	  WebElement ele2 = wait1.until(ExpectedConditions.
-				presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
-	  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
-	 
-	  WebElement ele3 = wait1.until(ExpectedConditions.
-				presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
-	  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
-	  /*try{
-	  //View Items
-	  WebElement W3 = dr.findElement(By.xpath(".//*[@class='skMobff_pendingOrderItems']"));
-	  List<WebElement> WB3 = W3.findElements(By.xpath(".//*[@class='skMobff_productDetails']"));
-	  //Random Selection to PDP
-	  Random rand3 = new Random(System.currentTimeMillis());
-	  WebElement WW3 = WB3.get(rand.nextInt(WB3.size()));
-	  System.out.println("***** Rand Items ***** ");
-	  System.out.println(WW3.getText());
-	  W2.click();
-	  }catch(WebDriverException e) {
-			
-		  System.out.println("Anyway Complete the script & display the Exception: "+e);
-		}*/
-	  
-	
+	  Thread.sleep(3000);
+	  String Str2 = dr.findElement(By.id("skMobff_orderId")).getText();
+	  System.out.println("***** Str2 ***** ");
+	  System.out.println(Str2);
+	  if(Str2.contains(Str1))
+	  {
+		  System.out.println("Your Selected Order is Opened : "+Str1);
+	  }
+	  else
+	  {
+		  System.out.println("Selected Order in PO screen is: "+Str1+" Opened Order is : "+Str2);
+	  }
   }
    
   @AfterTest

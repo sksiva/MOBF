@@ -97,12 +97,40 @@ public class MOBF_PO {
 		  }
   }
   
-  @Test (enabled = false)
-  public void TestOrder1() throws InterruptedException {
-	  		
+  @Test (priority = '4')
+  public void Ordervalidation() throws InterruptedException {
+	  //dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
+	  dr.findElement(By.xpath(".//*[@class='skMobff_headerMenuIcon']")).click();
+	  Thread.sleep(3000);
+	  dr.findElement(By.name("pendingOrder")).click();
+	  Thread.sleep(3000);
+	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));	
+	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
+	  //Random Selection to PDP
+	  Random rand = new Random(System.currentTimeMillis());
+	  WebElement W2 = WB1.get(rand.nextInt(WB1.size()));
+	  String Str1 = W2.findElement(By.className("skMobff_OrderId")).getText();
+	  //String Str1 = W2.getText();
+	  
+	  System.out.println("***** Str1 ***** ");
+	  System.out.println(Str1);
+	  W2.click();
+	  
+	  Thread.sleep(3000);
+	  String Str2 = dr.findElement(By.id("skMobff_orderId")).getText();
+	  System.out.println("***** Str2 ***** ");
+	  System.out.println(Str2);
+	  if(Str2.contains(Str1))
+	  {
+		  System.out.println("Your Selected Order is Opened : "+Str1);
+	  }
+	  else
+	  {
+		  System.out.println("Selected Order in PO screen is: "+Str1+" Opened Order is : "+Str2);
+	  }
 	    }
   
-  @Test (priority = '4')
+  @Test (enabled = false)
   public void TestOrder2() throws InterruptedException {
 	  
   }
