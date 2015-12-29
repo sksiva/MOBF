@@ -4,23 +4,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
-
-import javax.swing.Action;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.interactions.internal.TouchAction;
-import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -45,7 +37,7 @@ public class MOBF_PO {
   @Test (priority = '1')
   public void ScrollOrder() throws InterruptedException {
 	  
-	  dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
+	  dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillmenttest");
 	  
 	  for (int second = 0;; second++) {
 		    if(second >=10){
@@ -90,7 +82,7 @@ public class MOBF_PO {
   public void UrgentOrder() {
 	  
 	  if(dr.findElements(By.xpath("//*[@id='id_skMobff_ordersList_0']/div[4]")).size() != 0){
-		  System.out.println("Urgent Order");
+		  System.out.println("Selected Order is an Urgent Order");
 		  }
 	  else{
 		  System.out.println("Not An Urgent Order");
@@ -173,13 +165,57 @@ public class MOBF_PO {
 			  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
   }
   
-  @Test (enabled = true)
-  public void TestOrder3(){
+  @Test (priority = '6')
+  public void PRICEvalidation() throws InterruptedException{
 	  
+	  dr.findElement(By.xpath(".//*[@class='skMobff_headerMenuIcon']")).click();
+	  Thread.sleep(3000);
+	  dr.findElement(By.name("pendingOrder")).click();
+	  Thread.sleep(3000);
+	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));	
+	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
+	  //Random Selection to PDP
+	  Random rand = new Random(System.currentTimeMillis());
+	  WebElement W2 = WB1.get(rand.nextInt(WB1.size()));
+	  String Str1 = W2.findElement(By.className("skMobff_TotalPrice")).getText();
+	  //String Str1 = W2.getText();
+	  
+	  System.out.println("***** Str1 ***** ");
+	  System.out.println(Str1);
+	  W2.click();
+	  
+	  Thread.sleep(3000);
+	  String Str2 = dr.findElement(By.id("skMobff_orderValue")).getText();
+	  System.out.println("***** Str2 ***** ");
+	  System.out.println(Str2);
+	  if(Str2.contains(Str1))
+	  {
+		  System.out.println("Your Selected Order's Total Price : "+Str1);
+	  }
+	  else
+	  {
+		  System.out.println("Order's Total Price in PLP page is: "+Str1+" Order's Total Price in Pending Order Item page is : "+Str2);
+	  }
+	  
+	// Back to PO
+	  WebDriverWait wait2 = new WebDriverWait(dr, 30);
+		  WebElement ele3 = wait2.until(ExpectedConditions.
+					presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
+		  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();	  
   }
   
   @Test (enabled = true)
   public void TestOrder4(){
+	  
+  }
+  
+  @Test (enabled = true)
+  public void TestOrder5(){
+	  
+  }
+  
+  @Test (enabled = true)
+  public void TestOrder6(){
 	  
   }
   
