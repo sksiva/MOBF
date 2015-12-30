@@ -1,57 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="9" passed="9">
+<testng-results skipped="0" failed="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="77491" started-at="2015-12-30T10:39:52Z" finished-at="2015-12-30T10:41:09Z">
+  <suite name="MOBF FIRST DEMO TEST SUITE" duration-ms="85317" started-at="2015-12-30T10:58:35Z" finished-at="2015-12-30T11:00:01Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="77491" started-at="2015-12-30T10:39:52Z" finished-at="2015-12-30T10:41:09Z">
+    <test name="DEMO@123 TestName" duration-ms="85317" started-at="2015-12-30T10:58:35Z" finished-at="2015-12-30T11:00:01Z">
       <class name="pak.Demo">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:pak.Demo@2cfb4a64]" name="beforeTest" is-config="true" duration-ms="1980" started-at="2015-12-30T16:09:52Z" finished-at="2015-12-30T16:09:54Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:pak.Demo@617c74e5]" name="beforeTest" is-config="true" duration-ms="2048" started-at="2015-12-30T16:28:35Z" finished-at="2015-12-30T16:28:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="TestOrder4()[pri:0, instance:pak.Demo@2cfb4a64]" name="TestOrder4" duration-ms="4" started-at="2015-12-30T16:09:54Z" finished-at="2015-12-30T16:09:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestOrder4 -->
-        <test-method status="PASS" signature="TestOrder5()[pri:0, instance:pak.Demo@2cfb4a64]" name="TestOrder5" duration-ms="1" started-at="2015-12-30T16:09:54Z" finished-at="2015-12-30T16:09:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestOrder5 -->
-        <test-method status="PASS" signature="TestOrder6()[pri:0, instance:pak.Demo@2cfb4a64]" name="TestOrder6" duration-ms="1" started-at="2015-12-30T16:09:54Z" finished-at="2015-12-30T16:09:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestOrder6 -->
-        <test-method status="PASS" signature="Swipe()[pri:49, instance:pak.Demo@2cfb4a64]" name="Swipe" duration-ms="19123" started-at="2015-12-30T16:09:54Z" finished-at="2015-12-30T16:10:13Z">
+        <test-method status="PASS" signature="Swipe()[pri:49, instance:pak.Demo@617c74e5]" name="Swipe" duration-ms="20869" started-at="2015-12-30T16:28:37Z" finished-at="2015-12-30T16:28:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Swipe -->
-        <test-method status="PASS" signature="ScrollOrder()[pri:50, instance:pak.Demo@2cfb4a64]" name="ScrollOrder" duration-ms="34170" started-at="2015-12-30T16:10:13Z" finished-at="2015-12-30T16:10:47Z">
+        <test-method status="PASS" signature="ScrollOrder()[pri:50, instance:pak.Demo@617c74e5]" name="ScrollOrder" duration-ms="34202" started-at="2015-12-30T16:28:58Z" finished-at="2015-12-30T16:29:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ScrollOrder -->
-        <test-method status="PASS" signature="UrgentOrder()[pri:52, instance:pak.Demo@2cfb4a64]" name="UrgentOrder" duration-ms="19" started-at="2015-12-30T16:10:47Z" finished-at="2015-12-30T16:10:47Z">
+        <test-method status="PASS" signature="UrgentOrder()[pri:51, instance:pak.Demo@617c74e5]" name="UrgentOrder" duration-ms="23" started-at="2015-12-30T16:29:32Z" finished-at="2015-12-30T16:29:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- UrgentOrder -->
-        <test-method status="PASS" signature="ORDERvalidation()[pri:53, instance:pak.Demo@2cfb4a64]" name="ORDERvalidation" duration-ms="9456" started-at="2015-12-30T16:10:47Z" finished-at="2015-12-30T16:10:56Z">
+        <test-method status="PASS" signature="ORDERvalidation()[pri:52, instance:pak.Demo@617c74e5]" name="ORDERvalidation" duration-ms="9458" started-at="2015-12-30T16:29:32Z" finished-at="2015-12-30T16:29:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ORDERvalidation -->
-        <test-method status="PASS" signature="QTYvalidation()[pri:54, instance:pak.Demo@2cfb4a64]" name="QTYvalidation" duration-ms="3284" started-at="2015-12-30T16:10:56Z" finished-at="2015-12-30T16:11:00Z">
+        <test-method status="PASS" signature="QTYvalidation()[pri:53, instance:pak.Demo@617c74e5]" name="QTYvalidation" duration-ms="3284" started-at="2015-12-30T16:29:42Z" finished-at="2015-12-30T16:29:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- QTYvalidation -->
-        <test-method status="PASS" signature="PRICEvalidation()[pri:55, instance:pak.Demo@2cfb4a64]" name="PRICEvalidation" duration-ms="9436" started-at="2015-12-30T16:11:00Z" finished-at="2015-12-30T16:11:09Z">
+        <test-method status="PASS" signature="PRICEvalidation()[pri:54, instance:pak.Demo@617c74e5]" name="PRICEvalidation" duration-ms="9466" started-at="2015-12-30T16:29:45Z" finished-at="2015-12-30T16:29:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PRICEvalidation -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:pak.Demo@2cfb4a64]" name="afterTest" is-config="true" duration-ms="1" started-at="2015-12-30T16:11:09Z" finished-at="2015-12-30T16:11:09Z">
+        <test-method status="PASS" signature="ViewOrder()[pri:55, instance:pak.Demo@617c74e5]" name="ViewOrder" duration-ms="5948" started-at="2015-12-30T16:29:55Z" finished-at="2015-12-30T16:30:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ViewOrder -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:pak.Demo@617c74e5]" name="afterTest" is-config="true" duration-ms="0" started-at="2015-12-30T16:30:01Z" finished-at="2015-12-30T16:30:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- pak.Demo -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- DEMO@123 TestName -->
+  </suite> <!-- MOBF FIRST DEMO TEST SUITE -->
 </testng-results>

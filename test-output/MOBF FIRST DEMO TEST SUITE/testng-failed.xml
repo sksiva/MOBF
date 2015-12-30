@@ -10,15 +10,4 @@
       <class name="pak.Demo"/>
     </classes>
   </test> <!-- DEMO@123 TestName -->
-  <test name="DEMO@123 TestName(failed)">
-    <classes>
-      <class name="pak.Demo">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="afterTest"/>
-          <include name="ViewOrder"/>
-        </methods>
-      </class> <!-- pak.Demo -->
-    </classes>
-  </test> <!-- DEMO@123 TestName(failed) -->
 </suite> <!-- Failed suite [MOBF FIRST DEMO TEST SUITE] -->

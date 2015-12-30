@@ -6,4 +6,15 @@
       <class name="pak.Demo"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="pak.Demo">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="ViewOrder"/>
+        </methods>
+      </class> <!-- pak.Demo -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
