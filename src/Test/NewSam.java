@@ -14,6 +14,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
@@ -39,12 +40,20 @@ public class NewSam {
   }
   
   @Test (priority = '2')
-  public void NARROW() throws InterruptedException {
-	  Thread.sleep(12000);
-	  dr.findElement(By.className("skMobff_filterBtnText")).click();
-	  Thread.sleep(3000);
+  public void SORTBY() throws InterruptedException {
+
+	  	Thread.sleep(3000);
+		dr.findElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[1]/div[1]/select")).click();
+	  	List<WebElement> WB2 = dr.findElements(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[1]/div[1]/select"));
+		WebElement id = dr.findElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[1]/div[1]/select"));
+		Select select = new Select(id);
+		select.selectByVisibleText("Urgent");
 	  
-	  // Random NARROW BY Selections
+	  
+	  
+	  
+	  
+	  /*// Random NARROW BY Selections
 	  WebElement WM1 = dr.findElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[1]/div[3]"));
 	  List<WebElement> LWM1 = WM1.findElements(By.className("skMobff_filter "));
 	  
@@ -81,12 +90,7 @@ public class NewSam {
 	  else
 	  {
 		  System.out.println("Sorry ! ! ! Incorrect Orders are displayed for the selected Category");
-	  }
-	  
-	  
-/*	  String M2 = WX1.getText();
-	  System.out.println("Option Name: "+M2);
-	  W1.click();*/
+	  }*/
   }
 
   @AfterTest

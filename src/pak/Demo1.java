@@ -11,13 +11,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class Demo {
+public class Demo1 {
   public WebDriver dr;
   
   @BeforeTest
@@ -276,21 +275,6 @@ public class Demo {
 					presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 		  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
   }
-  
-  @Test (priority = '9')
-  public void SORTBY() throws InterruptedException {
-
-	  	Thread.sleep(3000);
-	  	dr.findElement(By.xpath(".//*[@class='skMobff_headerMenuIcon']")).click();
-		Thread.sleep(3000);
-		dr.findElement(By.name("pendingOrder")).click();
-		Thread.sleep(3000);
-		dr.findElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[1]/div[1]/select")).click();
-	  	List<WebElement> WB2 = dr.findElements(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[1]/div[1]/select"));
-		WebElement id = dr.findElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[1]/div[1]/select"));
-		Select select = new Select(id);
-		select.selectByVisibleText("Urgent");
-	}
   
   @AfterTest
   public void afterTest() {
