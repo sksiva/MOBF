@@ -269,10 +269,11 @@ public class Demo {
 		  System.out.println("Sorry ! ! ! Incorrect Orders are displayed for the selected Category");
 	  }
 	  
-	  
-/*	  String M2 = WX1.getText();
-	  System.out.println("Option Name: "+M2);
-	  W1.click();*/
+	// Back to PO
+	  	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
+		  WebElement ele3 = wait1.until(ExpectedConditions.
+					presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
+		  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
   }
   
   @AfterTest
