@@ -3,6 +3,7 @@ package Test;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -31,43 +32,57 @@ public class NewSam {
       dr = new ChromeDriver(op);
   }
   
-  @Test
-  public void f() throws InterruptedException {
-	  dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/mobilefulfillment");
-	  //Thread.sleep(20000);
+  @Test (priority = '2')
+  public void ScrollOrder() throws InterruptedException {
+	  
+	 dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
+	  Thread.sleep(4000);
+	  for (int second = 0;; second++) {
+		    if(second >=10){
+		        break;
+		    }
+		    ((JavascriptExecutor) dr).executeScript("window.scrollBy(0,1500)", "");
+		    Thread.sleep(3000);
+		}
+	  
+	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));
+	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
+	  System.out.println("Scroll Completed "+"&"+" Number of Orders are : "+WB1.size());
+  }
+  
+  @Test (enabled=true)
+  public void ViewOrder() throws InterruptedException {
+	  Thread.sleep(3000);
+	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));
+	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
+	  //Random Selection to PDP
+	  Random rand = new Random(System.currentTimeMillis());
+	  WebElement W2 = WB1.get(rand.nextInt(WB1.size()));
+	  System.out.println("***** Rand Val ***** ");
+	  System.out.println(W2.getText());
+	  W2.click();
+	 
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
-		//Go to Item Details page
-		  WebElement ele1 = wait1.until(ExpectedConditions.
-					presenceOfElementLocated(By.xpath("//*[@id='id_skMobff_ordersList_1']/div[3]/div/div")));
-		  
-	  WebElement draggable = dr.findElement(By.xpath("//*[@id='id_skMobff_ordersList_1']/div[3]/div/div"));
-      System.out.println("Location"+draggable.getLocation());
-      System.out.println("Window size:"+ dr.manage().window().getSize().getWidth());
-      int dragg=dr.manage().window().getSize().getWidth();
-      System.out.println("dragg : "+ dragg);
-      int positive=dragg/2+1;
-      new Actions(dr).dragAndDropBy(draggable, positive,0).build().perform();
+	//Go to Item Details page	
+	  WebElement ele1 = wait1.until(ExpectedConditions.
+				presenceOfElementLocated(By.className("//skMobff_ItemProductsDiv")));
+	  dr.findElement(By.className("//skMobff_ItemProductsDiv")).click();
 	  
 	  
 	  
-	  
-	  /* WebElement draggable = dr.findElement(By.xpath("//*[@id='id_skMobff_ordersList_0']/div[3]/div/div/div[1]/img"));
-	  System.out.println("Location"+draggable.getLocation());
-	  System.out.println("Window size:"+ dr.manage().window().getSize().getWidth());
-	  int dragg=dr.manage().window().getSize().getWidth();
-	  //int positive=dragg/2+1;
-	  new Actions(dr).dragAndDropBy(draggable, 527,0).build()
-	  .perform();*/
+	  /*	  WebElement ele1 = wait1.until(ExpectedConditions.
+				presenceOfElementLocated(By.id("id_skMobff_productDetails_0")));
+	  dr.findElement(By.id("id_skMobff_productDetails_0")).click();*/
 	  
 	  
-	 /* WebElement draggable = dr.findElement(By.xpath("//*[@id='id_skMobff_ordersList_1']/div[3]/div/div"));
-	  System.out.println("Location"+draggable.getLocation());
-	  System.out.println("Win Size: "+dr.manage().window().getSize().getWidth());
-	  new Actions(dr).dragAndDropBy(draggable, 800, 0).build().perform();*/
-	  
-
-	  
-	  
+	// Back to PO Items
+	  WebElement ele2 = wait1.until(ExpectedConditions.
+				presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
+	  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
+	// Back to PO
+	  WebElement ele3 = wait1.until(ExpectedConditions.
+				presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
+	  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();	  
   }
 
   @AfterTest

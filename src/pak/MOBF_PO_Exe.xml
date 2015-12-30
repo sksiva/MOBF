@@ -4,15 +4,9 @@
       <listener class-name="org.uncommons.reportng.HTMLReporter"/>
       <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
-  <test name="POSwipe TestName" >
+  <test name="DEMO@123 TestName" >
     <classes>
-      <class name="pak.POSwipe" />
-   </classes>
-  </test>
-  
-  <test name="PO TestName" >
-    <classes>
-      <class name="pak.PO" />
+      <class name="pak.Demo" />
    </classes>
   </test>
 </suite>

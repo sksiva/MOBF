@@ -1,4 +1,4 @@
-package Test;
+package pak;
 
 import java.util.List;
 import java.util.Random;
@@ -16,7 +16,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class PreProd {
+public class Demo {
   public WebDriver dr;
   
   @BeforeTest
@@ -60,18 +60,10 @@ public class PreProd {
 	  W2.click();
 	 
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
-	//Go to Item Details page	
+	//Go to Item Details page
 	  WebElement ele1 = wait1.until(ExpectedConditions.
-				presenceOfElementLocated(By.className("//skMobff_ItemProductsDiv")));
-	  dr.findElement(By.className("//skMobff_ItemProductsDiv")).click();
-	  
-	  
-	  
-	  /*	  WebElement ele1 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.id("id_skMobff_productDetails_0")));
-	  dr.findElement(By.id("id_skMobff_productDetails_0")).click();*/
-	  
-	  
+	  dr.findElement(By.id("id_skMobff_productDetails_0")).click();
 	// Back to PO Items
 	  WebElement ele2 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
