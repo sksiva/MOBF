@@ -1,6 +1,8 @@
-package pak;
+package Test;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 import org.openqa.selenium.By;
@@ -10,24 +12,26 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class MOBF_PO {
+public class TestSwipe {
   public WebDriver dr;
   
   @BeforeTest
   public void beforeTest() {
-	//Mobile Emulator in Chrome
+	  //Mobile Emulator in Chrome
 	  ChromeOptions op=new ChromeOptions();
       op.addArguments("--disable-popup-blocking");
       op.addArguments("--user-agent=Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16");
       //Reporter.log("User agent set as iphone!",bolConsole);
       System.setProperty("webdriver.chrome.driver","D:/SK Backups/Selenium/chromedriver.exe");
       dr = new ChromeDriver(op);
+      dr.manage().window().maximize();
   }
 
   @Test (priority = '1')
@@ -211,17 +215,12 @@ public class MOBF_PO {
 	  
   }
   
-  @Test (enabled = true)
-  public void TestOrder4(){
-	  
-  }
-  
-  @Test (enabled = true)
+  @Test (enabled = false)
   public void TestOrder5(){
 	  
   }
   
-  @Test (enabled = true)
+  @Test (enabled = false)
   public void TestOrder6(){
 	  
   }

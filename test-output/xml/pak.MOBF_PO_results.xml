@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="MOBF TestName"
-           tests="9"
+           tests="10"
            failures="0"
            errors="0"
            skipped="0"
-           time="59.442">
+           time="59.336">
   <properties />
   
   
-            <testcase name="TestOrder5" time="0.001" classname="pak.MOBF_PO" />
-                <testcase name="QTYvalidation" time="3.293" classname="pak.MOBF_PO" />
-                <testcase name="TestOrder4" time="0.004" classname="pak.MOBF_PO" />
-                <testcase name="PRICEvalidation" time="9.414" classname="pak.MOBF_PO" />
-                <testcase name="TestOrder6" time="0.001" classname="pak.MOBF_PO" />
-                <testcase name="ViewOrder" time="1.963" classname="pak.MOBF_PO" />
-                <testcase name="ScrollOrder" time="35.292" classname="pak.MOBF_PO" />
-                <testcase name="ORDERvalidation" time="9.404" classname="pak.MOBF_PO" />
-                <testcase name="UrgentOrder" time="0.070" classname="pak.MOBF_PO" />
+            <testcase name="TestOrder6" time="0.000" classname="pak.MOBF_PO" />
+                <testcase name="ScrollOrder" time="34.887" classname="pak.MOBF_PO" />
+                <testcase name="TestOrder4" time="0.003" classname="pak.MOBF_PO" />
+                <testcase name="QTYvalidation" time="3.311" classname="pak.MOBF_PO" />
+                <testcase name="PRICEvalidation" time="9.455" classname="pak.MOBF_PO" />
+                <testcase name="TestOrder5" time="0.000" classname="pak.MOBF_PO" />
+                <testcase name="UrgentOrder" time="0.072" classname="pak.MOBF_PO" />
+                <testcase name="ORDERvalidation" time="9.440" classname="pak.MOBF_PO" />
+                <testcase name="Swipe" time="0.176" classname="pak.MOBF_PO" />
+                <testcase name="ViewOrder" time="1.992" classname="pak.MOBF_PO" />
       
 </testsuite>
