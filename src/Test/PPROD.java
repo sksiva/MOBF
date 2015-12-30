@@ -16,12 +16,12 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class PO {
+public class PPROD {
   public WebDriver dr;
   
   @BeforeTest
   public void beforeTest() {
-	//Mobile Emulator in Chrome
+	  //Mobile Emulator in Chrome
 	  ChromeOptions op=new ChromeOptions();
       op.addArguments("--disable-popup-blocking");
       op.addArguments("--user-agent=Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16");
@@ -30,25 +30,30 @@ public class PO {
       dr = new ChromeDriver(op);
   }
   
-  @Test (enabled=false)
+  @Test (priority = '1')
   public void Swipe() throws InterruptedException{
-	  dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
-	  Thread.sleep(5000);
+	  dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/mobilefulfillment");
+	  //Thread.sleep(20000);
+	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
+		//Go to Item Details page
+		  WebElement ele1 = wait1.until(ExpectedConditions.
+					presenceOfElementLocated(By.xpath("//*[@id='id_skMobff_ordersList_1']/div[3]/div/div")));
+		  
 	  WebElement draggable = dr.findElement(By.xpath("//*[@id='id_skMobff_ordersList_1']/div[3]/div/div"));
       System.out.println("Location"+draggable.getLocation());
       System.out.println("Window size:"+ dr.manage().window().getSize().getWidth());
       int dragg=dr.manage().window().getSize().getWidth();
       System.out.println("dragg : "+ dragg);
       int positive=dragg/2+1;
-      new Actions(dr).dragAndDropBy(draggable, positive,0).build().perform();	
-      System.out.println("Swipe Over");
+      new Actions(dr).dragAndDropBy(draggable, positive,0).build().perform();
+	    
   }
 
   @Test (priority = '2')
   public void ScrollOrder() throws InterruptedException {
 	  
-	  dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
-	  
+	 // dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
+	  Thread.sleep(4000);
 	  for (int second = 0;; second++) {
 		    if(second >=10){
 		        break;
@@ -62,34 +67,8 @@ public class PO {
 	  System.out.println("Scroll Completed "+"&"+" Number of Orders are : "+WB1.size());
   }
   
+    
   @Test (priority = '3')
-  public void ViewOrder() throws InterruptedException {
-	  Thread.sleep(4000);
-	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));
-	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
-	  //Random Selection to PDP
-	  Random rand = new Random(System.currentTimeMillis());
-	  WebElement W2 = WB1.get(rand.nextInt(WB1.size()));
-	  System.out.println("***** Rand Val ***** ");
-	  System.out.println(W2.getText());
-	  W2.click();
-	 
-	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
-	//Go to Item Details page
-	  WebElement ele1 = wait1.until(ExpectedConditions.
-				presenceOfElementLocated(By.id("id_skMobff_productDetails_0")));
-	  dr.findElement(By.id("id_skMobff_productDetails_0")).click();
-	// Back to PO Items
-	  WebElement ele2 = wait1.until(ExpectedConditions.
-				presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
-	  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
-	// Back to PO
-	  WebElement ele3 = wait1.until(ExpectedConditions.
-				presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
-	  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();	  
-  }
-  
-  @Test (priority = '4')
   public void UrgentOrder() {
 	  
 	  if(dr.findElements(By.xpath("//*[@id='id_skMobff_ordersList_0']/div[4]")).size() != 0){
@@ -100,7 +79,7 @@ public class PO {
 		  }
   }
   
-  @Test (priority = '5')
+  @Test (priority = '4')
   public void ORDERvalidation() throws InterruptedException {
 	  //dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
 	  dr.findElement(By.xpath(".//*[@class='skMobff_headerMenuIcon']")).click();
@@ -139,7 +118,7 @@ public class PO {
 		  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
 	    }
   
-  @Test (priority = '6')
+  @Test (priority = '5')
   public void QTYvalidation() throws InterruptedException{
 	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));	
 	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
@@ -176,7 +155,7 @@ public class PO {
 			  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
   }
   
-  @Test (priority = '7')
+  @Test (priority = '6')
   public void PRICEvalidation() throws InterruptedException{
 	  
 	  dr.findElement(By.xpath(".//*[@class='skMobff_headerMenuIcon']")).click();
@@ -215,7 +194,32 @@ public class PO {
 		  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();	  
   }
   
-
+  @Test (priority = '7')
+  public void ViewOrder() throws InterruptedException {
+	  Thread.sleep(4000);
+	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));
+	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
+	  //Random Selection to PDP
+	  Random rand = new Random(System.currentTimeMillis());
+	  WebElement W2 = WB1.get(rand.nextInt(WB1.size()));
+	  System.out.println("***** Rand Val ***** ");
+	  System.out.println(W2.getText());
+	  W2.click();
+	 
+	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
+	//Go to Item Details page
+	  WebElement ele1 = wait1.until(ExpectedConditions.
+				presenceOfElementLocated(By.id("id_skMobff_productDetails_0")));
+	  dr.findElement(By.id("id_skMobff_productDetails_0")).click();
+	// Back to PO Items
+	  WebElement ele2 = wait1.until(ExpectedConditions.
+				presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
+	  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
+	// Back to PO
+	  WebElement ele3 = wait1.until(ExpectedConditions.
+				presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
+	  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();	  
+  }
   
   @AfterTest
   public void afterTest() {
