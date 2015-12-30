@@ -29,8 +29,22 @@ public class PO {
       System.setProperty("webdriver.chrome.driver","D:/SK Backups/Selenium/chromedriver.exe");
       dr = new ChromeDriver(op);
   }
+  
+  @Test (enabled=false)
+  public void Swipe() throws InterruptedException{
+	  dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
+	  Thread.sleep(5000);
+	  WebElement draggable = dr.findElement(By.xpath("//*[@id='id_skMobff_ordersList_1']/div[3]/div/div"));
+      System.out.println("Location"+draggable.getLocation());
+      System.out.println("Window size:"+ dr.manage().window().getSize().getWidth());
+      int dragg=dr.manage().window().getSize().getWidth();
+      System.out.println("dragg : "+ dragg);
+      int positive=dragg/2+1;
+      new Actions(dr).dragAndDropBy(draggable, positive,0).build().perform();	
+      System.out.println("Swipe Over");
+  }
 
-  @Test (priority = '1')
+  @Test (priority = '2')
   public void ScrollOrder() throws InterruptedException {
 	  
 	  dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
@@ -48,8 +62,9 @@ public class PO {
 	  System.out.println("Scroll Completed "+"&"+" Number of Orders are : "+WB1.size());
   }
   
-  @Test (priority = '2')
+  @Test (priority = '3')
   public void ViewOrder() throws InterruptedException {
+	  Thread.sleep(4000);
 	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));
 	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
 	  //Random Selection to PDP
@@ -74,7 +89,7 @@ public class PO {
 	  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();	  
   }
   
-  @Test (priority = '3')
+  @Test (priority = '4')
   public void UrgentOrder() {
 	  
 	  if(dr.findElements(By.xpath("//*[@id='id_skMobff_ordersList_0']/div[4]")).size() != 0){
@@ -85,7 +100,7 @@ public class PO {
 		  }
   }
   
-  @Test (priority = '4')
+  @Test (priority = '5')
   public void ORDERvalidation() throws InterruptedException {
 	  //dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
 	  dr.findElement(By.xpath(".//*[@class='skMobff_headerMenuIcon']")).click();
@@ -124,7 +139,7 @@ public class PO {
 		  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
 	    }
   
-  @Test (priority = '5')
+  @Test (priority = '6')
   public void QTYvalidation() throws InterruptedException{
 	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));	
 	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
@@ -161,7 +176,7 @@ public class PO {
 			  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
   }
   
-  @Test (priority = '6')
+  @Test (priority = '7')
   public void PRICEvalidation() throws InterruptedException{
 	  
 	  dr.findElement(By.xpath(".//*[@class='skMobff_headerMenuIcon']")).click();
@@ -200,32 +215,7 @@ public class PO {
 		  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();	  
   }
   
-  @Test (priority = '7')
-  public void Swipe(){
-	  WebElement draggable = dr.findElement(By.xpath("//*[@id='id_skMobff_ordersList_1']/div[3]/div/div"));
-      System.out.println("Location"+draggable.getLocation());
-      System.out.println("Window size:"+ dr.manage().window().getSize().getWidth());
-      int dragg=dr.manage().window().getSize().getWidth();
-      System.out.println("dragg : "+ dragg);
-      int positive=dragg/2+1;
-      new Actions(dr).dragAndDropBy(draggable, positive,0).build().perform();
-	  
-  }
-  
-  @Test (enabled = true)
-  public void TestOrder4(){
-	  
-  }
-  
-  @Test (enabled = true)
-  public void TestOrder5(){
-	  
-  }
-  
-  @Test (enabled = true)
-  public void TestOrder6(){
-	  
-  }
+
   
   @AfterTest
   public void afterTest() {

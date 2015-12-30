@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="PO TestName"
+           tests="6"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="62.500">
+  <properties />
+  
+  
+            <testcase name="ScrollOrder" time="34.349" classname="pak.PO" />
+                <testcase name="UrgentOrder" time="0.068" classname="pak.PO" />
+                <testcase name="ORDERvalidation" time="9.399" classname="pak.PO" />
+                <testcase name="ViewOrder" time="5.990" classname="pak.PO" />
+                <testcase name="QTYvalidation" time="3.292" classname="pak.PO" />
+                <testcase name="PRICEvalidation" time="9.402" classname="pak.PO" />
+      
+</testsuite>

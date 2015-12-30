@@ -33,8 +33,8 @@ public class PreProd {
   @Test (priority = '2')
   public void ScrollOrder() throws InterruptedException {
 	  
-	  dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
-	  
+	 // dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
+	  Thread.sleep(4000);
 	  for (int second = 0;; second++) {
 		    if(second >=10){
 		        break;
@@ -202,8 +202,13 @@ public class PreProd {
   
   @Test (priority = '1')
   public void Swipe() throws InterruptedException{
-	  dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
-	  Thread.sleep(3000);
+	  dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/mobilefulfillment");
+	  //Thread.sleep(20000);
+	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
+		//Go to Item Details page
+		  WebElement ele1 = wait1.until(ExpectedConditions.
+					presenceOfElementLocated(By.xpath("//*[@id='id_skMobff_ordersList_1']/div[3]/div/div")));
+		  
 	  WebElement draggable = dr.findElement(By.xpath("//*[@id='id_skMobff_ordersList_1']/div[3]/div/div"));
       System.out.println("Location"+draggable.getLocation());
       System.out.println("Window size:"+ dr.manage().window().getSize().getWidth());
@@ -211,7 +216,7 @@ public class PreProd {
       System.out.println("dragg : "+ dragg);
       int positive=dragg/2+1;
       new Actions(dr).dragAndDropBy(draggable, positive,0).build().perform();
-	  
+	    
   }
   
   @Test (enabled = true)

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="POSwipe TestName"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="9.262">
+  <properties />
+  
+  
+            <testcase name="swipePO" time="9.262" classname="pak.POSwipe" />
+      
+</testsuite>
