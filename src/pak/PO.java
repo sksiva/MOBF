@@ -16,7 +16,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class MOBF_PO {
+public class PO {
   public WebDriver dr;
   
   @BeforeTest
@@ -33,7 +33,7 @@ public class MOBF_PO {
   @Test (priority = '1')
   public void ScrollOrder() throws InterruptedException {
 	  
-	  dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillmenttest");
+	  dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
 	  
 	  for (int second = 0;; second++) {
 		    if(second >=10){
@@ -204,9 +204,10 @@ public class MOBF_PO {
   public void Swipe(){
 	  WebElement draggable = dr.findElement(By.xpath("//*[@id='id_skMobff_ordersList_1']/div[3]/div/div"));
       System.out.println("Location"+draggable.getLocation());
-     System.out.println("Window size:"+ dr.manage().window().getSize().getWidth());
-     int dragg=dr.manage().window().getSize().getWidth();
-     int positive=dragg/2+1;
+      System.out.println("Window size:"+ dr.manage().window().getSize().getWidth());
+      int dragg=dr.manage().window().getSize().getWidth();
+      System.out.println("dragg : "+ dragg);
+      int positive=dragg/2+1;
       new Actions(dr).dragAndDropBy(draggable, positive,0).build().perform();
 	  
   }

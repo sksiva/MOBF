@@ -1,8 +1,6 @@
 package Test;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
 
 import org.openqa.selenium.By;
@@ -12,14 +10,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class TestSwipe {
+public class PreProd {
   public WebDriver dr;
   
   @BeforeTest
@@ -31,13 +28,12 @@ public class TestSwipe {
       //Reporter.log("User agent set as iphone!",bolConsole);
       System.setProperty("webdriver.chrome.driver","D:/SK Backups/Selenium/chromedriver.exe");
       dr = new ChromeDriver(op);
-      dr.manage().window().maximize();
   }
 
-  @Test (priority = '1')
+  @Test (priority = '2')
   public void ScrollOrder() throws InterruptedException {
 	  
-	  dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillmenttest");
+	  dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
 	  
 	  for (int second = 0;; second++) {
 		    if(second >=10){
@@ -52,7 +48,7 @@ public class TestSwipe {
 	  System.out.println("Scroll Completed "+"&"+" Number of Orders are : "+WB1.size());
   }
   
-  @Test (priority = '2')
+  @Test (priority = '3')
   public void ViewOrder() throws InterruptedException {
 	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));
 	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
@@ -78,7 +74,7 @@ public class TestSwipe {
 	  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();	  
   }
   
-  @Test (priority = '3')
+  @Test (priority = '4')
   public void UrgentOrder() {
 	  
 	  if(dr.findElements(By.xpath("//*[@id='id_skMobff_ordersList_0']/div[4]")).size() != 0){
@@ -89,7 +85,7 @@ public class TestSwipe {
 		  }
   }
   
-  @Test (priority = '4')
+  @Test (priority = '5')
   public void ORDERvalidation() throws InterruptedException {
 	  //dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
 	  dr.findElement(By.xpath(".//*[@class='skMobff_headerMenuIcon']")).click();
@@ -128,7 +124,7 @@ public class TestSwipe {
 		  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
 	    }
   
-  @Test (priority = '5')
+  @Test (priority = '6')
   public void QTYvalidation() throws InterruptedException{
 	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));	
 	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
@@ -165,7 +161,7 @@ public class TestSwipe {
 			  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
   }
   
-  @Test (priority = '6')
+  @Test (priority = '7')
   public void PRICEvalidation() throws InterruptedException{
 	  
 	  dr.findElement(By.xpath(".//*[@class='skMobff_headerMenuIcon']")).click();
@@ -204,23 +200,31 @@ public class TestSwipe {
 		  dr.findElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();	  
   }
   
-  @Test (priority = '7')
-  public void Swipe(){
+  @Test (priority = '1')
+  public void Swipe() throws InterruptedException{
+	  dr.get("http://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
+	  Thread.sleep(3000);
 	  WebElement draggable = dr.findElement(By.xpath("//*[@id='id_skMobff_ordersList_1']/div[3]/div/div"));
       System.out.println("Location"+draggable.getLocation());
-     System.out.println("Window size:"+ dr.manage().window().getSize().getWidth());
-     int dragg=dr.manage().window().getSize().getWidth();
-     int positive=dragg/2+1;
+      System.out.println("Window size:"+ dr.manage().window().getSize().getWidth());
+      int dragg=dr.manage().window().getSize().getWidth();
+      System.out.println("dragg : "+ dragg);
+      int positive=dragg/2+1;
       new Actions(dr).dragAndDropBy(draggable, positive,0).build().perform();
 	  
   }
   
-  @Test (enabled = false)
+  @Test (enabled = true)
+  public void TestOrder4(){
+	  
+  }
+  
+  @Test (enabled = true)
   public void TestOrder5(){
 	  
   }
   
-  @Test (enabled = false)
+  @Test (enabled = true)
   public void TestOrder6(){
 	  
   }

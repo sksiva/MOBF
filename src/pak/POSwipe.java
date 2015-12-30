@@ -1,4 +1,4 @@
-package Test;
+package pak;
 
 import java.util.HashMap;
 import java.util.List;
@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
 
-public class NewSam {
+public class POSwipe {
 	public WebDriver dr;	
   @BeforeTest
   public void beforeTest() {
