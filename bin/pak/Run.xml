@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MOBF PAK TEST SUITE" >
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="MOBF PAK TEST NAME" >
+    <classes>
+      <class name="pak.Sample" />
+   </classes>
+  </test>
+</suite>
