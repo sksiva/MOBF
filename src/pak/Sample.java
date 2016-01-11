@@ -49,7 +49,7 @@ public class Sample {
   @Test (priority = 1)
   public void GetOrder() throws InterruptedException {
 	  
-	  dr.get("https://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
+	  dr.get("https://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/mobileFulfillment");
 	  //Thread.sleep(5000);	1
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
 	  WebElement ele1 = wait1.until(ExpectedConditions.

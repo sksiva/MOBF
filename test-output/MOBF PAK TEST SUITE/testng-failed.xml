@@ -10,21 +10,4 @@
       <class name="pak.Sample"/>
     </classes>
   </test> <!-- MOBF PAK TEST NAME -->
-  <test name="MOBF PAK TEST NAME(failed)">
-    <classes>
-      <class name="pak.Sample">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="DATEvalidation"/>
-          <include name="QTYvalidation"/>
-          <include name="PRICEvalidation"/>
-          <include name="afterTest"/>
-          <include name="ORDERvalidation"/>
-          <include name="OrderList"/>
-          <include name="UrgentOrder"/>
-          <include name="ViewOrder"/>
-        </methods>
-      </class> <!-- pak.Sample -->
-    </classes>
-  </test> <!-- MOBF PAK TEST NAME(failed) -->
 </suite> <!-- Failed suite [MOBF PAK TEST SUITE] -->

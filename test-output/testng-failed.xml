@@ -1,30 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [MOBF PAK TEST SUITE]">
-  <listeners>
-    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
-  </listeners>
-  <test name="MOBF PAK TEST NAME">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test verbose="2" name="Default test">
     <classes>
       <class name="pak.Sample"/>
     </classes>
-  </test> <!-- MOBF PAK TEST NAME -->
-  <test name="MOBF PAK TEST NAME(failed)">
-    <classes>
-      <class name="pak.Sample">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="DATEvalidation"/>
-          <include name="QTYvalidation"/>
-          <include name="PRICEvalidation"/>
-          <include name="afterTest"/>
-          <include name="ORDERvalidation"/>
-          <include name="OrderList"/>
-          <include name="UrgentOrder"/>
-          <include name="ViewOrder"/>
-        </methods>
-      </class> <!-- pak.Sample -->
-    </classes>
-  </test> <!-- MOBF PAK TEST NAME(failed) -->
-</suite> <!-- Failed suite [MOBF PAK TEST SUITE] -->
+  </test> <!-- Default test -->
+</suite> <!-- Failed suite [Default suite] -->
