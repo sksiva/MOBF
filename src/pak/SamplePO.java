@@ -294,14 +294,14 @@ public class SamplePO {
 	  highlightElement(By.name("pendingOrder")).click();	  
   }
   
-  @Test (enabled=false)
+  @Test (priority = 10)
   public void SORTBY() throws Exception {
 	  
 	  	WebDriverWait wait1 = new WebDriverWait(dr, 30);
 	  	WebElement ele1 = wait1.until(ExpectedConditions.
-				presenceOfElementLocated(By.className("skMob_sortByOptions")));
-	  	highlightElement(By.className("skMob_sortByOptions")).click();
-	  	WebElement sort = dr.findElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[1]/div[1]/select"));
+				presenceOfElementLocated(By.className("skMobff_sortLabel")));
+	  	highlightElement(By.className("skMobff_sortLabel")).click();
+	  	WebElement sort = dr.findElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[2]/div[1]/select"));
 		Select select = new Select(sort);
 		select.selectByVisibleText(" Order # ");
 		System.out.println("--------------------------------------------------------------");		
@@ -359,8 +359,8 @@ public class SamplePO {
 		  }
   }
   
-  @Test (priority = 10)
-  public void SWIPE1() throws Exception {
+  @Test (priority = 12)
+  public void SWIPE() throws Exception {
 	  
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
 	  WebElement ele2 = wait1.until(ExpectedConditions.presenceOfElementLocated(orderAttr));
