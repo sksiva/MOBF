@@ -22,7 +22,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class Sample {
+public class SamplePO {
 	public WebDriver dr;
 	public WebElement WB1;
 	public String Str1, Str2, Str3;
@@ -294,24 +294,25 @@ public class Sample {
 	  highlightElement(By.name("pendingOrder")).click();	  
   }
   
-  @Test (enabled=false)
+  @Test (priority = 10)
   public void SORTBY() throws Exception {
 	  
 	  	WebDriverWait wait1 = new WebDriverWait(dr, 30);
 	  	WebElement ele1 = wait1.until(ExpectedConditions.
-				presenceOfElementLocated(By.className("skMob_sortByOptions")));
-	  	highlightElement(By.className("skMob_sortByOptions")).click();
-	  	WebElement sort = dr.findElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[1]/div[1]/select"));
+				presenceOfElementLocated(By.className("skMobff_sortLabel")));
+	  	highlightElement(By.className("skMobff_sortLabel")).click();
+	  	WebElement sort = dr.findElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[2]/div[1]/select"));
 		Select select = new Select(sort);
 		select.selectByVisibleText(" Order # ");
 		System.out.println("--------------------------------------------------------------");		
   }
   
-  @Test (enabled=false)
+  @Test (priority = 11)
   public void NARROWBY() throws Exception {
 	  
 	      WebDriverWait wait1 = new WebDriverWait(dr, 30);
-	  	  highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[1]/div[2]")).click();
+	  	  highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[2]/div[2]")).click();
+	  	  
 	  	
 	  	  //Random NARROW BY Selections
 		  WebElement ele1 = wait1.until(ExpectedConditions.
@@ -357,10 +358,16 @@ public class Sample {
 		  else{
 			  System.out.println("OOPS ! ! ! System Randomly Selected Clear All option from NARROW BY");			  
 		  }
+		  
+		  // Back to PO
+		  WebDriverWait wait2 = new WebDriverWait(dr, 30);
+		  WebElement ele4 = wait1.until(ExpectedConditions.
+					presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
+		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
   }
   
-  @Test (priority = 10)
-  public void SWIPE1() throws Exception {
+  @Test (priority = 13)
+  public void SWIPE() throws Exception {
 	  
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
 	  WebElement ele2 = wait1.until(ExpectedConditions.presenceOfElementLocated(orderAttr));

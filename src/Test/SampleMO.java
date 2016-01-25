@@ -1,4 +1,4 @@
-package pak;
+package Test;
 
 import java.awt.Robot;
 import java.awt.event.InputEvent;
@@ -22,7 +22,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class SamplePO {
+public class SampleMO {
 	public WebDriver dr;
 	public WebElement WB1;
 	public String Str1, Str2, Str3;
@@ -311,8 +311,7 @@ public class SamplePO {
   public void NARROWBY() throws Exception {
 	  
 	      WebDriverWait wait1 = new WebDriverWait(dr, 30);
-	  	  highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[2]/div[2]")).click();
-	  	  
+	  	  highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[1]/div[2]")).click();
 	  	
 	  	  //Random NARROW BY Selections
 		  WebElement ele1 = wait1.until(ExpectedConditions.
@@ -358,12 +357,6 @@ public class SamplePO {
 		  else{
 			  System.out.println("OOPS ! ! ! System Randomly Selected Clear All option from NARROW BY");			  
 		  }
-		  
-		  // Back to PO
-		  WebDriverWait wait2 = new WebDriverWait(dr, 30);
-		  WebElement ele4 = wait1.until(ExpectedConditions.
-					presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
-		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
   }
   
   @Test (priority = 13)

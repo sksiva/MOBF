@@ -6,7 +6,7 @@
   </listeners>
   <test name="Sample Test MOBF" >
     <classes>
-      <class name="Test.Sample" />
+      <class name="Test.SamplePO" />
    </classes>
   </test>
 </suite>
