@@ -3,25 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="pak.Demo"/>
+      <class name="Test.CopyOfSample"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="pak.Demo">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="UrgentOrder"/>
-          <include name="afterTest"/>
-          <include name="ORDERvalidation"/>
-          <include name="PRICEvalidation"/>
-          <include name="ScrollOrder"/>
-          <include name="ViewOrder"/>
-          <include name="QTYvalidation"/>
-          <include name="SORTBY"/>
-          <include name="NARROWBY"/>
-        </methods>
-      </class> <!-- pak.Demo -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

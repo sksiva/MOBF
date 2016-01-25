@@ -7,19 +7,7 @@
   </listeners>
   <test name="MOBF PAK TEST NAME">
     <classes>
-      <class name="pak.Sample"/>
+      <class name="pak.SamplePO"/>
     </classes>
   </test> <!-- MOBF PAK TEST NAME -->
-  <test name="MOBF PAK TEST NAME(failed)">
-    <classes>
-      <class name="pak.Sample">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="NARROWBY"/>
-          <include name="SORTBY"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- pak.Sample -->
-    </classes>
-  </test> <!-- MOBF PAK TEST NAME(failed) -->
 </suite> <!-- Failed suite [MOBF PAK TEST SUITE] -->

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MOBF PAK TEST NAME"
+           tests="10"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="70.450">
+  <properties />
+  
+  
+            <testcase name="PRICEvalidation" time="5.001" classname="pak.SamplePO" />
+                <testcase name="ViewOrder" time="12.397" classname="pak.SamplePO" />
+                <testcase name="GetOrder" time="7.119" classname="pak.SamplePO" />
+                <testcase name="QTYvalidation" time="5.013" classname="pak.SamplePO" />
+                <testcase name="UrgentOrder" time="0.171" classname="pak.SamplePO" />
+                <testcase name="DATEvalidation" time="5.081" classname="pak.SamplePO" />
+                <testcase name="ORDERvalidation" time="4.906" classname="pak.SamplePO" />
+                <testcase name="OrderList" time="0.162" classname="pak.SamplePO" />
+                <testcase name="SWIPE1" time="9.175" classname="pak.SamplePO" />
+                <testcase name="Navigation" time="21.425" classname="pak.SamplePO" />
+      
+</testsuite>

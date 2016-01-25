@@ -1,7 +1,12 @@
 package pak;
 
+import java.awt.Robot;
+import java.awt.event.InputEvent;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -9,6 +14,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -16,7 +22,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class Sample {
+public class SamplePO {
 	public WebDriver dr;
 	public WebElement WB1;
 	public String Str1, Str2, Str3;
@@ -25,11 +31,20 @@ public class Sample {
   @BeforeTest
   public void beforeTest() {
 	  //Mobile Emulator in Chrome
-	  ChromeOptions op=new ChromeOptions();
+	  /*ChromeOptions op=new ChromeOptions();
       op.addArguments("--disable-popup-blocking");
       op.addArguments("--user-agent=Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16");
       System.setProperty("webdriver.chrome.driver","D:/SK Backups/Selenium/chromedriver.exe");
-      dr = new ChromeDriver(op);
+      dr = new ChromeDriver(op);*/
+      
+      	Map<String, String> mobileEmulation = new HashMap<String, String>();
+		mobileEmulation.put("deviceName", "Apple iPhone 6 Plus");
+		Map<String, Object> chromeOptions = new HashMap<String, Object>();
+		chromeOptions.put("mobileEmulation", mobileEmulation);
+		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+		capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+		System.setProperty("webdriver.chrome.driver", "D:/SK Backups/Selenium/chromedriver.exe");
+		dr = new ChromeDriver(capabilities);
   }
   
   public WebElement highlightElement(By by) throws Exception
@@ -49,7 +64,7 @@ public class Sample {
   @Test (priority = 1)
   public void GetOrder() throws InterruptedException {
 	  
-	  dr.get("https://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/mobileFulfillment");
+	  dr.get("https://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
 	  //Thread.sleep(5000);	1
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
 	  WebElement ele1 = wait1.until(ExpectedConditions.
@@ -279,12 +294,10 @@ public class Sample {
 	  highlightElement(By.name("pendingOrder")).click();	  
   }
   
-  @Test (priority = 10)
+  @Test (enabled=false)
   public void SORTBY() throws Exception {
 	  
 	  	WebDriverWait wait1 = new WebDriverWait(dr, 30);
-	  	
-	  	//Thread.sleep(3000);
 	  	WebElement ele1 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.className("skMob_sortByOptions")));
 	  	highlightElement(By.className("skMob_sortByOptions")).click();
@@ -294,20 +307,18 @@ public class Sample {
 		System.out.println("--------------------------------------------------------------");		
   }
   
-  @Test (priority = 11)
+  @Test (enabled=false)
   public void NARROWBY() throws Exception {
 	  
-	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
+	      WebDriverWait wait1 = new WebDriverWait(dr, 30);
 	  	  highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[1]/div[2]")).click();
-	  	  // Random NARROW BY Selections
-		  
-	  	  //Thread.sleep(3000);
-	  	WebElement ele1 = wait1.until(ExpectedConditions.
+	  	
+	  	  //Random NARROW BY Selections
+		  WebElement ele1 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.className("skMob_filterOptions")));
 		  //WebElement WM1 = dr.findElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[1]/div[3]"));
 		  WebElement WM1 = dr.findElement(By.className("skMob_filterOptions"));
 		  List<WebElement> LWM1 = WM1.findElements(By.className("skMobff_filter "));
-		  
 		  Random rand1 = new Random(System.currentTimeMillis());
 		  WebElement W1 = LWM1.get(rand1.nextInt(LWM1.size()));
 		  String M1 = W1.getText();
@@ -315,7 +326,6 @@ public class Sample {
 		  W1.click();
 		  		  
 		  //Random Order Selection After Filter
-		  //Thread.sleep(4000);
 		  WebElement ele2 = wait1.until(ExpectedConditions.
 					presenceOfElementLocated(By.className("skMobff_OrderMainList")));
 		  WebElement WO1 = dr.findElement(By.className("skMobff_OrderMainList"));
@@ -327,12 +337,10 @@ public class Sample {
 		  WK1.click();
 		  
 		  //Ranomly Check an Item's Category
-		  //Thread.sleep(4000);
 		  WebElement ele3 = wait1.until(ExpectedConditions.
 					presenceOfElementLocated(By.className("skMobff_orderItems")));
 		  WebElement X1 = dr.findElement(By.className("skMobff_orderItems"));
 		  List<WebElement> LX1 = X1.findElements(By.className("skMobff_productDetails "));
-		  
 		  Random rand2 = new Random(System.currentTimeMillis());
 		  WebElement WX1 = LX1.get(rand1.nextInt(LX1.size()));
 		  String M2 = WX1.findElement(By.className("skMobff_Value")).getText();
@@ -350,9 +358,46 @@ public class Sample {
 			  System.out.println("OOPS ! ! ! System Randomly Selected Clear All option from NARROW BY");			  
 		  }
   }
+  
+  @Test (priority = 10)
+  public void SWIPE1() throws Exception {
+	  
+	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
+	  WebElement ele2 = wait1.until(ExpectedConditions.presenceOfElementLocated(orderAttr));
+	  WebElement draggable = dr.findElement(orderAttr);
+	  System.out.println("Swiped Order Numb : "+draggable.findElement(By.className("skMobff_OrderId")).getText());
+	  
+	  WebElement FW = dr.findElement(By.id("id_skMobff_ordersList_0"));
+	  int FX = FW.getLocation().getX();
+	  int FY = FW.getLocation().getY()+150;
+	    
+	  //X-Axis From
+	  int FX1 = FW.getLocation().getX()+25;
+	    
+	  //X-Axis To
+	  int FX2 = FW.getLocation().getX()+240;
+		
+	  //Scroll Till Order Visibility
+	  ((JavascriptExecutor) dr).executeScript("arguments[0].scrollIntoView(true);", draggable);
+	    
+	  //Swipe Using Robot Class
+      Robot r = new Robot(); 
+      Thread.sleep(4000);
+      dr.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+      r.mouseMove(FX1, FY);
+      r.mousePress(InputEvent.BUTTON1_MASK); 
+      r.mouseMove(FX2, FY); 
+      r.mouseRelease(InputEvent.BUTTON1_MASK);
+      
+      //Click My Orders
+	  highlightElement(By.xpath(".//*[@class='skMobff_headerMenuIcon']")).click();
+	  highlightElement(By.name("myOrder")).click();	 
+	  System.out.println("--------------------------------------------------------------");
+  }
 
   @AfterTest
-  public void afterTest() {
-	  dr.quit();
+  public void afterTest() throws Exception {
+	  
+	  
   }
 }

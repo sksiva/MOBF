@@ -10,4 +10,16 @@
       <class name="Test.Sample"/>
     </classes>
   </test> <!-- Sample Test MOBF -->
+  <test name="Sample Test MOBF(failed)">
+    <classes>
+      <class name="Test.Sample">
+        <methods>
+          <include name="SORTBY"/>
+          <include name="beforeTest"/>
+          <include name="NARROWBY"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Test.Sample -->
+    </classes>
+  </test> <!-- Sample Test MOBF(failed) -->
 </suite> <!-- Failed suite [Sample SUITE MOBF] -->

@@ -6,7 +6,7 @@
   </listeners>
   <test name="MOBF PAK TEST NAME" >
     <classes>
-      <class name="pak.Sample" />
+      <class name="pak.SamplePO" />
    </classes>
   </test>
 </suite>

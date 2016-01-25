@@ -5,6 +5,7 @@ import java.awt.Robot;
 import java.awt.event.InputEvent;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -39,7 +40,8 @@ public class swipe {
 	    
 	    //Robot Class
         Robot r = new Robot(); 
-        Thread.sleep(4000); 
+        //Thread.sleep(4000);
+        dr.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         r.mouseMove(30, 349);
         r.mousePress(InputEvent.BUTTON1_MASK); 
         //Thread.sleep(2000); 
