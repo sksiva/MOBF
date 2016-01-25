@@ -393,8 +393,8 @@ public class SampleMO extends SamplePO{
   }
 
   @AfterTest
-  public void afterTest() throws Exception {
+  public void EndofPO() throws Exception {
 	  
-	  
+	  System.out.println("After in PORder");
   }
 }

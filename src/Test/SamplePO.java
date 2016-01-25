@@ -29,7 +29,7 @@ public class SamplePO {
 	public By orderAttr;
 		
   @BeforeTest
-  public void beforeTest() {
+  public void MobEmulation() {
 	  //Mobile Emulator in Chrome
 	  /*ChromeOptions op=new ChromeOptions();
       op.addArguments("--disable-popup-blocking");
@@ -403,7 +403,7 @@ public class SamplePO {
   }
 
   @AfterTest
-  public void afterTest() throws Exception {
+  public void EndofPO() throws Exception {
 	  
 	  
   }

@@ -15,20 +15,22 @@
     <classes>
       <class name="Test.SamplePO">
         <methods>
-          <include name="beforeTest"/>
-          <include name="afterTest"/>
+          <include name="MobEmulation"/>
+          <include name="EndofPO"/>
         </methods>
       </class> <!-- Test.SamplePO -->
       <class name="Test.MyOrder">
         <methods>
           <include name="NARROWBY"/>
           <include name="OrderList"/>
+          <include name="StartMO"/>
           <include name="ORDERvalidation"/>
-          <include name="SORTBY"/>
-          <include name="PRICEvalidation"/>
           <include name="SWIPE"/>
           <include name="UrgentOrder"/>
           <include name="GetOrder"/>
+          <include name="EndofMO"/>
+          <include name="SORTBY"/>
+          <include name="PRICEvalidation"/>
           <include name="Navigation"/>
           <include name="QTYvalidation"/>
           <include name="DATEvalidation"/>
