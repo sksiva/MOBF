@@ -7,19 +7,34 @@
   </listeners>
   <test name="Sample Test MOBF">
     <classes>
-      <class name="Test.Sample"/>
+      <class name="Test.SamplePO"/>
+      <class name="Test.MyOrder"/>
     </classes>
   </test> <!-- Sample Test MOBF -->
   <test name="Sample Test MOBF(failed)">
     <classes>
-      <class name="Test.Sample">
+      <class name="Test.SamplePO">
         <methods>
-          <include name="SORTBY"/>
           <include name="beforeTest"/>
-          <include name="NARROWBY"/>
           <include name="afterTest"/>
         </methods>
-      </class> <!-- Test.Sample -->
+      </class> <!-- Test.SamplePO -->
+      <class name="Test.MyOrder">
+        <methods>
+          <include name="NARROWBY"/>
+          <include name="OrderList"/>
+          <include name="ORDERvalidation"/>
+          <include name="SORTBY"/>
+          <include name="PRICEvalidation"/>
+          <include name="SWIPE"/>
+          <include name="UrgentOrder"/>
+          <include name="GetOrder"/>
+          <include name="Navigation"/>
+          <include name="QTYvalidation"/>
+          <include name="DATEvalidation"/>
+          <include name="ViewOrder"/>
+        </methods>
+      </class> <!-- Test.MyOrder -->
     </classes>
   </test> <!-- Sample Test MOBF(failed) -->
 </suite> <!-- Failed suite [Sample SUITE MOBF] -->

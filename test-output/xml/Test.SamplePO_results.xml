@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Sample Test MOBF"
+           tests="12"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="84.287">
+  <properties />
+  
+  
+            <testcase name="ORDERvalidation" time="4.836" classname="Test.SamplePO" />
+                <testcase name="DATEvalidation" time="4.936" classname="Test.SamplePO" />
+                <testcase name="OrderList" time="0.305" classname="Test.SamplePO" />
+                <testcase name="SWIPE" time="8.708" classname="Test.SamplePO" />
+                <testcase name="ViewOrder" time="12.155" classname="Test.SamplePO" />
+                <testcase name="PRICEvalidation" time="4.929" classname="Test.SamplePO" />
+                <testcase name="SORTBY" time="2.945" classname="Test.SamplePO" />
+                <testcase name="QTYvalidation" time="4.907" classname="Test.SamplePO" />
+                <testcase name="GetOrder" time="14.222" classname="Test.SamplePO" />
+                <testcase name="Navigation" time="21.067" classname="Test.SamplePO" />
+                <testcase name="NARROWBY" time="5.112" classname="Test.SamplePO" />
+                <testcase name="UrgentOrder" time="0.165" classname="Test.SamplePO" />
+      
+</testsuite>

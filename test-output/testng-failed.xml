@@ -1,13 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [MOBF PAK TEST SUITE]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Sample SUITE MOBF]">
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
-  <test name="MOBF PAK TEST NAME">
+  <test name="Sample Test MOBF">
     <classes>
-      <class name="pak.SamplePO"/>
+      <class name="Test.SamplePO"/>
+      <class name="Test.MyOrder"/>
     </classes>
-  </test> <!-- MOBF PAK TEST NAME -->
-</suite> <!-- Failed suite [MOBF PAK TEST SUITE] -->
+  </test> <!-- Sample Test MOBF -->
+  <test name="Sample Test MOBF(failed)">
+    <classes>
+      <class name="Test.SamplePO">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- Test.SamplePO -->
+      <class name="Test.MyOrder">
+        <methods>
+          <include name="NARROWBY"/>
+          <include name="OrderList"/>
+          <include name="ORDERvalidation"/>
+          <include name="SORTBY"/>
+          <include name="PRICEvalidation"/>
+          <include name="SWIPE"/>
+          <include name="UrgentOrder"/>
+          <include name="GetOrder"/>
+          <include name="Navigation"/>
+          <include name="QTYvalidation"/>
+          <include name="DATEvalidation"/>
+          <include name="ViewOrder"/>
+        </methods>
+      </class> <!-- Test.MyOrder -->
+    </classes>
+  </test> <!-- Sample Test MOBF(failed) -->
+</suite> <!-- Failed suite [Sample SUITE MOBF] -->

@@ -22,11 +22,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class SampleMO {
-	public WebDriver dr;
-	public WebElement WB1;
-	public String Str1, Str2, Str3;
-	public By orderAttr;
+public class SampleMO extends SamplePO{
+
 		
   @BeforeTest
   public void beforeTest() {
