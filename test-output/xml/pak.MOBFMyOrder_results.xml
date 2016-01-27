@@ -4,16 +4,16 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="32.523">
+           time="32.858">
   <properties />
   
   
-            <testcase name="VIEWALL" time="7.269" classname="pak.MOBFMyOrder" />
-                <testcase name="SORTBY" time="2.409" classname="pak.MOBFMyOrder" />
-                <testcase name="ORDERvalidation" time="4.491" classname="pak.MOBFMyOrder" />
-                <testcase name="NARROWBY" time="4.930" classname="pak.MOBFMyOrder" />
-                <testcase name="PRICEvalidation" time="4.439" classname="pak.MOBFMyOrder" />
-                <testcase name="DATEvalidation" time="4.541" classname="pak.MOBFMyOrder" />
-                <testcase name="QTYvalidation" time="4.444" classname="pak.MOBFMyOrder" />
+            <testcase name="SORTBY" time="2.471" classname="pak.MOBFMyOrder" />
+                <testcase name="QTYvalidation" time="4.581" classname="pak.MOBFMyOrder" />
+                <testcase name="DATEvalidation" time="4.588" classname="pak.MOBFMyOrder" />
+                <testcase name="NARROWBY" time="5.093" classname="pak.MOBFMyOrder" />
+                <testcase name="PRICEvalidation" time="4.414" classname="pak.MOBFMyOrder" />
+                <testcase name="ORDERvalidation" time="4.436" classname="pak.MOBFMyOrder" />
+                <testcase name="VIEWALL" time="7.275" classname="pak.MOBFMyOrder" />
       
 </testsuite>
