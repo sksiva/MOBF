@@ -1,21 +1,24 @@
 package pak;
 
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class Del extends Attr{
 	
-	  @AfterTest
+	  @BeforeClass
 	  public void Del1() throws Exception {
-		System.out.println("Del1");  	  
+		System.out.println("Before Delete");
 	  }
 	  @Test
 	  public void f1() {
 		  System.out.println("Test");
+		  
 	  }
 	  
-	  @AfterTest
-	  public void EOPO() throws Exception {
-		System.out.println("EOPO");  	  
+	  @AfterClass
+	  public void EOMO() throws Exception {
+		System.out.println("After Delete"); 
+		//dr.quit();
 	  }
 }

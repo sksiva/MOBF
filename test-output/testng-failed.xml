@@ -7,7 +7,7 @@
   </listeners>
   <test name="MOBF PAK TEST NAME">
     <classes>
-      <class name="pak.SamplePO"/>
+      <class name="pak.MOBFPendingOrder"/>
       <class name="pak.Del"/>
     </classes>
   </test> <!-- MOBF PAK TEST NAME -->

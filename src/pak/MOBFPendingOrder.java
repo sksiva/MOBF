@@ -10,7 +10,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -18,28 +17,29 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class SamplePO extends Attr{
+public class MOBFPendingOrder extends Attr{
 	
-  @BeforeTest
-  public void SOPO() {
-      
-      	Map<String, String> mobileEmulation = new HashMap<String, String>();
-		mobileEmulation.put("deviceName", "Apple iPhone 6 Plus");
-		Map<String, Object> chromeOptions = new HashMap<String, Object>();
-		chromeOptions.put("mobileEmulation", mobileEmulation);
-		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-		capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-		System.setProperty("webdriver.chrome.driver", "D:/SK Backups/Selenium/chromedriver.exe");
-		dr = new ChromeDriver(capabilities);
-  }
-  
-  public WebElement highlightElement(By by) throws Exception
+	@BeforeClass
+	public static void SOPO() {
+	      
+	      	Map<String, String> mobileEmulation = new HashMap<String, String>();
+			mobileEmulation.put("deviceName", "Apple iPhone 6 Plus");
+			Map<String, Object> chromeOptions = new HashMap<String, Object>();
+			chromeOptions.put("mobileEmulation", mobileEmulation);
+			DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+			capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+			System.setProperty("webdriver.chrome.driver", "D:/SK Backups/Selenium/chromedriver.exe");
+			dr = new ChromeDriver(capabilities);
+			
+	}
+	
+	public static WebElement highlightElement(By by) throws Exception
 	{
-		WebElement element = dr.findElement(by);
+		element = dr.findElement(by);
 		// Draw a border around the found element
 		if (dr instanceof JavascriptExecutor)
 		{
@@ -50,7 +50,7 @@ public class SamplePO extends Attr{
 		}
 		return element;
 	}
-  
+	  
   @Test (priority = 1)
   public void GetOrder() throws InterruptedException {
 	  
@@ -336,7 +336,7 @@ public class SamplePO extends Attr{
 		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
   }
   
-  @Test (priority = 13)
+  @Test (priority = 12)
   public void SWIPE() throws Exception {
 	  
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -372,8 +372,8 @@ public class SamplePO extends Attr{
 	  System.out.println("--------------------------------------------------------------");
   }
 
-  @AfterTest
+  @AfterClass
   public void EOPO() throws Exception {
-	System.out.println("EOPO");  	  
+	System.out.println("End Of Pending Order");  	  
   }
 }

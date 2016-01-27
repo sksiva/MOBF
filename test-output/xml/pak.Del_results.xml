@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.001">
+           time="0.000">
   <properties />
   
   
-            <testcase name="f1" time="0.001" classname="pak.Del" />
+            <testcase name="f1" time="0.000" classname="pak.Del" />
       
 </testsuite>
