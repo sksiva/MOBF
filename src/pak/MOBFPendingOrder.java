@@ -21,7 +21,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class MOBFPendingOrder extends Attr{
+public class MOBFPendingOrder extends Attributes{
 	
   @Test (priority = 1)
   public void GetOrder() throws InterruptedException {

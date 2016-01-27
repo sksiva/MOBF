@@ -13,7 +13,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
-public class Attr {
+public class Attributes {
 	
 	public static WebDriver dr;
 	public static WebElement WB1;
@@ -22,7 +22,7 @@ public class Attr {
 	public static WebElement element;
 	
 	@BeforeSuite
-	public static void SOPO() {
+	public static void Emulator() {
 	      
 	      	Map<String, String> mobileEmulation = new HashMap<String, String>();
 			mobileEmulation.put("deviceName", "Apple iPhone 6 Plus");
@@ -32,7 +32,6 @@ public class Attr {
 			capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 			System.setProperty("webdriver.chrome.driver", "D:/SK Backups/Selenium/chromedriver.exe");
 			dr = new ChromeDriver(capabilities);
-			
 	}
 	
 	public static WebElement highlightElement(By by) throws Exception

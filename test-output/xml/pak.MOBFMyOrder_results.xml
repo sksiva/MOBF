@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MOBF PAK TEST NAME"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="9.343">
+  <properties />
+  
+  
+            <testcase name="VIEWALL" time="2.094" classname="pak.MOBFMyOrder" />
+                <testcase name="NARROWBY" time="4.973" classname="pak.MOBFMyOrder" />
+                <testcase name="SORTBY" time="2.276" classname="pak.MOBFMyOrder" />
+      
+</testsuite>

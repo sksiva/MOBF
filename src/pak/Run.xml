@@ -7,7 +7,7 @@
   <test name="MOBF PAK TEST NAME" >
     <classes>
       <class name="pak.MOBFPendingOrder" />
-      <class name="pak.Del" />
+      <class name="pak.MOBFMyOrder" />
    </classes>
   </test>
 </suite>
