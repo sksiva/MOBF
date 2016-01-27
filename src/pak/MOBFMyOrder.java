@@ -168,14 +168,14 @@ public class MOBFMyOrder extends Attributes{
 		  String Q2 = String.valueOf(i);
 		  if(Q1.contains(Q2))
 		  {
-			  System.out.println("Order Items Qty are Same in both PLP & PO Items page: "+Q1);
+			  System.out.println("Order Items Qty are Same in both PLP & My Orders Items page: "+Q1);
 		  }
 		  else
 		  {
-			  System.out.println("Qty in PLP is : "+Q1+". But Qty in PO Items page : "+Q2+" item(s)");
+			  System.out.println("Qty in PLP is : "+Q1+". But Qty in My Orders Items page : "+Q2+" item(s)");
 		  }
 		  
-		  // Back to PO
+		  // Back to My Orders
 		  WebElement ele3 = wait1.until(ExpectedConditions.
 					presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
@@ -195,14 +195,14 @@ public class MOBFMyOrder extends Attributes{
 		  String P2 = dr.findElement(By.id("skMobff_orderValue")).getText();
 		  if(P2.contains(P1))
 		  {
-			  System.out.println("Selected Order Price page in PLP is Same in PO Items page for the Order "+P1);
+			  System.out.println("Selected Order Price page in PLP is Same in My Orders Items page for the Order "+P1);
 		  }
 		  else
 		  {
 			  System.out.println("Selected Order in PLP is: "+P1+" But Opened Order Price is : "+P2);
 		  }	  
 		  
-		  // Back to PO
+		  // Back to My Orders
 		  WebElement ele3 = wait1.until(ExpectedConditions.
 					presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
@@ -223,14 +223,14 @@ public class MOBFMyOrder extends Attributes{
 		  String D2 = dr.findElement(By.id("skMobff_orderDate")).getText();
 		  if(D1.contains(D2))
 		  {
-			  System.out.println("Selected Order Date in PLP is Same in PO Items page for the Order "+D1);
+			  System.out.println("Selected Order Date in PLP is Same in My Orders Items page for the Order "+D1);
 		  }
 		  else
 		  {
 			  System.out.println("Selected Order in PLP is: "+D1+" But Opened Order's Date is : "+D2);
 		  }	 
 		  	  
-		  // Back to PO
+		  // Back to My Orders
 		  WebElement ele3 = wait1.until(ExpectedConditions.
 					presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();

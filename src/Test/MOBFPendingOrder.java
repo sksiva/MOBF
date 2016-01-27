@@ -2,23 +2,17 @@ package Test;
 
 import java.awt.Robot;
 import java.awt.event.InputEvent;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class MOBFPendingOrder extends Attributes{
@@ -26,6 +20,7 @@ public class MOBFPendingOrder extends Attributes{
   @Test (priority = 1)
   public void GetOrder() throws InterruptedException {
 	  
+	  System.out.println("************************* Pending Orders *************************");
 	  dr.get("https://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
 	  WebElement ele1 = wait1.until(ExpectedConditions.
@@ -273,40 +268,32 @@ public class MOBFPendingOrder extends Attributes{
 					presenceOfElementLocated(By.className("skMobff_OrderMainList")));
 		  WebElement WO1 = dr.findElement(By.className("skMobff_OrderMainList"));
 		  List<WebElement> WP1 = WO1.findElements(By.className("skMobff_orders"));
-		  int MOsize = WP1.size();
+		  Random rand = new Random(System.currentTimeMillis());
+		  WebElement WK1 = WP1.get(rand.nextInt(WP1.size()));
+		  System.out.println("***** Rand Val ***** ");
+		  System.out.println(WK1.getText());
+		  WK1.click();
 		  
-		  if(MOsize!=0){
-				  Random rand = new Random(System.currentTimeMillis());
-				  WebElement WK1 = WP1.get(rand.nextInt(WP1.size()));
-				  System.out.println("***** Rand Val ***** ");
-				  System.out.println(WK1.getText());
-				  WK1.click();
-				  
-				  //Ranomly Check an Item's Category
-				  WebElement ele3 = wait1.until(ExpectedConditions.
-							presenceOfElementLocated(By.className("skMobff_orderItems")));
-				  WebElement X1 = dr.findElement(By.className("skMobff_orderItems"));
-				  List<WebElement> LX1 = X1.findElements(By.className("skMobff_productDetails "));
-				  Random rand2 = new Random(System.currentTimeMillis());
-				  WebElement WX1 = LX1.get(rand1.nextInt(LX1.size()));
-				  String M2 = WX1.findElement(By.className("skMobff_Value")).getText();
-				  System.out.println("M2 Valueeeeeeeeeeeeee: "+M2);
-				  
-				  if(M1!="Clear All"){
-					  if(M1.contains(M2)){
-						  System.out.println("Success ! ! ! Correct Orders are displayed for the selected Category");
-					  }
-						  else{
-							  System.out.println("Sorry ! ! ! Incorrect Orders are displayed for the selected Category");
-						  }	
-				  }
+		  //Ranomly Check an Item's Category
+		  WebElement ele3 = wait1.until(ExpectedConditions.
+					presenceOfElementLocated(By.className("skMobff_orderItems")));
+		  WebElement X1 = dr.findElement(By.className("skMobff_orderItems"));
+		  List<WebElement> LX1 = X1.findElements(By.className("skMobff_productDetails "));
+		  Random rand2 = new Random(System.currentTimeMillis());
+		  WebElement WX1 = LX1.get(rand1.nextInt(LX1.size()));
+		  String M2 = WX1.findElement(By.className("skMobff_Value")).getText();
+		  System.out.println("Narrow By Category Name : "+M2);
+		  
+		  if(M1!="Clear All"){
+			  if(M1.contains(M2)){
+				  System.out.println("Success ! ! ! Correct Orders are displayed for the selected Category");
+			  }
 				  else{
-					  System.out.println("OOPS ! ! ! System Randomly Selected Clear All option from NARROW BY");			  
-				  }
+					  System.out.println("Sorry ! ! ! Incorrect Orders are displayed for the selected Category");
+				  }	
 		  }
-		  else
-		  {
-			  System.out.println("No Items found after Filter in My Orders Page");			  
+		  else{
+			  System.out.println("OOPS ! ! ! System Randomly Selected Clear All option from NARROW BY");			  
 		  }
 		  
 		  // Back to PO
@@ -343,7 +330,7 @@ public class MOBFPendingOrder extends Attributes{
       dr.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
       r.mouseMove(FX1, FY);
       r.mousePress(InputEvent.BUTTON1_MASK); 
-      r.mouseMove(FX2, FY);
+      r.mouseMove(FX2, FY); 
       r.mouseRelease(InputEvent.BUTTON1_MASK);
       
       //Click My Orders
@@ -354,6 +341,6 @@ public class MOBFPendingOrder extends Attributes{
 
   @AfterClass
   public void EOPO() throws Exception {
-	System.out.println("End Of Pending Order");  	  
+	  System.out.println("************************* End of Pending Orders *************************");  	  
   }
 }

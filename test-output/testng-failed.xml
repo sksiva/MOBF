@@ -7,8 +7,8 @@
   </listeners>
   <test name="MOBF PAK TEST NAME">
     <classes>
-      <class name="Test.MOBFPendingOrder"/>
-      <class name="Test.MOBFMyOrder"/>
+      <class name="pak.MOBFPendingOrder"/>
+      <class name="pak.MOBFMyOrder"/>
     </classes>
   </test> <!-- MOBF PAK TEST NAME -->
 </suite> <!-- Failed suite [MOBF PAK TEST SUITE] -->

@@ -1,10 +1,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="MOBF PAK TEST SUITE" >
+<suite name="DEMO SUITE" >
   <listeners>
       <listener class-name="org.uncommons.reportng.HTMLReporter"/>
       <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
-  <test name="MOBF PAK TEST NAME" >
+  <test name="DEMO TEST" >
     <classes>
       <class name="Test.MOBFPendingOrder" />
       <class name="Test.MOBFMyOrder" />
