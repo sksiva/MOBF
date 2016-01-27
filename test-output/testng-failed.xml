@@ -8,6 +8,7 @@
   <test name="MOBF PAK TEST NAME">
     <classes>
       <class name="pak.SamplePO"/>
+      <class name="pak.Del"/>
     </classes>
   </test> <!-- MOBF PAK TEST NAME -->
 </suite> <!-- Failed suite [MOBF PAK TEST SUITE] -->

@@ -4,21 +4,21 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="77.967">
+           time="85.469">
   <properties />
   
   
-            <testcase name="ViewOrder" time="12.073" classname="Test.SamplePO" />
-                <testcase name="OrderList" time="0.159" classname="Test.SamplePO" />
-                <testcase name="NARROWBY" time="5.149" classname="Test.SamplePO" />
-                <testcase name="SORTBY" time="2.934" classname="Test.SamplePO" />
-                <testcase name="UrgentOrder" time="0.167" classname="Test.SamplePO" />
-                <testcase name="GetOrder" time="8.067" classname="Test.SamplePO" />
-                <testcase name="DATEvalidation" time="5.021" classname="Test.SamplePO" />
-                <testcase name="PRICEvalidation" time="4.926" classname="Test.SamplePO" />
-                <testcase name="QTYvalidation" time="4.910" classname="Test.SamplePO" />
-                <testcase name="Navigation" time="21.020" classname="Test.SamplePO" />
-                <testcase name="ORDERvalidation" time="4.812" classname="Test.SamplePO" />
-                <testcase name="SWIPE" time="8.729" classname="Test.SamplePO" />
+            <testcase name="SWIPE" time="8.890" classname="Test.SamplePO" />
+                <testcase name="ORDERvalidation" time="4.809" classname="Test.SamplePO" />
+                <testcase name="Navigation" time="21.015" classname="Test.SamplePO" />
+                <testcase name="NARROWBY" time="5.144" classname="Test.SamplePO" />
+                <testcase name="SORTBY" time="2.935" classname="Test.SamplePO" />
+                <testcase name="QTYvalidation" time="4.995" classname="Test.SamplePO" />
+                <testcase name="GetOrder" time="15.111" classname="Test.SamplePO" />
+                <testcase name="DATEvalidation" time="4.998" classname="Test.SamplePO" />
+                <testcase name="ViewOrder" time="12.186" classname="Test.SamplePO" />
+                <testcase name="OrderList" time="0.205" classname="Test.SamplePO" />
+                <testcase name="PRICEvalidation" time="4.948" classname="Test.SamplePO" />
+                <testcase name="UrgentOrder" time="0.233" classname="Test.SamplePO" />
       
 </testsuite>

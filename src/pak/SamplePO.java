@@ -22,20 +22,10 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class SamplePO {
-	public WebDriver dr;
-	public WebElement WB1;
-	public String Str1, Str2, Str3;
-	public By orderAttr;
-		
+public class SamplePO extends Attr{
+	
   @BeforeTest
-  public void beforeTest() {
-	  //Mobile Emulator in Chrome
-	  /*ChromeOptions op=new ChromeOptions();
-      op.addArguments("--disable-popup-blocking");
-      op.addArguments("--user-agent=Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16");
-      System.setProperty("webdriver.chrome.driver","D:/SK Backups/Selenium/chromedriver.exe");
-      dr = new ChromeDriver(op);*/
+  public void SOPO() {
       
       	Map<String, String> mobileEmulation = new HashMap<String, String>();
 		mobileEmulation.put("deviceName", "Apple iPhone 6 Plus");
@@ -65,7 +55,6 @@ public class SamplePO {
   public void GetOrder() throws InterruptedException {
 	  
 	  dr.get("https://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
-	  //Thread.sleep(5000);	1
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
 	  WebElement ele1 = wait1.until(ExpectedConditions.
 	  					presenceOfElementLocated(By.className("skMobff_OrderMainList")));
@@ -76,14 +65,12 @@ public class SamplePO {
 	  Random rand = new Random(System.currentTimeMillis());
 	  WebElement W2 = WB1.get(rand.nextInt(WB1.size()));
 	  
-	  //Order's Xpath using OrderID
 	  Str1 = ".//*[@orderid='";
 	  Str2 = W2.findElement(By.className("skMobff_OrderId")).getText();
 	  Str3 = "']";
 	  System.out.println("Selected Order Number To Be Manipulate : "+Str2);
 	  System.out.println("--------------------------------------------------------------");
-	  orderAttr = By.xpath(Str1+Str2+Str3);
-	  	  
+	  orderAttr = By.xpath(Str1+Str2+Str3);	  
   }
   
   @Test (priority = 2)
@@ -130,7 +117,6 @@ public class SamplePO {
 	  WB1 = highlightElement(orderAttr);
 	  String S1 = WB1.findElement(By.className("skMobff_OrderId")).getText();
 	  WB1.click();
-	  //Thread.sleep(4000);		2
 	  WebElement ele1 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.id("skMobff_orderId")));
 	  
@@ -144,14 +130,12 @@ public class SamplePO {
 		  System.out.println("Selected Order in PLP is: "+S1+" But Opened Order Number is : "+S2);
 	  }	  
 	  
-		// Back to PO
-	  
+	  // Back to PO
 	  WebElement ele3 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 	  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
 	  System.out.println("Order Number is Validated for "+Str2+" Successfully");
 	  System.out.println("--------------------------------------------------------------");
-	  
   }
   
   @Test (priority = 5)
@@ -162,7 +146,6 @@ public class SamplePO {
 	  String Q1 = WB1.findElement(By.className("skMobff_ItemCount")).getText();
 	  WB1.click();
 	  //Get Number of Items in the Order
-	  //Thread.sleep(3000);		3
 	  WebElement ele1 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.className("skMobff_orderItems")));
 	  WebElement WM1 = dr.findElement(By.className("skMobff_orderItems"));
@@ -178,8 +161,7 @@ public class SamplePO {
 		  System.out.println("Qty in PLP is : "+Q1+". But Qty in PO Items page : "+Q2+" item(s)");
 	  }
 	  
-		// Back to PO
-	 // WebDriverWait wait1 = new WebDriverWait(dr, 30);
+	  // Back to PO
 	  WebElement ele3 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 	  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
@@ -194,8 +176,6 @@ public class SamplePO {
 	  WB1 = highlightElement(orderAttr);
 	  String P1 = WB1.findElement(By.className("skMobff_TotalPrice")).getText();
 	  WB1.click();
-	  
-	  //Thread.sleep(4000);		4
 	  WebElement ele1 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.id("skMobff_orderValue")));
 	  String P2 = dr.findElement(By.id("skMobff_orderValue")).getText();
@@ -208,8 +188,7 @@ public class SamplePO {
 		  System.out.println("Selected Order in PLP is: "+P1+" But Opened Order Price is : "+P2);
 	  }	  
 	  
-		// Back to PO
-	  //WebDriverWait wait1 = new WebDriverWait(dr, 30);
+	  // Back to PO
 	  WebElement ele3 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 	  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
@@ -225,7 +204,6 @@ public class SamplePO {
 	  String D1 = WB1.findElement(By.className("skMobff_OrderDate")).getText();
 	  WB1.click();
 	  
-	  //Thread.sleep(4000);
 	  WebElement ele1 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.id("skMobff_orderDate")));
 	  String D2 = dr.findElement(By.id("skMobff_orderDate")).getText();
@@ -238,8 +216,7 @@ public class SamplePO {
 		  System.out.println("Selected Order in PLP is: "+D1+" But Opened Order's Date is : "+D2);
 	  }	 
 	  	  
-		// Back to PO
-	  //WebDriverWait wait1 = new WebDriverWait(dr, 30);
+	  // Back to PO
 	  WebElement ele3 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 	  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
@@ -251,7 +228,6 @@ public class SamplePO {
   public void OrderList() throws InterruptedException {
 	  
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
-	  //Thread.sleep(3000);		5
 	  WebElement ele1 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.className("skMobff_OrderMainList")));
 	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));
@@ -267,26 +243,22 @@ public class SamplePO {
 	  //Click PO
 	  highlightElement(By.xpath(".//*[@class='skMobff_headerMenuIcon']")).click();
 	  highlightElement(By.name("pendingOrder")).click();
-	  //Thread.sleep(3000);		6
 	  WebElement ele1 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.xpath(".//*[@class='skMobff_headerMenuIcon']")));
 	  //Click My Orders
 	  highlightElement(By.xpath(".//*[@class='skMobff_headerMenuIcon']")).click();
 	  highlightElement(By.name("myOrder")).click();
-	  //Thread.sleep(3000);		7
 	  WebElement ele2 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.xpath(".//*[@class='skMobff_headerMenuIcon']")));
 	  
 	  //Click Completed Orders
 	  highlightElement(By.xpath(".//*[@class='skMobff_headerMenuIcon']")).click();
 	  highlightElement(By.name("completedOrder")).click();
-	  //Thread.sleep(3000);
 	  WebElement ele3 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.xpath(".//*[@class='skMobff_headerMenuIcon']")));
 	  //Click Archive Orders
 	  highlightElement(By.xpath(".//*[@class='skMobff_headerMenuIcon']")).click();
 	  highlightElement(By.name("archiveOrder")).click();
-	  //Thread.sleep(3000);
 	  WebElement ele4 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.xpath(".//*[@class='skMobff_headerMenuIcon']")));
 	  //Click PO
@@ -313,11 +285,9 @@ public class SamplePO {
 	      WebDriverWait wait1 = new WebDriverWait(dr, 30);
 	  	  highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[2]/div[2]")).click();
 	  	  
-	  	
 	  	  //Random NARROW BY Selections
 		  WebElement ele1 = wait1.until(ExpectedConditions.
 				presenceOfElementLocated(By.className("skMob_filterOptions")));
-		  //WebElement WM1 = dr.findElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[1]/div[3]"));
 		  WebElement WM1 = dr.findElement(By.className("skMob_filterOptions"));
 		  List<WebElement> LWM1 = WM1.findElements(By.className("skMobff_filter "));
 		  Random rand1 = new Random(System.currentTimeMillis());
@@ -403,8 +373,7 @@ public class SamplePO {
   }
 
   @AfterTest
-  public void afterTest() throws Exception {
-	  
-	  
+  public void EOPO() throws Exception {
+	System.out.println("EOPO");  	  
   }
 }

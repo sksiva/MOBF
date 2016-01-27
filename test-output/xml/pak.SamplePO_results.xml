@@ -4,21 +4,21 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="76.751">
+           time="77.235">
   <properties />
   
   
-            <testcase name="NARROWBY" time="5.123" classname="pak.SamplePO" />
-                <testcase name="ORDERvalidation" time="4.825" classname="pak.SamplePO" />
-                <testcase name="DATEvalidation" time="4.980" classname="pak.SamplePO" />
+            <testcase name="ORDERvalidation" time="4.838" classname="pak.SamplePO" />
+                <testcase name="UrgentOrder" time="0.169" classname="pak.SamplePO" />
                 <testcase name="Navigation" time="20.963" classname="pak.SamplePO" />
-                <testcase name="SWIPE" time="8.740" classname="pak.SamplePO" />
-                <testcase name="PRICEvalidation" time="4.919" classname="pak.SamplePO" />
-                <testcase name="OrderList" time="0.159" classname="pak.SamplePO" />
-                <testcase name="QTYvalidation" time="4.939" classname="pak.SamplePO" />
-                <testcase name="ViewOrder" time="12.109" classname="pak.SamplePO" />
-                <testcase name="UrgentOrder" time="0.173" classname="pak.SamplePO" />
-                <testcase name="GetOrder" time="6.877" classname="pak.SamplePO" />
-                <testcase name="SORTBY" time="2.944" classname="pak.SamplePO" />
+                <testcase name="PRICEvalidation" time="4.934" classname="pak.SamplePO" />
+                <testcase name="DATEvalidation" time="4.958" classname="pak.SamplePO" />
+                <testcase name="OrderList" time="0.157" classname="pak.SamplePO" />
+                <testcase name="ViewOrder" time="12.091" classname="pak.SamplePO" />
+                <testcase name="SORTBY" time="2.902" classname="pak.SamplePO" />
+                <testcase name="QTYvalidation" time="4.905" classname="pak.SamplePO" />
+                <testcase name="SWIPE" time="8.763" classname="pak.SamplePO" />
+                <testcase name="NARROWBY" time="5.127" classname="pak.SamplePO" />
+                <testcase name="GetOrder" time="7.428" classname="pak.SamplePO" />
       
 </testsuite>

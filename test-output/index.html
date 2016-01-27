@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">12 methods,   12 passed</span>
+                    <span class="method-stats">13 methods,   13 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -158,6 +158,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-MOBF_PAK_TEST_SUITE" title="pak.SamplePO" hash-for-method="ViewOrder">ViewOrder</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MOBF_PAK_TEST_SUITE" title="pak.Del" hash-for-method="f1">f1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-MOBF_PAK_TEST_SUITE -->
@@ -264,6 +269,21 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-MOBF_PAK_TEST_SUITE-class-passed -->
+          <div class="suite-MOBF_PAK_TEST_SUITE-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">pak.Del</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="f1">
+                  </a> <!-- f1 -->
+                  <span class="method-name">f1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MOBF_PAK_TEST_SUITE-class-passed -->
         </div> <!-- panel MOBF_PAK_TEST_SUITE -->
         <div panel-name="test-xml-MOBF_PAK_TEST_SUITE" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -281,6 +301,7 @@
   &lt;test name=&quot;MOBF PAK TEST NAME&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;pak.SamplePO&quot;/&gt;
+      &lt;class name=&quot;pak.Del&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- MOBF PAK TEST NAME --&gt;
 &lt;/suite&gt; &lt;!-- MOBF PAK TEST SUITE --&gt;
@@ -294,7 +315,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">MOBF PAK TEST NAME (1 class)</span>
+                <span class="test-name">MOBF PAK TEST NAME (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -320,7 +341,7 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(12);
+data.addRows(13);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Navigation')
 data.setCell(0, 2, 'pak.SamplePO')
@@ -328,47 +349,51 @@ data.setCell(0, 3, 20963);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'ViewOrder')
 data.setCell(1, 2, 'pak.SamplePO')
-data.setCell(1, 3, 12109);
+data.setCell(1, 3, 12091);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'SWIPE')
 data.setCell(2, 2, 'pak.SamplePO')
-data.setCell(2, 3, 8740);
+data.setCell(2, 3, 8763);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'GetOrder')
 data.setCell(3, 2, 'pak.SamplePO')
-data.setCell(3, 3, 6877);
+data.setCell(3, 3, 7428);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'NARROWBY')
 data.setCell(4, 2, 'pak.SamplePO')
-data.setCell(4, 3, 5123);
+data.setCell(4, 3, 5127);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'DATEvalidation')
 data.setCell(5, 2, 'pak.SamplePO')
-data.setCell(5, 3, 4980);
+data.setCell(5, 3, 4958);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'QTYvalidation')
+data.setCell(6, 1, 'PRICEvalidation')
 data.setCell(6, 2, 'pak.SamplePO')
-data.setCell(6, 3, 4939);
+data.setCell(6, 3, 4934);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'PRICEvalidation')
+data.setCell(7, 1, 'QTYvalidation')
 data.setCell(7, 2, 'pak.SamplePO')
-data.setCell(7, 3, 4919);
+data.setCell(7, 3, 4905);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'ORDERvalidation')
 data.setCell(8, 2, 'pak.SamplePO')
-data.setCell(8, 3, 4825);
+data.setCell(8, 3, 4838);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'SORTBY')
 data.setCell(9, 2, 'pak.SamplePO')
-data.setCell(9, 3, 2944);
+data.setCell(9, 3, 2902);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'UrgentOrder')
 data.setCell(10, 2, 'pak.SamplePO')
-data.setCell(10, 3, 173);
+data.setCell(10, 3, 169);
 data.setCell(11, 0, 11)
 data.setCell(11, 1, 'OrderList')
 data.setCell(11, 2, 'pak.SamplePO')
-data.setCell(11, 3, 159);
+data.setCell(11, 3, 157);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'f1')
+data.setCell(12, 2, 'pak.Del')
+data.setCell(12, 3, 1);
 window.suiteTableData['MOBF_PAK_TEST_SUITE']= { tableData: data, tableDiv: 'times-div-MOBF_PAK_TEST_SUITE'}
 return data;
 }
@@ -401,60 +426,78 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">pak.SamplePO</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">beforeTest</span>
+                <span class="method-name">SOPO</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">GetOrder</span>
-                <span class="method-start">1396 ms</span>
+                <span class="method-start">1909 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ViewOrder</span>
-                <span class="method-start">8275 ms</span>
+                <span class="method-start">9339 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">UrgentOrder</span>
-                <span class="method-start">20385 ms</span>
+                <span class="method-start">21431 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ORDERvalidation</span>
-                <span class="method-start">20558 ms</span>
+                <span class="method-start">21602 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">QTYvalidation</span>
-                <span class="method-start">25384 ms</span>
+                <span class="method-start">26441 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">PRICEvalidation</span>
-                <span class="method-start">30323 ms</span>
+                <span class="method-start">31347 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">DATEvalidation</span>
-                <span class="method-start">35243 ms</span>
+                <span class="method-start">36281 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">OrderList</span>
-                <span class="method-start">40224 ms</span>
+                <span class="method-start">41240 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Navigation</span>
-                <span class="method-start">40384 ms</span>
+                <span class="method-start">41398 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SORTBY</span>
-                <span class="method-start">61348 ms</span>
+                <span class="method-start">62362 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">NARROWBY</span>
-                <span class="method-start">64293 ms</span>
+                <span class="method-start">65265 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SWIPE</span>
-                <span class="method-start">69416 ms</span>
+                <span class="method-start">70393 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">pak.Del</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">f1</span>
+                <span class="method-start">79157 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
-                <span class="method-name">afterTest</span>
-                <span class="method-start">78157 ms</span>
+                <span class="method-name">Del1</span>
+                <span class="method-start">79158 ms</span>
+              </div> <!-- configuration-test after -->
+              <div class="configuration-test after">
+                <span class="method-name">EOPO</span>
+                <span class="method-start">79158 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">pak.SamplePO</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">EOPO</span>
+                <span class="method-start">79158 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

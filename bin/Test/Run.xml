@@ -6,8 +6,8 @@
   </listeners>
   <test name="Sample Test MOBF" >
     <classes>
-      <class name="Test.SamplePO" />
-      <class name="Test.MyOrder" />
+     <!--  <class name="Test.SamplePO" /> -->
+      <class name="Test.Del" />
    </classes>
   </test>
 </suite>

@@ -1,69 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="12" passed="12">
+<testng-results skipped="0" failed="0" total="13" passed="13">
   <reporter-output>
   </reporter-output>
-  <suite name="MOBF PAK TEST SUITE" duration-ms="78160" started-at="2016-01-25T14:17:45Z" finished-at="2016-01-25T14:19:03Z">
+  <suite name="MOBF PAK TEST SUITE" duration-ms="79160" started-at="2016-01-27T06:37:53Z" finished-at="2016-01-27T06:39:12Z">
     <groups>
     </groups>
-    <test name="MOBF PAK TEST NAME" duration-ms="78160" started-at="2016-01-25T14:17:45Z" finished-at="2016-01-25T14:19:03Z">
+    <test name="MOBF PAK TEST NAME" duration-ms="79160" started-at="2016-01-27T06:37:53Z" finished-at="2016-01-27T06:39:12Z">
       <class name="pak.SamplePO">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:pak.SamplePO@7225790e]" name="beforeTest" is-config="true" duration-ms="1391" started-at="2016-01-25T19:47:45Z" finished-at="2016-01-25T19:47:47Z">
+        <test-method status="PASS" signature="SOPO()[pri:0, instance:pak.SamplePO@5a61f5df]" name="SOPO" is-config="true" duration-ms="1903" started-at="2016-01-27T12:07:53Z" finished-at="2016-01-27T12:07:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="GetOrder()[pri:1, instance:pak.SamplePO@7225790e]" name="GetOrder" duration-ms="6877" started-at="2016-01-25T19:47:47Z" finished-at="2016-01-25T19:47:54Z">
+        </test-method> <!-- SOPO -->
+        <test-method status="PASS" signature="GetOrder()[pri:1, instance:pak.SamplePO@5a61f5df]" name="GetOrder" duration-ms="7428" started-at="2016-01-27T12:07:55Z" finished-at="2016-01-27T12:08:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetOrder -->
-        <test-method status="PASS" signature="ViewOrder()[pri:2, instance:pak.SamplePO@7225790e]" name="ViewOrder" duration-ms="12109" started-at="2016-01-25T19:47:54Z" finished-at="2016-01-25T19:48:06Z">
+        <test-method status="PASS" signature="ViewOrder()[pri:2, instance:pak.SamplePO@5a61f5df]" name="ViewOrder" duration-ms="12091" started-at="2016-01-27T12:08:02Z" finished-at="2016-01-27T12:08:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ViewOrder -->
-        <test-method status="PASS" signature="UrgentOrder()[pri:3, instance:pak.SamplePO@7225790e]" name="UrgentOrder" duration-ms="173" started-at="2016-01-25T19:48:06Z" finished-at="2016-01-25T19:48:06Z">
+        <test-method status="PASS" signature="UrgentOrder()[pri:3, instance:pak.SamplePO@5a61f5df]" name="UrgentOrder" duration-ms="169" started-at="2016-01-27T12:08:14Z" finished-at="2016-01-27T12:08:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- UrgentOrder -->
-        <test-method status="PASS" signature="ORDERvalidation()[pri:4, instance:pak.SamplePO@7225790e]" name="ORDERvalidation" duration-ms="4825" started-at="2016-01-25T19:48:06Z" finished-at="2016-01-25T19:48:11Z">
+        <test-method status="PASS" signature="ORDERvalidation()[pri:4, instance:pak.SamplePO@5a61f5df]" name="ORDERvalidation" duration-ms="4838" started-at="2016-01-27T12:08:14Z" finished-at="2016-01-27T12:08:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ORDERvalidation -->
-        <test-method status="PASS" signature="QTYvalidation()[pri:5, instance:pak.SamplePO@7225790e]" name="QTYvalidation" duration-ms="4939" started-at="2016-01-25T19:48:11Z" finished-at="2016-01-25T19:48:16Z">
+        <test-method status="PASS" signature="QTYvalidation()[pri:5, instance:pak.SamplePO@5a61f5df]" name="QTYvalidation" duration-ms="4905" started-at="2016-01-27T12:08:19Z" finished-at="2016-01-27T12:08:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- QTYvalidation -->
-        <test-method status="PASS" signature="PRICEvalidation()[pri:6, instance:pak.SamplePO@7225790e]" name="PRICEvalidation" duration-ms="4919" started-at="2016-01-25T19:48:16Z" finished-at="2016-01-25T19:48:20Z">
+        <test-method status="PASS" signature="PRICEvalidation()[pri:6, instance:pak.SamplePO@5a61f5df]" name="PRICEvalidation" duration-ms="4934" started-at="2016-01-27T12:08:24Z" finished-at="2016-01-27T12:08:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PRICEvalidation -->
-        <test-method status="PASS" signature="DATEvalidation()[pri:7, instance:pak.SamplePO@7225790e]" name="DATEvalidation" duration-ms="4980" started-at="2016-01-25T19:48:20Z" finished-at="2016-01-25T19:48:25Z">
+        <test-method status="PASS" signature="DATEvalidation()[pri:7, instance:pak.SamplePO@5a61f5df]" name="DATEvalidation" duration-ms="4958" started-at="2016-01-27T12:08:29Z" finished-at="2016-01-27T12:08:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DATEvalidation -->
-        <test-method status="PASS" signature="OrderList()[pri:8, instance:pak.SamplePO@7225790e]" name="OrderList" duration-ms="159" started-at="2016-01-25T19:48:25Z" finished-at="2016-01-25T19:48:26Z">
+        <test-method status="PASS" signature="OrderList()[pri:8, instance:pak.SamplePO@5a61f5df]" name="OrderList" duration-ms="157" started-at="2016-01-27T12:08:34Z" finished-at="2016-01-27T12:08:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OrderList -->
-        <test-method status="PASS" signature="Navigation()[pri:9, instance:pak.SamplePO@7225790e]" name="Navigation" duration-ms="20963" started-at="2016-01-25T19:48:26Z" finished-at="2016-01-25T19:48:47Z">
+        <test-method status="PASS" signature="Navigation()[pri:9, instance:pak.SamplePO@5a61f5df]" name="Navigation" duration-ms="20963" started-at="2016-01-27T12:08:34Z" finished-at="2016-01-27T12:08:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Navigation -->
-        <test-method status="PASS" signature="SORTBY()[pri:10, instance:pak.SamplePO@7225790e]" name="SORTBY" duration-ms="2944" started-at="2016-01-25T19:48:47Z" finished-at="2016-01-25T19:48:50Z">
+        <test-method status="PASS" signature="SORTBY()[pri:10, instance:pak.SamplePO@5a61f5df]" name="SORTBY" duration-ms="2902" started-at="2016-01-27T12:08:55Z" finished-at="2016-01-27T12:08:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SORTBY -->
-        <test-method status="PASS" signature="NARROWBY()[pri:11, instance:pak.SamplePO@7225790e]" name="NARROWBY" duration-ms="5123" started-at="2016-01-25T19:48:50Z" finished-at="2016-01-25T19:48:55Z">
+        <test-method status="PASS" signature="NARROWBY()[pri:11, instance:pak.SamplePO@5a61f5df]" name="NARROWBY" duration-ms="5127" started-at="2016-01-27T12:08:58Z" finished-at="2016-01-27T12:09:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NARROWBY -->
-        <test-method status="PASS" signature="SWIPE()[pri:13, instance:pak.SamplePO@7225790e]" name="SWIPE" duration-ms="8740" started-at="2016-01-25T19:48:55Z" finished-at="2016-01-25T19:49:03Z">
+        <test-method status="PASS" signature="SWIPE()[pri:13, instance:pak.SamplePO@5a61f5df]" name="SWIPE" duration-ms="8763" started-at="2016-01-27T12:09:03Z" finished-at="2016-01-27T12:09:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SWIPE -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:pak.SamplePO@7225790e]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-01-25T19:49:03Z" finished-at="2016-01-25T19:49:03Z">
+      </class> <!-- pak.SamplePO -->
+      <class name="pak.Del">
+        <test-method status="PASS" signature="f1()[pri:0, instance:pak.Del@3551a94]" name="f1" duration-ms="1" started-at="2016-01-27T12:09:12Z" finished-at="2016-01-27T12:09:12Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- pak.SamplePO -->
+        </test-method> <!-- f1 -->
+        <test-method status="PASS" signature="EOPO()[pri:0, instance:pak.Del@3551a94]" name="EOPO" is-config="true" duration-ms="0" started-at="2016-01-27T12:09:12Z" finished-at="2016-01-27T12:09:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EOPO -->
+        <test-method status="PASS" signature="EOPO()[pri:0, instance:pak.SamplePO@5a61f5df]" name="EOPO" is-config="true" duration-ms="0" started-at="2016-01-27T12:09:12Z" finished-at="2016-01-27T12:09:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EOPO -->
+        <test-method status="PASS" signature="Del1()[pri:0, instance:pak.Del@3551a94]" name="Del1" is-config="true" duration-ms="0" started-at="2016-01-27T12:09:12Z" finished-at="2016-01-27T12:09:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Del1 -->
+      </class> <!-- pak.Del -->
     </test> <!-- MOBF PAK TEST NAME -->
   </suite> <!-- MOBF PAK TEST SUITE -->
 </testng-results>
