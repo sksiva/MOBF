@@ -23,34 +23,6 @@ import org.testng.annotations.Test;
 
 public class MOBFPendingOrder extends Attr{
 	
-	@BeforeClass
-	public static void SOPO() {
-	      
-	      	Map<String, String> mobileEmulation = new HashMap<String, String>();
-			mobileEmulation.put("deviceName", "Apple iPhone 6 Plus");
-			Map<String, Object> chromeOptions = new HashMap<String, Object>();
-			chromeOptions.put("mobileEmulation", mobileEmulation);
-			DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-			capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-			System.setProperty("webdriver.chrome.driver", "D:/SK Backups/Selenium/chromedriver.exe");
-			dr = new ChromeDriver(capabilities);
-			
-	}
-	
-	public static WebElement highlightElement(By by) throws Exception
-	{
-		element = dr.findElement(by);
-		// Draw a border around the found element
-		if (dr instanceof JavascriptExecutor)
-		{
-			JavascriptExecutor js = (JavascriptExecutor) dr;
-			js.executeScript("arguments[0].style.border='2px solid red'", element);
-			Thread.sleep(2000);
-			js.executeScript("arguments[0].style.border=''", element);
-		}
-		return element;
-	}
-	  
   @Test (priority = 1)
   public void GetOrder() throws InterruptedException {
 	  
