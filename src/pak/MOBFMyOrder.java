@@ -240,6 +240,6 @@ public class MOBFMyOrder extends Attributes{
 	  
 	  @AfterClass
 		  public void EOMO() throws Exception {
-		  System.out.println("After Delete");
+		  System.out.println("************************* End of My Orders *************************");
 		}
 }

@@ -2,23 +2,17 @@ package pak;
 
 import java.awt.Robot;
 import java.awt.event.InputEvent;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class MOBFPendingOrder extends Attributes{
@@ -26,6 +20,7 @@ public class MOBFPendingOrder extends Attributes{
   @Test (priority = 1)
   public void GetOrder() throws InterruptedException {
 	  
+	  System.out.println("************************* Pending Orders *************************");
 	  dr.get("https://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
 	  WebElement ele1 = wait1.until(ExpectedConditions.
@@ -287,7 +282,7 @@ public class MOBFPendingOrder extends Attributes{
 		  Random rand2 = new Random(System.currentTimeMillis());
 		  WebElement WX1 = LX1.get(rand1.nextInt(LX1.size()));
 		  String M2 = WX1.findElement(By.className("skMobff_Value")).getText();
-		  System.out.println("M2 Valueeeeeeeeeeeeee: "+M2);
+		  System.out.println("Narrow By Category Name : "+M2);
 		  
 		  if(M1!="Clear All"){
 			  if(M1.contains(M2)){
@@ -346,6 +341,6 @@ public class MOBFPendingOrder extends Attributes{
 
   @AfterClass
   public void EOPO() throws Exception {
-	System.out.println("End Of Pending Order");  	  
+	  System.out.println("************************* End of Pending Orders *************************");  	  
   }
 }
