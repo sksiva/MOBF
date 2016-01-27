@@ -6,8 +6,8 @@
   </listeners>
   <test name="MOBF PAK TEST NAME" >
     <classes>
-      <class name="pak.MOBFPendingOrder" />
-      <class name="pak.MOBFMyOrder" />
+      <class name="Test.MOBFPendingOrder" />
+      <class name="Test.MOBFMyOrder" />
    </classes>
   </test>
 </suite>

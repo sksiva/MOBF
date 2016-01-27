@@ -343,7 +343,7 @@ public class MOBFPendingOrder extends Attributes{
       dr.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
       r.mouseMove(FX1, FY);
       r.mousePress(InputEvent.BUTTON1_MASK); 
-      r.mouseMove(FX2, FY); 
+      r.mouseMove(FX2, FY);
       r.mouseRelease(InputEvent.BUTTON1_MASK);
       
       //Click My Orders
