@@ -2,97 +2,39 @@
 <testng-results skipped="0" failed="1" total="19" passed="18">
   <reporter-output>
   </reporter-output>
-  <suite name="DEMO SUITE" duration-ms="219417" started-at="2016-01-28T10:43:24Z" finished-at="2016-01-28T10:47:04Z">
+  <suite name="MOBF PAK TEST SUITE" duration-ms="200722" started-at="2016-01-28T10:49:31Z" finished-at="2016-01-28T10:52:52Z">
     <groups>
     </groups>
-    <test name="DEMO TEST" duration-ms="219417" started-at="2016-01-28T10:43:24Z" finished-at="2016-01-28T10:47:04Z">
-      <class name="Test.MOBFPendingOrder">
-        <test-method status="PASS" signature="Emulator()[pri:0, instance:Test.MOBFPendingOrder@531be3c5]" name="Emulator" is-config="true" duration-ms="6700" started-at="2016-01-28T16:13:18Z" finished-at="2016-01-28T16:13:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Emulator -->
-        <test-method status="PASS" signature="GetOrder()[pri:1, instance:Test.MOBFPendingOrder@531be3c5]" name="GetOrder" duration-ms="10568" started-at="2016-01-28T16:13:24Z" finished-at="2016-01-28T16:13:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- GetOrder -->
-        <test-method status="PASS" signature="ViewOrder()[pri:2, instance:Test.MOBFPendingOrder@531be3c5]" name="ViewOrder" duration-ms="14116" started-at="2016-01-28T16:13:35Z" finished-at="2016-01-28T16:13:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ViewOrder -->
-        <test-method status="PASS" signature="UrgentOrder()[pri:3, instance:Test.MOBFPendingOrder@531be3c5]" name="UrgentOrder" duration-ms="147" started-at="2016-01-28T16:13:49Z" finished-at="2016-01-28T16:13:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- UrgentOrder -->
-        <test-method status="PASS" signature="ORDERvalidation()[pri:4, instance:Test.MOBFPendingOrder@531be3c5]" name="ORDERvalidation" duration-ms="5637" started-at="2016-01-28T16:13:49Z" finished-at="2016-01-28T16:13:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ORDERvalidation -->
-        <test-method status="PASS" signature="QTYvalidation()[pri:5, instance:Test.MOBFPendingOrder@531be3c5]" name="QTYvalidation" duration-ms="5769" started-at="2016-01-28T16:13:55Z" finished-at="2016-01-28T16:14:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- QTYvalidation -->
-        <test-method status="PASS" signature="PRICEvalidation()[pri:6, instance:Test.MOBFPendingOrder@531be3c5]" name="PRICEvalidation" duration-ms="5835" started-at="2016-01-28T16:14:01Z" finished-at="2016-01-28T16:14:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- PRICEvalidation -->
-        <test-method status="PASS" signature="DATEvalidation()[pri:7, instance:Test.MOBFPendingOrder@531be3c5]" name="DATEvalidation" duration-ms="5771" started-at="2016-01-28T16:14:07Z" finished-at="2016-01-28T16:14:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DATEvalidation -->
-        <test-method status="PASS" signature="Navigation()[pri:8, instance:Test.MOBFPendingOrder@531be3c5]" name="Navigation" duration-ms="24466" started-at="2016-01-28T16:14:12Z" finished-at="2016-01-28T16:14:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Navigation -->
-        <test-method status="PASS" signature="SORTBY()[pri:9, instance:Test.MOBFPendingOrder@531be3c5]" name="SORTBY" duration-ms="3454" started-at="2016-01-28T16:14:37Z" finished-at="2016-01-28T16:14:40Z">
+    <test name="MOBF PAK TEST NAME" duration-ms="200722" started-at="2016-01-28T10:49:31Z" finished-at="2016-01-28T10:52:52Z">
+      <class name="pak.MOBFMyOrder">
+        <test-method status="PASS" signature="SORTBY()[pri:1, instance:pak.MOBFMyOrder@52af6cff]" name="SORTBY" duration-ms="6625" started-at="2016-01-28T16:20:54Z" finished-at="2016-01-28T16:21:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SORTBY -->
-        <test-method status="PASS" signature="NARROWBY()[pri:10, instance:Test.MOBFPendingOrder@531be3c5]" name="NARROWBY" duration-ms="5958" started-at="2016-01-28T16:14:40Z" finished-at="2016-01-28T16:14:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NARROWBY -->
-        <test-method status="PASS" signature="SWIPE()[pri:11, instance:Test.MOBFPendingOrder@531be3c5]" name="SWIPE" duration-ms="5167" started-at="2016-01-28T16:14:46Z" finished-at="2016-01-28T16:14:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SWIPE -->
-        <test-method status="PASS" signature="OrderCountPO()[pri:12, instance:Test.MOBFPendingOrder@531be3c5]" name="OrderCountPO" duration-ms="5032" started-at="2016-01-28T16:14:51Z" finished-at="2016-01-28T16:14:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OrderCountPO -->
-        <test-method status="PASS" signature="EOPO()[pri:0, instance:Test.MOBFPendingOrder@531be3c5]" name="EOPO" is-config="true" duration-ms="0" started-at="2016-01-28T16:14:56Z" finished-at="2016-01-28T16:14:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EOPO -->
-      </class> <!-- Test.MOBFPendingOrder -->
-      <class name="Test.MOBFMyOrder">
-        <test-method status="PASS" signature="Del1()[pri:0, instance:Test.MOBFMyOrder@52af6cff]" name="Del1" is-config="true" duration-ms="0" started-at="2016-01-28T16:14:56Z" finished-at="2016-01-28T16:14:56Z">
+        <test-method status="PASS" signature="Del1()[pri:0, instance:pak.MOBFMyOrder@52af6cff]" name="Del1" is-config="true" duration-ms="0" started-at="2016-01-28T16:20:54Z" finished-at="2016-01-28T16:20:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Del1 -->
-        <test-method status="PASS" signature="SORTBY()[pri:1, instance:Test.MOBFMyOrder@52af6cff]" name="SORTBY" duration-ms="7365" started-at="2016-01-28T16:14:56Z" finished-at="2016-01-28T16:15:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SORTBY -->
-        <test-method status="FAIL" signature="NARROWBY()[pri:2, instance:Test.MOBFMyOrder@52af6cff]" name="NARROWBY" duration-ms="93339" started-at="2016-01-28T16:15:04Z" finished-at="2016-01-28T16:16:37Z">
+        <test-method status="FAIL" signature="NARROWBY()[pri:2, instance:pak.MOBFMyOrder@52af6cff]" name="NARROWBY" duration-ms="85278" started-at="2016-01-28T16:21:01Z" finished-at="2016-01-28T16:22:26Z">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Timed out after 30 seconds waiting for presence of element located by: By.xpath: .//*[@class='skMobff_backBtnIcon']
 Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:59:12'
 System info: host: 'SK-SYS-043', ip: '192.168.2.187', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_05'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=true, chrome={userDataDir=C:\Users\SIVAKU~1.N\AppData\Local\Temp\scoped_dir204_7086}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=true, version=47.0.2526.111, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: a0ce33e9237285b96699a83d6f7a729c]]>
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=true, chrome={userDataDir=C:\Users\SIVAKU~1.N\AppData\Local\Temp\scoped_dir5424_13967}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=true, version=47.0.2526.111, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: bf5b10ed91abe0c5e7fa164176df8981]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 30 seconds waiting for presence of element located by: By.xpath: .//*[@class='skMobff_backBtnIcon']
 Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:59:12'
 System info: host: 'SK-SYS-043', ip: '192.168.2.187', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_05'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=true, chrome={userDataDir=C:\Users\SIVAKU~1.N\AppData\Local\Temp\scoped_dir204_7086}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=true, version=47.0.2526.111, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: a0ce33e9237285b96699a83d6f7a729c
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=true, chrome={userDataDir=C:\Users\SIVAKU~1.N\AppData\Local\Temp\scoped_dir5424_13967}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=true, version=47.0.2526.111, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: bf5b10ed91abe0c5e7fa164176df8981
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
-	at Test.MOBFMyOrder.NARROWBY(MOBFMyOrder.java:80)
+	at pak.MOBFMyOrder.NARROWBY(MOBFMyOrder.java:80)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -120,13 +62,13 @@ Session ID: a0ce33e9237285b96699a83d6f7a729c
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//*[@class='skMobff_backBtnIcon']"}
   (Session info: chrome=47.0.2526.111)
   (Driver info: chromedriver=2.20.353145 (343b531d31eeb933ec778dbcf7081628a1396067),platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 44.52 seconds
+Command duration or timeout: 40.92 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:59:12'
 System info: host: 'SK-SYS-043', ip: '192.168.2.187', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_05'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=true, chrome={userDataDir=C:\Users\SIVAKU~1.N\AppData\Local\Temp\scoped_dir204_7086}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=true, version=47.0.2526.111, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: a0ce33e9237285b96699a83d6f7a729c
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=true, chrome={userDataDir=C:\Users\SIVAKU~1.N\AppData\Local\Temp\scoped_dir5424_13967}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=true, version=47.0.2526.111, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: bf5b10ed91abe0c5e7fa164176df8981
 *** Element info: {Using=xpath, value=.//*[@class='skMobff_backBtnIcon']}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
@@ -151,31 +93,89 @@ Session ID: a0ce33e9237285b96699a83d6f7a729c
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NARROWBY -->
-        <test-method status="PASS" signature="VIEWALL()[pri:4, instance:Test.MOBFMyOrder@52af6cff]" name="VIEWALL" duration-ms="7734" started-at="2016-01-28T16:16:37Z" finished-at="2016-01-28T16:16:45Z">
+        <test-method status="PASS" signature="VIEWALL()[pri:4, instance:pak.MOBFMyOrder@52af6cff]" name="VIEWALL" duration-ms="7500" started-at="2016-01-28T16:22:26Z" finished-at="2016-01-28T16:22:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VIEWALL -->
-        <test-method status="PASS" signature="ORDERvalidation()[pri:5, instance:Test.MOBFMyOrder@52af6cff]" name="ORDERvalidation" duration-ms="4856" started-at="2016-01-28T16:16:45Z" finished-at="2016-01-28T16:16:50Z">
+        <test-method status="PASS" signature="ORDERvalidation()[pri:5, instance:pak.MOBFMyOrder@52af6cff]" name="ORDERvalidation" duration-ms="4618" started-at="2016-01-28T16:22:34Z" finished-at="2016-01-28T16:22:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ORDERvalidation -->
-        <test-method status="PASS" signature="QTYvalidation()[pri:6, instance:Test.MOBFMyOrder@52af6cff]" name="QTYvalidation" duration-ms="4749" started-at="2016-01-28T16:16:50Z" finished-at="2016-01-28T16:16:54Z">
+        <test-method status="PASS" signature="QTYvalidation()[pri:6, instance:pak.MOBFMyOrder@52af6cff]" name="QTYvalidation" duration-ms="4599" started-at="2016-01-28T16:22:38Z" finished-at="2016-01-28T16:22:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- QTYvalidation -->
-        <test-method status="PASS" signature="PRICEvalidation()[pri:7, instance:Test.MOBFMyOrder@52af6cff]" name="PRICEvalidation" duration-ms="4661" started-at="2016-01-28T16:16:54Z" finished-at="2016-01-28T16:16:59Z">
+        <test-method status="PASS" signature="PRICEvalidation()[pri:7, instance:pak.MOBFMyOrder@52af6cff]" name="PRICEvalidation" duration-ms="4513" started-at="2016-01-28T16:22:43Z" finished-at="2016-01-28T16:22:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PRICEvalidation -->
-        <test-method status="PASS" signature="DATEvalidation()[pri:8, instance:Test.MOBFMyOrder@52af6cff]" name="DATEvalidation" duration-ms="4740" started-at="2016-01-28T16:16:59Z" finished-at="2016-01-28T16:17:04Z">
+        <test-method status="PASS" signature="DATEvalidation()[pri:8, instance:pak.MOBFMyOrder@52af6cff]" name="DATEvalidation" duration-ms="4536" started-at="2016-01-28T16:22:47Z" finished-at="2016-01-28T16:22:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DATEvalidation -->
-        <test-method status="PASS" signature="EOMO()[pri:0, instance:Test.MOBFMyOrder@52af6cff]" name="EOMO" is-config="true" duration-ms="0" started-at="2016-01-28T16:17:04Z" finished-at="2016-01-28T16:17:04Z">
+        <test-method status="PASS" signature="EOMO()[pri:0, instance:pak.MOBFMyOrder@52af6cff]" name="EOMO" is-config="true" duration-ms="0" started-at="2016-01-28T16:22:52Z" finished-at="2016-01-28T16:22:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EOMO -->
-      </class> <!-- Test.MOBFMyOrder -->
-    </test> <!-- DEMO TEST -->
-  </suite> <!-- DEMO SUITE -->
+      </class> <!-- pak.MOBFMyOrder -->
+      <class name="pak.MOBFPendingOrder">
+        <test-method status="PASS" signature="Emulator()[pri:0, instance:pak.MOBFPendingOrder@531be3c5]" name="Emulator" is-config="true" duration-ms="2597" started-at="2016-01-28T16:19:29Z" finished-at="2016-01-28T16:19:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Emulator -->
+        <test-method status="PASS" signature="GetOrder()[pri:1, instance:pak.MOBFPendingOrder@531be3c5]" name="GetOrder" duration-ms="8533" started-at="2016-01-28T16:19:31Z" finished-at="2016-01-28T16:19:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetOrder -->
+        <test-method status="PASS" signature="ViewOrder()[pri:2, instance:pak.MOBFPendingOrder@531be3c5]" name="ViewOrder" duration-ms="12923" started-at="2016-01-28T16:19:40Z" finished-at="2016-01-28T16:19:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ViewOrder -->
+        <test-method status="PASS" signature="UrgentOrder()[pri:3, instance:pak.MOBFPendingOrder@531be3c5]" name="UrgentOrder" duration-ms="132" started-at="2016-01-28T16:19:53Z" finished-at="2016-01-28T16:19:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UrgentOrder -->
+        <test-method status="PASS" signature="ORDERvalidation()[pri:4, instance:pak.MOBFPendingOrder@531be3c5]" name="ORDERvalidation" duration-ms="5135" started-at="2016-01-28T16:19:53Z" finished-at="2016-01-28T16:19:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ORDERvalidation -->
+        <test-method status="PASS" signature="QTYvalidation()[pri:5, instance:pak.MOBFPendingOrder@531be3c5]" name="QTYvalidation" duration-ms="5238" started-at="2016-01-28T16:19:58Z" finished-at="2016-01-28T16:20:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- QTYvalidation -->
+        <test-method status="PASS" signature="PRICEvalidation()[pri:6, instance:pak.MOBFPendingOrder@531be3c5]" name="PRICEvalidation" duration-ms="5271" started-at="2016-01-28T16:20:03Z" finished-at="2016-01-28T16:20:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PRICEvalidation -->
+        <test-method status="PASS" signature="DATEvalidation()[pri:7, instance:pak.MOBFPendingOrder@531be3c5]" name="DATEvalidation" duration-ms="5335" started-at="2016-01-28T16:20:08Z" finished-at="2016-01-28T16:20:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DATEvalidation -->
+        <test-method status="PASS" signature="Navigation()[pri:8, instance:pak.MOBFPendingOrder@531be3c5]" name="Navigation" duration-ms="22394" started-at="2016-01-28T16:20:14Z" finished-at="2016-01-28T16:20:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Navigation -->
+        <test-method status="PASS" signature="SORTBY()[pri:9, instance:pak.MOBFPendingOrder@531be3c5]" name="SORTBY" duration-ms="3111" started-at="2016-01-28T16:20:36Z" finished-at="2016-01-28T16:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SORTBY -->
+        <test-method status="PASS" signature="NARROWBY()[pri:10, instance:pak.MOBFPendingOrder@531be3c5]" name="NARROWBY" duration-ms="5478" started-at="2016-01-28T16:20:39Z" finished-at="2016-01-28T16:20:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NARROWBY -->
+        <test-method status="PASS" signature="SWIPE()[pri:11, instance:pak.MOBFPendingOrder@531be3c5]" name="SWIPE" duration-ms="4855" started-at="2016-01-28T16:20:45Z" finished-at="2016-01-28T16:20:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SWIPE -->
+        <test-method status="PASS" signature="OrderCountPO()[pri:12, instance:pak.MOBFPendingOrder@531be3c5]" name="OrderCountPO" duration-ms="4608" started-at="2016-01-28T16:20:50Z" finished-at="2016-01-28T16:20:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OrderCountPO -->
+        <test-method status="PASS" signature="EOPO()[pri:0, instance:pak.MOBFPendingOrder@531be3c5]" name="EOPO" is-config="true" duration-ms="0" started-at="2016-01-28T16:20:54Z" finished-at="2016-01-28T16:20:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EOPO -->
+      </class> <!-- pak.MOBFPendingOrder -->
+    </test> <!-- MOBF PAK TEST NAME -->
+  </suite> <!-- MOBF PAK TEST SUITE -->
 </testng-results>

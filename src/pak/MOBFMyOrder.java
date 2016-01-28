@@ -53,7 +53,6 @@ public class MOBFMyOrder extends Attributes{
 				  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_orderItems")));
 				  WebElement X1 = dr.findElement(By.className("skMobff_orderItems"));
 				  List<WebElement> LX1 = X1.findElements(By.className("skMobff_productDetails "));
-				  //Random rand2 = new Random(System.currentTimeMillis());
 				  WebElement WX1 = LX1.get(rand1.nextInt(LX1.size()));
 				  String M2 = WX1.findElement(By.className("skMobff_Value")).getText();
 				  System.out.println("Narrow By Value in My Order page : "+M2);
@@ -76,7 +75,7 @@ public class MOBFMyOrder extends Attributes{
 		  }
 		  
 		  // Back to PO
-		  //WebDriverWait wait2 = new WebDriverWait(dr, 30);
+		  Thread.sleep(4000);
 		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();		  
 	  }
