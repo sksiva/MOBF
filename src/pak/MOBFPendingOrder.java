@@ -225,7 +225,59 @@ public class MOBFPendingOrder extends Attributes{
 	      WebDriverWait wait1 = new WebDriverWait(dr, 30);
 	  	  highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[2]/div[2]")).click();
 	  	  
-	  	  //Random NARROW BY Selections
+	  	//Random NARROW BY Selections
+		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMob_filterOptions")));
+		  WebElement WM1 = dr.findElement(By.className("skMob_filterOptions"));
+		  List<WebElement> LWM1 = WM1.findElements(By.className("skMobff_filter "));
+		  Random rand1 = new Random(System.currentTimeMillis());
+		  WebElement W1 = LWM1.get(rand1.nextInt(LWM1.size()));
+		  String Menu1 = W1.getText();
+		  System.out.println("Menu1 : "+Menu1);
+		  W1.click();
+		  		  
+		  //Random Order Selection After Filter
+		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_OrderMainList")));
+		  WebElement WO1 = dr.findElement(By.className("skMobff_OrderMainList"));
+		  List<WebElement> WP1 = WO1.findElements(By.className("skMobff_orders"));
+		  Random rand = new Random(System.currentTimeMillis());
+		  WebElement WK1 = WP1.get(rand.nextInt(WP1.size()));
+		  System.out.println("***** Rand Val ***** ");
+		  System.out.println(WK1.getText());
+		  WK1.click();
+		  
+		  // Items Count Validation
+		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_pendingOrderItems")));
+		  WebElement Q1 = dr.findElement(By.className("skMobff_pendingOrderItems"));
+		  List<WebElement> LQ1 = Q1.findElements(By.className("skMobff_productDetails"));
+		  int LQ = LQ1.size();
+		  System.out.println("Size : "+LQ);
+		  int flag=0;
+		  if(Menu1!="Clear All")
+		  {
+				  for(int i=0;i<LQ;i++)
+				  {
+					  String Z1 = "//*[@id='id_skMobff_productDetails_";
+					  String Z2 = "']/div[1]/div/div[2]";
+					  String NM = dr.findElement(By.xpath(Z1+i+Z2)).getText();
+					  System.out.println(i+" : "+NM);
+					  
+					  if(Menu1.equals(NM))
+					  {
+						  flag=1;
+						  System.out.println("Correct Order is displayed for the selected Category : "+Menu1);
+						  break;
+					  }
+				  }
+				  if(flag==0)
+				  {
+					  System.out.println("In-correct Order is displayed for the selected Category "+Menu1);
+				  }
+		  }
+		  else
+		  {
+			  System.out.println("All Items will be displayed while selecting "+Menu1);
+		  }
+	  	  /*//Random NARROW BY Selections
 		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMob_filterOptions")));
 		  WebElement WM1 = dr.findElement(By.className("skMob_filterOptions"));
 		  List<WebElement> LWM1 = WM1.findElements(By.className("skMobff_filter "));
@@ -243,9 +295,11 @@ public class MOBFPendingOrder extends Attributes{
 		  WebElement WK1 = WP1.get(rand.nextInt(WP1.size()));
 		  System.out.println("***** Rand Val ***** ");
 		  System.out.println(WK1.getText());
-		  WK1.click();
+		  WK1.click();*/
 		  
-		  //Ranomly Check an Item's Category
+		  
+		  
+		  /*//Ranomly Check an Item's Category
 		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_orderItems")));
 		  WebElement X1 = dr.findElement(By.className("skMobff_orderItems"));
 		  List<WebElement> LX1 = X1.findElements(By.className("skMobff_productDetails "));
@@ -264,12 +318,11 @@ public class MOBFPendingOrder extends Attributes{
 		  }
 		  else{
 			  System.out.println("OOPS ! ! ! System Randomly Selected Clear All option from NARROW BY");			  
-		  }
+		  }*/
 		  
 		  // Back to PO
 		  //WebDriverWait wait2 = new WebDriverWait(dr, 30);
-		  wait1.until(ExpectedConditions.
-					presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
+		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
   }
   

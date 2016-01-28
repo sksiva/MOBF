@@ -11,21 +11,4 @@
       <class name="Test.MOBFMyOrder"/>
     </classes>
   </test> <!-- DEMO TEST -->
-  <test name="DEMO TEST(failed)">
-    <classes>
-      <class name="Test.MOBFPendingOrder">
-        <methods>
-          <include name="Emulator"/>
-          <include name="EOPO"/>
-        </methods>
-      </class> <!-- Test.MOBFPendingOrder -->
-      <class name="Test.MOBFMyOrder">
-        <methods>
-          <include name="EOMO"/>
-          <include name="NARROWBY"/>
-          <include name="Del1"/>
-        </methods>
-      </class> <!-- Test.MOBFMyOrder -->
-    </classes>
-  </test> <!-- DEMO TEST(failed) -->
 </suite> <!-- Failed suite [DEMO SUITE] -->
