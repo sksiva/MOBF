@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [MOBF PAK TEST SUITE]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [DEMO SUITE]">
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
-  <test name="MOBF PAK TEST NAME">
+  <test name="DEMO TEST">
     <classes>
-      <class name="pak.MOBFPendingOrder"/>
-      <class name="pak.MOBFMyOrder"/>
+      <class name="Test.MOBFPendingOrder"/>
+      <class name="Test.MOBFMyOrder"/>
     </classes>
-  </test> <!-- MOBF PAK TEST NAME -->
-  <test name="MOBF PAK TEST NAME(failed)">
+  </test> <!-- DEMO TEST -->
+  <test name="DEMO TEST(failed)">
     <classes>
-      <class name="pak.MOBFPendingOrder">
+      <class name="Test.MOBFPendingOrder">
         <methods>
           <include name="Emulator"/>
           <include name="EOPO"/>
         </methods>
-      </class> <!-- pak.MOBFPendingOrder -->
-      <class name="pak.MOBFMyOrder">
+      </class> <!-- Test.MOBFPendingOrder -->
+      <class name="Test.MOBFMyOrder">
         <methods>
-          <include name="Del1"/>
-          <include name="NARROWBY"/>
           <include name="EOMO"/>
+          <include name="NARROWBY"/>
+          <include name="Del1"/>
         </methods>
-      </class> <!-- pak.MOBFMyOrder -->
+      </class> <!-- Test.MOBFMyOrder -->
     </classes>
-  </test> <!-- MOBF PAK TEST NAME(failed) -->
-</suite> <!-- Failed suite [MOBF PAK TEST SUITE] -->
+  </test> <!-- DEMO TEST(failed) -->
+</suite> <!-- Failed suite [DEMO SUITE] -->

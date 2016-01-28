@@ -27,8 +27,7 @@ public class MOBFMyOrder extends Attributes{
 	  	  highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[2]/div[3]/div[1]")).click();
 	  	  
 	  	  //Random NARROW BY Selections
-		  WebElement ele1 = wait1.until(ExpectedConditions.
-				presenceOfElementLocated(By.className("skMob_filterOptions")));
+		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMob_filterOptions")));
 		  WebElement WM1 = dr.findElement(By.className("skMob_filterOptions"));
 		  List<WebElement> LWM1 = WM1.findElements(By.className("skMobff_filter"));
 		  Random rand1 = new Random(System.currentTimeMillis());
@@ -38,7 +37,7 @@ public class MOBFMyOrder extends Attributes{
 		  W1.click();
 		  		  
 		  //Random Order Selection After Filter
-		  WebElement ele2 = wait1.until(ExpectedConditions.
+		  wait1.until(ExpectedConditions.
 					presenceOfElementLocated(By.className("skMobff_OrderMainList")));
 		  WebElement WO1 = dr.findElement(By.className("skMobff_OrderMainList"));
 		  List<WebElement> WP1 = WO1.findElements(By.className("skMobff_orders"));
@@ -51,11 +50,10 @@ public class MOBFMyOrder extends Attributes{
 				  WK1.click();
 				  
 				  //Ranomly Check an Item's Category
-				  WebElement ele3 = wait1.until(ExpectedConditions.
-							presenceOfElementLocated(By.className("skMobff_orderItems")));
+				  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_orderItems")));
 				  WebElement X1 = dr.findElement(By.className("skMobff_orderItems"));
 				  List<WebElement> LX1 = X1.findElements(By.className("skMobff_productDetails "));
-				  Random rand2 = new Random(System.currentTimeMillis());
+				  //Random rand2 = new Random(System.currentTimeMillis());
 				  WebElement WX1 = LX1.get(rand1.nextInt(LX1.size()));
 				  String M2 = WX1.findElement(By.className("skMobff_Value")).getText();
 				  System.out.println("Narrow By Value in My Order page : "+M2);
@@ -78,9 +76,8 @@ public class MOBFMyOrder extends Attributes{
 		  }
 		  
 		  // Back to PO
-		  WebDriverWait wait2 = new WebDriverWait(dr, 30);
-		  WebElement ele4 = wait1.until(ExpectedConditions.
-					presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
+		  //WebDriverWait wait2 = new WebDriverWait(dr, 30);
+		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();		  
 	  }
 	  
@@ -88,8 +85,7 @@ public class MOBFMyOrder extends Attributes{
 	  public void SORTBY() throws Exception {
 		  Thread.sleep(4000);
 		  WebDriverWait wait1 = new WebDriverWait(dr, 40);
-		  	WebElement ele1 = wait1.until(ExpectedConditions.
-					presenceOfElementLocated(By.className("skMobff_sortLabel")));
+		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_sortLabel")));
 		  	highlightElement(By.className("skMobff_sortLabel")).click();
 		  	WebElement sort = dr.findElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[2]/div[2]/select"));
 		  
@@ -104,17 +100,14 @@ public class MOBFMyOrder extends Attributes{
 		  	dr.findElement(orderAttr).click();
 		  	WebDriverWait wait1 = new WebDriverWait(dr, 50);
 			//Go to Item Details page
-			  WebElement ele1 = wait1.until(ExpectedConditions.
-						presenceOfElementLocated(By.id("id_skMobff_productDetails_0")));
+			wait1.until(ExpectedConditions.presenceOfElementLocated(By.id("id_skMobff_productDetails_0")));
 			  highlightElement(By.id("id_skMobff_productDetails_0")).click();
 			// Back to PO Items
 			  Thread.sleep(5000);		
-			  WebElement ele2 = wait1.until(ExpectedConditions.
-						presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
+			 wait1.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 			  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
 			// Back to PO
-			  WebElement ele3 = wait1.until(ExpectedConditions.
-						presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
+			wait1.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 			  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
 			  System.out.println("Order "+Str2+" Viewed Successfully");
 			  System.out.println("--------------------------------------------------------------");
@@ -151,8 +144,7 @@ public class MOBFMyOrder extends Attributes{
 		  WB1 = highlightElement(orderAttr);
 		  String S1 = WB1.findElement(By.className("skMobff_OrderId")).getText();
 		  WB1.click();
-		  WebElement ele1 = wait1.until(ExpectedConditions.
-					presenceOfElementLocated(By.id("skMobff_orderId")));
+		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.id("skMobff_orderId")));
 		  
 		  String S2 = dr.findElement(By.id("skMobff_orderId")).getText();
 		  if(S2.contains(S1))
@@ -165,8 +157,7 @@ public class MOBFMyOrder extends Attributes{
 		  }	  
 		  
 		  // Back to PO
-		  WebElement ele3 = wait1.until(ExpectedConditions.
-					presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
+		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
 		  System.out.println("Order Number is Validated for "+Str2+" Successfully");
 		  System.out.println("--------------------------------------------------------------");
@@ -180,10 +171,9 @@ public class MOBFMyOrder extends Attributes{
 		  String Q1 = WB1.findElement(By.className("skMobff_ItemCount")).getText();
 		  WB1.click();
 		  //Get Number of Items in the Order
-		  WebElement ele1 = wait1.until(ExpectedConditions.
-					presenceOfElementLocated(By.className("skMobff_orderItems")));
+		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_orderItems")));
 		  WebElement WM1 = dr.findElement(By.className("skMobff_orderItems"));
-		  List<WebElement> LL1 = dr.findElements(By.className("skMobff_productDetails"));
+		  List<WebElement> LL1 = WM1.findElements(By.className("skMobff_productDetails"));
 		  int i = LL1.size();
 		  String Q2 = String.valueOf(i);
 		  if(Q1.contains(Q2))
@@ -196,8 +186,7 @@ public class MOBFMyOrder extends Attributes{
 		  }
 		  
 		  // Back to PO
-		  WebElement ele3 = wait1.until(ExpectedConditions.
-					presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
+		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
 		  System.out.println("Order Qty is Validated for "+Str2+" Successfully");
 		  System.out.println("--------------------------------------------------------------");
@@ -210,8 +199,7 @@ public class MOBFMyOrder extends Attributes{
 		  WB1 = highlightElement(orderAttr);
 		  String P1 = WB1.findElement(By.className("skMobff_TotalPrice")).getText();
 		  WB1.click();
-		  WebElement ele1 = wait1.until(ExpectedConditions.
-					presenceOfElementLocated(By.id("skMobff_orderValue")));
+		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.id("skMobff_orderValue")));
 		  String P2 = dr.findElement(By.id("skMobff_orderValue")).getText();
 		  if(P2.contains(P1))
 		  {
@@ -223,8 +211,7 @@ public class MOBFMyOrder extends Attributes{
 		  }	  
 		  
 		  // Back to PO
-		  WebElement ele3 = wait1.until(ExpectedConditions.
-					presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
+		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
 		  System.out.println("Order Price is Validated for "+Str2+" Successfully");
 		  System.out.println("--------------------------------------------------------------");
@@ -238,8 +225,7 @@ public class MOBFMyOrder extends Attributes{
 		  String D1 = WB1.findElement(By.className("skMobff_OrderDate")).getText();
 		  WB1.click();
 		  
-		  WebElement ele1 = wait1.until(ExpectedConditions.
-					presenceOfElementLocated(By.id("skMobff_orderDate")));
+		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.id("skMobff_orderDate")));
 		  String D2 = dr.findElement(By.id("skMobff_orderDate")).getText();
 		  if(D1.contains(D2))
 		  {
@@ -251,8 +237,7 @@ public class MOBFMyOrder extends Attributes{
 		  }	 
 		  	  
 		  // Back to PO
-		  WebElement ele3 = wait1.until(ExpectedConditions.
-					presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
+		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
 		  System.out.println("Order Date is Validated for "+Str2+" Successfully");
 		  System.out.println("--------------------------------------------------------------");

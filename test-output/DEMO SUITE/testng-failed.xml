@@ -22,7 +22,7 @@
       <class name="Test.MOBFMyOrder">
         <methods>
           <include name="EOMO"/>
-          <include name="SORTBY"/>
+          <include name="NARROWBY"/>
           <include name="Del1"/>
         </methods>
       </class> <!-- Test.MOBFMyOrder -->
