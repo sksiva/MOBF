@@ -12,17 +12,17 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class MOBFMyOrder extends Attributes{
+public class MOBFMyOrder0 extends Attributes{
 	
 	  @BeforeClass
 	  public void Del1() throws Exception {
 		System.out.println("************************* My Orders *************************");
 	  }
 	  
-	  @Test (priority=2)
+	  @Test (priority=1)
 	  public void NARROWBY() throws Exception {
-		  	
-		  
+		  System.out.println("Test1");
+		
 		  WebDriverWait wait1 = new WebDriverWait(dr, 30);
 	  	  highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[2]/div[3]/div[1]")).click();
 	  	  
@@ -48,6 +48,8 @@ public class MOBFMyOrder extends Attributes{
 		  if(MOsize!=0){
 				  Random rand = new Random(System.currentTimeMillis());
 				  WebElement WK1 = WP1.get(rand.nextInt(WP1.size()));
+				  /*System.out.println("***** Rand Val ***** ");
+				  System.out.println(WK1.getText());*/
 				  WK1.click();
 				  
 				  //Ranomly Check an Item's Category
@@ -84,10 +86,10 @@ public class MOBFMyOrder extends Attributes{
 		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();		  
 	  }
 	  
-	  @Test (priority=1)
+	  @Test (priority=2)
 	  public void SORTBY() throws Exception {
-		  Thread.sleep(4000);
-		  WebDriverWait wait1 = new WebDriverWait(dr, 40);
+		  
+		  WebDriverWait wait1 = new WebDriverWait(dr, 30);
 		  	WebElement ele1 = wait1.until(ExpectedConditions.
 					presenceOfElementLocated(By.className("skMobff_sortLabel")));
 		  	highlightElement(By.className("skMobff_sortLabel")).click();
@@ -98,29 +100,7 @@ public class MOBFMyOrder extends Attributes{
 			System.out.println("--------------------------------------------------------------");	
 	  }
 	  
-	  @Test (enabled=false)
-	  public void ViewOrder() throws Exception {
-		  
-		  	dr.findElement(orderAttr).click();
-		  	WebDriverWait wait1 = new WebDriverWait(dr, 50);
-			//Go to Item Details page
-			  WebElement ele1 = wait1.until(ExpectedConditions.
-						presenceOfElementLocated(By.id("id_skMobff_productDetails_0")));
-			  highlightElement(By.id("id_skMobff_productDetails_0")).click();
-			// Back to PO Items
-			  Thread.sleep(5000);		
-			  WebElement ele2 = wait1.until(ExpectedConditions.
-						presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
-			  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
-			// Back to PO
-			  WebElement ele3 = wait1.until(ExpectedConditions.
-						presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
-			  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
-			  System.out.println("Order "+Str2+" Viewed Successfully");
-			  System.out.println("--------------------------------------------------------------");
-	  }
-	  
-	  @Test (priority=4)
+	  @Test (priority=3)
 	  public void VIEWALL() throws Exception {
 		  
 		  highlightElement(By.className("skMobff_viewAllItem")).click();
@@ -144,7 +124,7 @@ public class MOBFMyOrder extends Attributes{
 		  highlightElement(By.className("skMobff_backBtnIcon")).click();
 	  }
 	  
-	  @Test (priority = 5)
+	  @Test (priority = 4)
 	  public void ORDERvalidation() throws Exception {
 		  
 		  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -172,7 +152,7 @@ public class MOBFMyOrder extends Attributes{
 		  System.out.println("--------------------------------------------------------------");
 	  }
 	  
-	  @Test (priority = 6)
+	  @Test (priority = 5)
 	  public void QTYvalidation() throws Exception {
 		  
 		  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -188,14 +168,14 @@ public class MOBFMyOrder extends Attributes{
 		  String Q2 = String.valueOf(i);
 		  if(Q1.contains(Q2))
 		  {
-			  System.out.println("Order Items Qty are Same in both PLP & PO Items page: "+Q1);
+			  System.out.println("Order Items Qty are Same in both PLP & My Orders Items page: "+Q1);
 		  }
 		  else
 		  {
-			  System.out.println("Qty in PLP is : "+Q1+". But Qty in PO Items page : "+Q2+" item(s)");
+			  System.out.println("Qty in PLP is : "+Q1+". But Qty in My Orders Items page : "+Q2+" item(s)");
 		  }
 		  
-		  // Back to PO
+		  // Back to My Orders
 		  WebElement ele3 = wait1.until(ExpectedConditions.
 					presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
@@ -203,7 +183,7 @@ public class MOBFMyOrder extends Attributes{
 		  System.out.println("--------------------------------------------------------------");
 	  }
 	  
-	  @Test (priority = 7)
+	  @Test (priority = 6)
 	  public void PRICEvalidation() throws Exception {
 		  
 		  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -215,14 +195,14 @@ public class MOBFMyOrder extends Attributes{
 		  String P2 = dr.findElement(By.id("skMobff_orderValue")).getText();
 		  if(P2.contains(P1))
 		  {
-			  System.out.println("Selected Order Price page in PLP is Same in PO Items page for the Order "+P1);
+			  System.out.println("Selected Order Price page in PLP is Same in My Orders Items page for the Order "+P1);
 		  }
 		  else
 		  {
 			  System.out.println("Selected Order in PLP is: "+P1+" But Opened Order Price is : "+P2);
 		  }	  
 		  
-		  // Back to PO
+		  // Back to My Orders
 		  WebElement ele3 = wait1.until(ExpectedConditions.
 					presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
@@ -230,7 +210,7 @@ public class MOBFMyOrder extends Attributes{
 		  System.out.println("--------------------------------------------------------------");
 	  }
 	  
-	  @Test (priority = 8)
+	  @Test (priority = 7)
 	  public void DATEvalidation() throws Exception {
 		  
 		  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -243,14 +223,14 @@ public class MOBFMyOrder extends Attributes{
 		  String D2 = dr.findElement(By.id("skMobff_orderDate")).getText();
 		  if(D1.contains(D2))
 		  {
-			  System.out.println("Selected Order Date in PLP is Same in PO Items page for the Order "+D1);
+			  System.out.println("Selected Order Date in PLP is Same in My Orders Items page for the Order "+D1);
 		  }
 		  else
 		  {
 			  System.out.println("Selected Order in PLP is: "+D1+" But Opened Order's Date is : "+D2);
 		  }	 
 		  	  
-		  // Back to PO
+		  // Back to My Orders
 		  WebElement ele3 = wait1.until(ExpectedConditions.
 					presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();

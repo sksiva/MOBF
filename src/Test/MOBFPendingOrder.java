@@ -191,19 +191,9 @@ public class MOBFPendingOrder extends Attributes{
 	  System.out.println("--------------------------------------------------------------");
   }
   
-  @Test (priority = 8)
-  public void OrderList() throws InterruptedException {
-	  
-	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
-	  WebElement ele1 = wait1.until(ExpectedConditions.
-				presenceOfElementLocated(By.className("skMobff_OrderMainList")));
-	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));
-	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
-	  System.out.println("Number of Orders in PLP are : "+WB1.size());
-	  System.out.println("--------------------------------------------------------------");
-  }
   
-  @Test (priority = 9)
+  
+  @Test (priority = 8)
   public void Navigation() throws Exception {
 	  
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -233,7 +223,7 @@ public class MOBFPendingOrder extends Attributes{
 	  highlightElement(By.name("pendingOrder")).click();	  
   }
   
-  @Test (priority = 10)
+  @Test (priority = 9)
   public void SORTBY() throws Exception {
 	  
 	  	WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -246,7 +236,7 @@ public class MOBFPendingOrder extends Attributes{
 		System.out.println("--------------------------------------------------------------");		
   }
   
-  @Test (priority = 11)
+  @Test (priority = 10)
   public void NARROWBY() throws Exception {
 	  
 	      WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -303,7 +293,7 @@ public class MOBFPendingOrder extends Attributes{
 		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
   }
   
-  @Test (priority = 12)
+  @Test (priority = 11)
   public void SWIPE() throws Exception {
 	  
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -333,9 +323,38 @@ public class MOBFPendingOrder extends Attributes{
       r.mouseMove(FX2, FY); 
       r.mouseRelease(InputEvent.BUTTON1_MASK);
       
-      //Click My Orders
+      /*//Click My Orders
 	  highlightElement(By.xpath(".//*[@class='skMobff_headerMenuIcon']")).click();
-	  highlightElement(By.name("myOrder")).click();	 
+	  highlightElement(By.name("myOrder")).click();	 */
+	  System.out.println("--------------------------------------------------------------");
+  }
+  
+  @Test (priority = 12)
+  public void OrderCount() throws Exception {
+	  
+	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
+	  WebElement ele1 = wait1.until(ExpectedConditions.
+				presenceOfElementLocated(By.className("skMobff_OrderMainList")));
+	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));
+	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
+	  // Get Order count from Pending Order page
+	  int X1 = WB1.size();
+	  String numOrders = Integer.toString(X1);
+	  System.out.println("Number of Orders in PLP are : "+numOrders);
+	  
+	  highlightElement(By.xpath(".//*[@class='skMobff_headerMenuIcon']")).click();
+	  //Get PO icon Count 
+	  String POcount = dr.findElement(By.id("id_menuListItemCount_0")).getText();
+	  if(numOrders.equals(POcount))
+	  {
+		  System.out.println("Order Count in PO screen is same as PO icon count : "+numOrders);
+	  }
+	  else
+	  {
+		  System.out.println("Order Count in PO screen is : "+numOrders+" PO Icon count is : "+POcount);
+	  }
+	  highlightElement(By.name("myOrder")).click();
+	  
 	  System.out.println("--------------------------------------------------------------");
   }
 
