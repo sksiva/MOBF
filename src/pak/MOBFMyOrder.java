@@ -21,13 +21,12 @@ public class MOBFMyOrder extends Attributes{
 	  
 	  @Test (priority=1)
 	  public void SORTBY() throws Exception {
-		  Thread.sleep(4000);
-		  WebDriverWait wait1 = new WebDriverWait(dr, 40);
-		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_sortLabel")));
+		  	WebDriverWait wait1 = new WebDriverWait(dr, 40);
+		  	Thread.sleep(4000);
+		  	wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_sortLabel")));
 		  	highlightElement(By.className("skMobff_sortLabel")).click();
 		  	WebElement sort = dr.findElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[2]/div[2]/select"));
-		  
-			Select select = new Select(sort);
+		  	Select select = new Select(sort);
 			select.selectByVisibleText("Order #");
 			System.out.println("--------------------------------------------------------------");	
 	  }
@@ -35,14 +34,11 @@ public class MOBFMyOrder extends Attributes{
 	  @Test (priority=2)
 	  public void NARROWBY() throws Exception {
 		  	
-		  
-		  Thread.sleep(4000);
-	      WebDriverWait wait1 = new WebDriverWait(dr, 30);
+		  WebDriverWait wait1 = new WebDriverWait(dr, 30);
 	  	  highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[2]/div[3]/div[1]")).click();
 	  	  
 	  	  //Random NARROW BY Selections
-	  	  Thread.sleep(4000);
-		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMob_filterOptions")));
+	  	  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMob_filterOptions")));
 		  WebElement WM1 = dr.findElement(By.className("skMob_filterOptions"));
 		  List<WebElement> LWM1 = WM1.findElements(By.className("skMobff_filter "));
 		  Random rand1 = new Random(System.currentTimeMillis());
@@ -52,7 +48,6 @@ public class MOBFMyOrder extends Attributes{
 		  W1.click();
 		  		  
 		  //Random Order Selection After Filter
-		  Thread.sleep(4000);
 		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_OrderMainList")));
 		  WebElement WO1 = dr.findElement(By.className("skMobff_OrderMainList"));
 		  List<WebElement> WP1 = WO1.findElements(By.className("skMobff_orders"));
@@ -107,31 +102,12 @@ public class MOBFMyOrder extends Attributes{
 			  System.out.println("After Narrow By filter applied NO ITEMS DISPLAYED");
 		  }			  
 	  }
-  
-	  @Test (enabled=false)
-	  public void ViewOrder() throws Exception {
-		  
-		  	dr.findElement(orderAttr).click();
-		  	WebDriverWait wait1 = new WebDriverWait(dr, 50);
-			//Go to Item Details page
-			wait1.until(ExpectedConditions.presenceOfElementLocated(By.id("id_skMobff_productDetails_0")));
-			  highlightElement(By.id("id_skMobff_productDetails_0")).click();
-			// Back to PO Items
-			  Thread.sleep(5000);		
-			 wait1.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
-			  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
-			// Back to PO
-			wait1.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
-			  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
-			  System.out.println("Order "+Str2+" Viewed Successfully");
-			  System.out.println("--------------------------------------------------------------");
-	  }
 	  
-	  @Test (priority=4)
+	  @Test (priority=3)
 	  public void VIEWALL() throws Exception {
 		  
 		  highlightElement(By.className("skMobff_viewAllItem")).click();
-		  Thread.sleep(3000);
+		  //Thread.sleep(3000);
 		  String Mcount = dr.findElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[3]/div[1]/div[2]")).getText();
 		  System.out.println("MCount 1 : "+Mcount);
 		  WebElement WE1 = dr.findElement(By.className("skMobff_pendingOrderItems"));
@@ -151,7 +127,7 @@ public class MOBFMyOrder extends Attributes{
 		  highlightElement(By.className("skMobff_backBtnIcon")).click();
 	  }
 	  
-	  @Test (priority = 5)
+	  @Test (priority = 4)
 	  public void ORDERvalidation() throws Exception {
 		  
 		  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -177,7 +153,7 @@ public class MOBFMyOrder extends Attributes{
 		  System.out.println("--------------------------------------------------------------");
 	  }
 	  
-	  @Test (priority = 6)
+	  @Test (priority = 5)
 	  public void QTYvalidation() throws Exception {
 		  
 		  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -206,7 +182,7 @@ public class MOBFMyOrder extends Attributes{
 		  System.out.println("--------------------------------------------------------------");
 	  }
 	  
-	  @Test (priority = 7)
+	  @Test (priority = 6)
 	  public void PRICEvalidation() throws Exception {
 		  
 		  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -231,7 +207,7 @@ public class MOBFMyOrder extends Attributes{
 		  System.out.println("--------------------------------------------------------------");
 	  }
 	  
-	  @Test (priority = 8)
+	  @Test (priority = 7)
 	  public void DATEvalidation() throws Exception {
 		  
 		  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -256,11 +232,4 @@ public class MOBFMyOrder extends Attributes{
 		  System.out.println("Order Date is Validated for "+Str2+" Successfully");
 		  System.out.println("--------------------------------------------------------------");
 	  }
-	  
-	  
-	  
-	  @AfterClass
-		  public void EOMO() throws Exception {
-		  System.out.println("************************* End of My Orders *************************");
-		}
 }
