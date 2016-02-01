@@ -15,7 +15,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Delete {
+public class NarrowBy {
 	public static WebDriver dr;
 	public static WebElement WB1;
 	public static String Str1, Str2, Str3;
@@ -86,7 +86,7 @@ public class Delete {
 		  List<WebElement> LQ1 = Q1.findElements(By.className("skMobff_productDetails"));
 		  int LQ = LQ1.size();
 		  System.out.println("Size : "+LQ);
-		  int j, flag=0;
+		  int flag=0;
 		  if(Menu1!="Clear All")
 		  {
 				  for(int i=0;i<LQ;i++)
@@ -112,5 +112,10 @@ public class Delete {
 		  {
 			  System.out.println("All Items will be displayed while selecting "+Menu1);
 		  }
+		  
+		// Back to PO
+		  Thread.sleep(4000);
+		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
+		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();		
 	}
 }

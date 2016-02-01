@@ -2,102 +2,102 @@
 <testng-results skipped="0" failed="0" total="19" passed="19">
   <reporter-output>
   </reporter-output>
-  <suite name="DEMO SUITE" duration-ms="119302" started-at="2016-01-28T14:07:01Z" finished-at="2016-01-28T14:09:00Z">
+  <suite name="DEMO SUITE" duration-ms="127147" started-at="2016-02-01T05:12:25Z" finished-at="2016-02-01T05:14:32Z">
     <groups>
     </groups>
-    <test name="DEMO TEST" duration-ms="119302" started-at="2016-01-28T14:07:01Z" finished-at="2016-01-28T14:09:00Z">
+    <test name="DEMO TEST" duration-ms="127147" started-at="2016-02-01T05:12:25Z" finished-at="2016-02-01T05:14:32Z">
       <class name="Test.MOBFPendingOrder">
-        <test-method status="PASS" signature="Emulator()[pri:0, instance:Test.MOBFPendingOrder@531be3c5]" name="Emulator" is-config="true" duration-ms="2190" started-at="2016-01-28T19:36:59Z" finished-at="2016-01-28T19:37:01Z">
+        <test-method status="PASS" signature="Emulator()[pri:0, instance:Test.MOBFPendingOrder@531be3c5]" name="Emulator" is-config="true" duration-ms="6682" started-at="2016-02-01T10:42:18Z" finished-at="2016-02-01T10:42:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Emulator -->
-        <test-method status="PASS" signature="GetOrder()[pri:1, instance:Test.MOBFPendingOrder@531be3c5]" name="GetOrder" duration-ms="8469" started-at="2016-01-28T19:37:01Z" finished-at="2016-01-28T19:37:09Z">
+        <test-method status="PASS" signature="GetOrder()[pri:1, instance:Test.MOBFPendingOrder@531be3c5]" name="GetOrder" duration-ms="6277" started-at="2016-02-01T10:42:25Z" finished-at="2016-02-01T10:42:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetOrder -->
-        <test-method status="PASS" signature="ViewOrder()[pri:2, instance:Test.MOBFPendingOrder@531be3c5]" name="ViewOrder" duration-ms="12179" started-at="2016-01-28T19:37:09Z" finished-at="2016-01-28T19:37:22Z">
+        <test-method status="PASS" signature="ViewOrder()[pri:2, instance:Test.MOBFPendingOrder@531be3c5]" name="ViewOrder" duration-ms="12574" started-at="2016-02-01T10:42:31Z" finished-at="2016-02-01T10:42:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ViewOrder -->
-        <test-method status="PASS" signature="UrgentOrder()[pri:3, instance:Test.MOBFPendingOrder@531be3c5]" name="UrgentOrder" duration-ms="177" started-at="2016-01-28T19:37:22Z" finished-at="2016-01-28T19:37:22Z">
+        <test-method status="PASS" signature="UrgentOrder()[pri:3, instance:Test.MOBFPendingOrder@531be3c5]" name="UrgentOrder" duration-ms="126" started-at="2016-02-01T10:42:44Z" finished-at="2016-02-01T10:42:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- UrgentOrder -->
-        <test-method status="PASS" signature="ORDERvalidation()[pri:4, instance:Test.MOBFPendingOrder@531be3c5]" name="ORDERvalidation" duration-ms="4833" started-at="2016-01-28T19:37:22Z" finished-at="2016-01-28T19:37:27Z">
+        <test-method status="PASS" signature="ORDERvalidation()[pri:4, instance:Test.MOBFPendingOrder@531be3c5]" name="ORDERvalidation" duration-ms="4927" started-at="2016-02-01T10:42:44Z" finished-at="2016-02-01T10:42:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ORDERvalidation -->
-        <test-method status="PASS" signature="QTYvalidation()[pri:5, instance:Test.MOBFPendingOrder@531be3c5]" name="QTYvalidation" duration-ms="4964" started-at="2016-01-28T19:37:27Z" finished-at="2016-01-28T19:37:32Z">
+        <test-method status="PASS" signature="QTYvalidation()[pri:5, instance:Test.MOBFPendingOrder@531be3c5]" name="QTYvalidation" duration-ms="5003" started-at="2016-02-01T10:42:49Z" finished-at="2016-02-01T10:42:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- QTYvalidation -->
-        <test-method status="PASS" signature="PRICEvalidation()[pri:6, instance:Test.MOBFPendingOrder@531be3c5]" name="PRICEvalidation" duration-ms="4964" started-at="2016-01-28T19:37:32Z" finished-at="2016-01-28T19:37:37Z">
+        <test-method status="PASS" signature="PRICEvalidation()[pri:6, instance:Test.MOBFPendingOrder@531be3c5]" name="PRICEvalidation" duration-ms="5038" started-at="2016-02-01T10:42:54Z" finished-at="2016-02-01T10:42:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PRICEvalidation -->
-        <test-method status="PASS" signature="DATEvalidation()[pri:7, instance:Test.MOBFPendingOrder@531be3c5]" name="DATEvalidation" duration-ms="5002" started-at="2016-01-28T19:37:37Z" finished-at="2016-01-28T19:37:42Z">
+        <test-method status="PASS" signature="DATEvalidation()[pri:7, instance:Test.MOBFPendingOrder@531be3c5]" name="DATEvalidation" duration-ms="5107" started-at="2016-02-01T10:42:59Z" finished-at="2016-02-01T10:43:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DATEvalidation -->
-        <test-method status="PASS" signature="Navigation()[pri:8, instance:Test.MOBFPendingOrder@531be3c5]" name="Navigation" duration-ms="21131" started-at="2016-01-28T19:37:42Z" finished-at="2016-01-28T19:38:03Z">
+        <test-method status="PASS" signature="Navigation()[pri:8, instance:Test.MOBFPendingOrder@531be3c5]" name="Navigation" duration-ms="21606" started-at="2016-02-01T10:43:04Z" finished-at="2016-02-01T10:43:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Navigation -->
-        <test-method status="PASS" signature="SORTBY()[pri:9, instance:Test.MOBFPendingOrder@531be3c5]" name="SORTBY" duration-ms="2934" started-at="2016-01-28T19:38:03Z" finished-at="2016-01-28T19:38:06Z">
+        <test-method status="PASS" signature="SORTBY()[pri:9, instance:Test.MOBFPendingOrder@531be3c5]" name="SORTBY" duration-ms="3021" started-at="2016-02-01T10:43:26Z" finished-at="2016-02-01T10:43:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SORTBY -->
-        <test-method status="PASS" signature="NARROWBY()[pri:10, instance:Test.MOBFPendingOrder@531be3c5]" name="NARROWBY" duration-ms="5132" started-at="2016-01-28T19:38:06Z" finished-at="2016-01-28T19:38:11Z">
+        <test-method status="PASS" signature="NARROWBY()[pri:10, instance:Test.MOBFPendingOrder@531be3c5]" name="NARROWBY" duration-ms="13468" started-at="2016-02-01T10:43:29Z" finished-at="2016-02-01T10:43:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NARROWBY -->
-        <test-method status="PASS" signature="SWIPE()[pri:11, instance:Test.MOBFPendingOrder@531be3c5]" name="SWIPE" duration-ms="4632" started-at="2016-01-28T19:38:11Z" finished-at="2016-01-28T19:38:15Z">
+        <test-method status="PASS" signature="SWIPE()[pri:11, instance:Test.MOBFPendingOrder@531be3c5]" name="SWIPE" duration-ms="4406" started-at="2016-02-01T10:43:42Z" finished-at="2016-02-01T10:43:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SWIPE -->
-        <test-method status="PASS" signature="OrderCountPO()[pri:12, instance:Test.MOBFPendingOrder@531be3c5]" name="OrderCountPO" duration-ms="4338" started-at="2016-01-28T19:38:15Z" finished-at="2016-01-28T19:38:20Z">
+        <test-method status="PASS" signature="OrderCountPO()[pri:12, instance:Test.MOBFPendingOrder@531be3c5]" name="OrderCountPO" duration-ms="4427" started-at="2016-02-01T10:43:46Z" finished-at="2016-02-01T10:43:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OrderCountPO -->
-        <test-method status="PASS" signature="EOPO()[pri:0, instance:Test.MOBFPendingOrder@531be3c5]" name="EOPO" is-config="true" duration-ms="0" started-at="2016-01-28T19:38:20Z" finished-at="2016-01-28T19:38:20Z">
+        <test-method status="PASS" signature="EOPO()[pri:0, instance:Test.MOBFPendingOrder@531be3c5]" name="EOPO" is-config="true" duration-ms="1" started-at="2016-02-01T10:43:51Z" finished-at="2016-02-01T10:43:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EOPO -->
       </class> <!-- Test.MOBFPendingOrder -->
       <class name="Test.MOBFMyOrder">
-        <test-method status="PASS" signature="SORTBY()[pri:1, instance:Test.MOBFMyOrder@52af6cff]" name="SORTBY" duration-ms="6259" started-at="2016-01-28T19:38:20Z" finished-at="2016-01-28T19:38:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SORTBY -->
-        <test-method status="PASS" signature="Del1()[pri:0, instance:Test.MOBFMyOrder@52af6cff]" name="Del1" is-config="true" duration-ms="0" started-at="2016-01-28T19:38:20Z" finished-at="2016-01-28T19:38:20Z">
+        <test-method status="PASS" signature="Del1()[pri:0, instance:Test.MOBFMyOrder@52af6cff]" name="Del1" is-config="true" duration-ms="0" started-at="2016-02-01T10:43:51Z" finished-at="2016-02-01T10:43:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Del1 -->
-        <test-method status="PASS" signature="NARROWBY()[pri:2, instance:Test.MOBFMyOrder@52af6cff]" name="NARROWBY" duration-ms="8673" started-at="2016-01-28T19:38:26Z" finished-at="2016-01-28T19:38:35Z">
+        <test-method status="PASS" signature="SORTBY()[pri:1, instance:Test.MOBFMyOrder@52af6cff]" name="SORTBY" duration-ms="6392" started-at="2016-02-01T10:43:51Z" finished-at="2016-02-01T10:43:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SORTBY -->
+        <test-method status="PASS" signature="NARROWBY()[pri:2, instance:Test.MOBFMyOrder@52af6cff]" name="NARROWBY" duration-ms="8820" started-at="2016-02-01T10:43:57Z" finished-at="2016-02-01T10:44:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NARROWBY -->
-        <test-method status="PASS" signature="VIEWALL()[pri:4, instance:Test.MOBFMyOrder@52af6cff]" name="VIEWALL" duration-ms="7418" started-at="2016-01-28T19:38:35Z" finished-at="2016-01-28T19:38:42Z">
+        <test-method status="PASS" signature="VIEWALL()[pri:4, instance:Test.MOBFMyOrder@52af6cff]" name="VIEWALL" duration-ms="7622" started-at="2016-02-01T10:44:06Z" finished-at="2016-02-01T10:44:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VIEWALL -->
-        <test-method status="PASS" signature="ORDERvalidation()[pri:5, instance:Test.MOBFMyOrder@52af6cff]" name="ORDERvalidation" duration-ms="4546" started-at="2016-01-28T19:38:42Z" finished-at="2016-01-28T19:38:47Z">
+        <test-method status="PASS" signature="ORDERvalidation()[pri:5, instance:Test.MOBFMyOrder@52af6cff]" name="ORDERvalidation" duration-ms="4562" started-at="2016-02-01T10:44:14Z" finished-at="2016-02-01T10:44:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ORDERvalidation -->
-        <test-method status="PASS" signature="QTYvalidation()[pri:6, instance:Test.MOBFMyOrder@52af6cff]" name="QTYvalidation" duration-ms="4510" started-at="2016-01-28T19:38:47Z" finished-at="2016-01-28T19:38:51Z">
+        <test-method status="PASS" signature="QTYvalidation()[pri:6, instance:Test.MOBFMyOrder@52af6cff]" name="QTYvalidation" duration-ms="4692" started-at="2016-02-01T10:44:18Z" finished-at="2016-02-01T10:44:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- QTYvalidation -->
-        <test-method status="PASS" signature="PRICEvalidation()[pri:7, instance:Test.MOBFMyOrder@52af6cff]" name="PRICEvalidation" duration-ms="4501" started-at="2016-01-28T19:38:51Z" finished-at="2016-01-28T19:38:56Z">
+        <test-method status="PASS" signature="PRICEvalidation()[pri:7, instance:Test.MOBFMyOrder@52af6cff]" name="PRICEvalidation" duration-ms="4515" started-at="2016-02-01T10:44:23Z" finished-at="2016-02-01T10:44:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PRICEvalidation -->
-        <test-method status="PASS" signature="DATEvalidation()[pri:8, instance:Test.MOBFMyOrder@52af6cff]" name="DATEvalidation" duration-ms="4608" started-at="2016-01-28T19:38:56Z" finished-at="2016-01-28T19:39:00Z">
+        <test-method status="PASS" signature="DATEvalidation()[pri:8, instance:Test.MOBFMyOrder@52af6cff]" name="DATEvalidation" duration-ms="4525" started-at="2016-02-01T10:44:27Z" finished-at="2016-02-01T10:44:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DATEvalidation -->
-        <test-method status="PASS" signature="EOMO()[pri:0, instance:Test.MOBFMyOrder@52af6cff]" name="EOMO" is-config="true" duration-ms="0" started-at="2016-01-28T19:39:00Z" finished-at="2016-01-28T19:39:00Z">
+        <test-method status="PASS" signature="EOMO()[pri:0, instance:Test.MOBFMyOrder@52af6cff]" name="EOMO" is-config="true" duration-ms="1" started-at="2016-02-01T10:44:32Z" finished-at="2016-02-01T10:44:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EOMO -->
