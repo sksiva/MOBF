@@ -240,49 +240,56 @@ public class MOBFPendingOrder extends Attributes{
 	  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_OrderMainList")));
 	  WebElement WO1 = dr.findElement(By.className("skMobff_OrderMainList"));
 	  List<WebElement> WP1 = WO1.findElements(By.className("skMobff_orders"));
-	  Random rand = new Random(System.currentTimeMillis());
-	  WebElement WK1 = WP1.get(rand.nextInt(WP1.size()));
-	  System.out.println("***** Rand Val ***** ");
-	  System.out.println(WK1.getText());
-	  WK1.click();
+	  int sizeMO = WP1.size();
 	  
-	  // Items Count Validation
-	  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_pendingOrderItems")));
-	  WebElement Q1 = dr.findElement(By.className("skMobff_pendingOrderItems"));
-	  List<WebElement> LQ1 = Q1.findElements(By.className("skMobff_productDetails"));
-	  int LQ = LQ1.size();
-	  System.out.println("Size : "+LQ);
-	  int flag=0;
-	  if(Menu1!="Clear All")
+	  if(sizeMO!=0)
 	  {
-			  for(int i=0;i<LQ;i++)
+			  Random rand = new Random(System.currentTimeMillis());
+			  WebElement WK1 = WP1.get(rand.nextInt(WP1.size()));
+			  System.out.println("***** Rand Val ***** ");
+			  System.out.println(WK1.getText());
+			  WK1.click();
+			  
+			  // Items Count Validation
+			  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_pendingOrderItems")));
+			  WebElement Q1 = dr.findElement(By.className("skMobff_pendingOrderItems"));
+			  List<WebElement> LQ1 = Q1.findElements(By.className("skMobff_productDetails"));
+			  int LQ = LQ1.size();
+			  System.out.println("Size : "+LQ);
+			  int flag=0;
+			  if(Menu1!="Clear All")
 			  {
-				  String Z1 = "//*[@id='id_skMobff_productDetails_";
-				  String Z2 = "']/div[1]/div/div[2]";
-				  String NM = dr.findElement(By.xpath(Z1+i+Z2)).getText();
-				  System.out.println(i+" : "+NM);
-				  
-				  if(Menu1.equals(NM))
-				  {
-					  flag=1;
-					  System.out.println("Correct Order is displayed for the selected Category : "+Menu1);
-					  break;
-				  }
+					  for(int i=0;i<LQ;i++)
+					  {
+						  String Z1 = "//*[@id='id_skMobff_productDetails_";
+						  String Z2 = "']/div[1]/div/div[2]";
+						  String NM = dr.findElement(By.xpath(Z1+i+Z2)).getText();
+						  System.out.println(i+" : "+NM);
+						  
+						  if(Menu1.equals(NM))
+						  {
+							  flag=1;
+							  System.out.println("Correct Order is displayed for the selected Category : "+Menu1);
+							  break;
+						  }
+					  }
+					  if(flag==0)
+					  {
+						  System.out.println("In-correct Order is displayed for the selected Category "+Menu1);
+					  }
 			  }
-			  if(flag==0)
+			  else
 			  {
-				  System.out.println("In-correct Order is displayed for the selected Category "+Menu1);
+				  System.out.println("All Items will be displayed while selecting "+Menu1);
 			  }
+			//Back to PO
+			  wait1.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
+			  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
 	  }
 	  else
 	  {
-		  System.out.println("All Items will be displayed while selecting "+Menu1);
-	  }
-	  
-	// Back to PO
-	  Thread.sleep(4000);
-	  wait1.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
-	  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();	
+		  System.out.println("After Narrow By filter applied NO ITEMS DISPLAYED");
+	  }	
   }
   
   @Test (priority = 11)

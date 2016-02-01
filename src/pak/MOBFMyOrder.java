@@ -19,67 +19,6 @@ public class MOBFMyOrder extends Attributes{
 		System.out.println("************************* My Orders *************************");
 	  }
 	  
-	  @Test (priority=2)
-	  public void NARROWBY() throws Exception {
-		  	
-		  
-		  WebDriverWait wait1 = new WebDriverWait(dr, 30);
-	  	  highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[2]/div[3]/div[1]")).click();
-	  	  
-	  	  //Random NARROW BY Selections
-		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMob_filterOptions")));
-		  WebElement WM1 = dr.findElement(By.className("skMob_filterOptions"));
-		  List<WebElement> LWM1 = WM1.findElements(By.className("skMobff_filter"));
-		  Random rand1 = new Random(System.currentTimeMillis());
-		  WebElement W1 = LWM1.get(rand1.nextInt(LWM1.size()));
-		  String M1 = W1.getText();
-		  System.out.println("M2 : "+M1);
-		  W1.click();
-		  		  
-		  //Random Order Selection After Filter
-		  wait1.until(ExpectedConditions.
-					presenceOfElementLocated(By.className("skMobff_OrderMainList")));
-		  WebElement WO1 = dr.findElement(By.className("skMobff_OrderMainList"));
-		  List<WebElement> WP1 = WO1.findElements(By.className("skMobff_orders"));
-		  int MOsize = WP1.size();
-		  System.out.println("My Orders Count : "+MOsize);
-		  
-		  if(MOsize!=0){
-				  Random rand = new Random(System.currentTimeMillis());
-				  WebElement WK1 = WP1.get(rand.nextInt(WP1.size()));
-				  WK1.click();
-				  
-				  //Ranomly Check an Item's Category
-				  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_orderItems")));
-				  WebElement X1 = dr.findElement(By.className("skMobff_orderItems"));
-				  List<WebElement> LX1 = X1.findElements(By.className("skMobff_productDetails "));
-				  WebElement WX1 = LX1.get(rand1.nextInt(LX1.size()));
-				  String M2 = WX1.findElement(By.className("skMobff_Value")).getText();
-				  System.out.println("Narrow By Value in My Order page : "+M2);
-				  
-				  if(M1!="Clear All"){
-					  if(M1.contains(M2)){
-						  System.out.println("Success ! ! ! Correct Orders are displayed for the selected Category");
-					  }
-						  else{
-							  System.out.println("Sorry ! ! ! Incorrect Orders are displayed for the selected Category");
-						  }	
-				  }
-				  else{
-					  System.out.println("OOPS ! ! ! System Randomly Selected Clear All option from NARROW BY");			  
-				  }
-		  }
-		  else
-		  {
-			  System.out.println("No Items found after Filter in My Orders Page");
-		  }
-		  
-		  // Back to PO
-		  Thread.sleep(4000);
-		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
-		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();		  
-	  }
-	  
 	  @Test (priority=1)
 	  public void SORTBY() throws Exception {
 		  Thread.sleep(4000);
@@ -93,6 +32,82 @@ public class MOBFMyOrder extends Attributes{
 			System.out.println("--------------------------------------------------------------");	
 	  }
 	  
+	  @Test (priority=2)
+	  public void NARROWBY() throws Exception {
+		  	
+		  
+		  Thread.sleep(4000);
+	      WebDriverWait wait1 = new WebDriverWait(dr, 30);
+	  	  highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[2]/div[3]/div[1]")).click();
+	  	  
+	  	  //Random NARROW BY Selections
+	  	  Thread.sleep(4000);
+		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMob_filterOptions")));
+		  WebElement WM1 = dr.findElement(By.className("skMob_filterOptions"));
+		  List<WebElement> LWM1 = WM1.findElements(By.className("skMobff_filter "));
+		  Random rand1 = new Random(System.currentTimeMillis());
+		  WebElement W1 = LWM1.get(rand1.nextInt(LWM1.size()));
+		  String Menu1 = W1.getText();
+		  System.out.println("Menu1 : "+Menu1);
+		  W1.click();
+		  		  
+		  //Random Order Selection After Filter
+		  Thread.sleep(4000);
+		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_OrderMainList")));
+		  WebElement WO1 = dr.findElement(By.className("skMobff_OrderMainList"));
+		  List<WebElement> WP1 = WO1.findElements(By.className("skMobff_orders"));
+		  int sizeMO = WP1.size();
+		  
+		  if(sizeMO!=0)
+		  {
+				  Random rand = new Random(System.currentTimeMillis());
+				  WebElement WK1 = WP1.get(rand.nextInt(WP1.size()));
+				  System.out.println("***** Rand Val ***** ");
+				  System.out.println(WK1.getText());
+				  WK1.click();
+				  
+				  // Items Count Validation
+				  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_pendingOrderItems")));
+				  WebElement Q1 = dr.findElement(By.className("skMobff_pendingOrderItems"));
+				  List<WebElement> LQ1 = Q1.findElements(By.className("skMobff_productDetails"));
+				  int LQ = LQ1.size();
+				  System.out.println("Size : "+LQ);
+				  int flag=0;
+				  if(Menu1!="Clear All")
+				  {
+						  for(int i=0;i<LQ;i++)
+						  {
+							  String Z1 = "//*[@id='id_skMobff_productDetails_";
+							  String Z2 = "']/div[1]/div/div[2]";
+							  String NM = dr.findElement(By.xpath(Z1+i+Z2)).getText();
+							  System.out.println(i+" : "+NM);
+							  
+							  if(Menu1.equals(NM))
+							  {
+								  flag=1;
+								  System.out.println("Correct Order is displayed for the selected Category : "+Menu1);
+								  break;
+							  }
+						  }
+						  if(flag==0)
+						  {
+							  System.out.println("In-correct Order is displayed for the selected Category "+Menu1);
+						  }
+				  }
+				  else
+				  {
+					  System.out.println("All Items will be displayed while selecting "+Menu1);
+				  }
+				// Back to PO
+				  wait1.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
+				  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
+		  } 
+		  else
+		  {
+			  System.out.println("After Narrow By filter applied NO ITEMS DISPLAYED");
+		  }			  
+	  }
+  
 	  @Test (enabled=false)
 	  public void ViewOrder() throws Exception {
 		  
