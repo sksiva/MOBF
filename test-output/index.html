@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-DEMO_SUITE">
-              <span class="suite-name border-passed">DEMO SUITE</span>
+              <span class="suite-name border-failed">DEMO SUITE</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">19 methods,   19 passed</span>
+                    <span class="method-stats">19 methods, 1 failed,   18 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-DEMO_SUITE" class="hide-methods failed suite-DEMO_SUITE"> (hide)</a> <!-- hide-methods failed suite-DEMO_SUITE -->
+                      <a href="#" panel-name="suite-DEMO_SUITE" class="show-methods failed suite-DEMO_SUITE"> (show)</a> <!-- show-methods failed suite-DEMO_SUITE -->
+                    </span>
+                    <div class="method-list-content failed suite-DEMO_SUITE">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-DEMO_SUITE" title="Test.MOBFMyOrder" hash-for-method="NARROWBY">NARROWBY</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-DEMO_SUITE -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,22 +116,17 @@
                     <div class="method-list-content passed suite-DEMO_SUITE">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-DEMO_SUITE" title="Test.MOBFPendingOrder" hash-for-method="DATEvalidation">DATEvalidation</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-DEMO_SUITE" title="Test.MOBFMyOrder" hash-for-method="DATEvalidation">DATEvalidation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-DEMO_SUITE" title="Test.MOBFPendingOrder" hash-for-method="GetOrder">GetOrder</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-DEMO_SUITE" title="Test.MOBFPendingOrder" hash-for-method="DATEvalidation">DATEvalidation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-DEMO_SUITE" title="Test.MOBFMyOrder" hash-for-method="NARROWBY">NARROWBY</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-DEMO_SUITE" title="Test.MOBFPendingOrder" hash-for-method="GetOrder">GetOrder</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -132,12 +141,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-DEMO_SUITE" title="Test.MOBFPendingOrder" hash-for-method="ORDERvalidation">ORDERvalidation</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-DEMO_SUITE" title="Test.MOBFMyOrder" hash-for-method="ORDERvalidation">ORDERvalidation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-DEMO_SUITE" title="Test.MOBFMyOrder" hash-for-method="ORDERvalidation">ORDERvalidation</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-DEMO_SUITE" title="Test.MOBFPendingOrder" hash-for-method="ORDERvalidation">ORDERvalidation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -157,12 +166,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-DEMO_SUITE" title="Test.MOBFMyOrder" hash-for-method="QTYvalidation">QTYvalidation</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-DEMO_SUITE" title="Test.MOBFPendingOrder" hash-for-method="QTYvalidation">QTYvalidation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-DEMO_SUITE" title="Test.MOBFPendingOrder" hash-for-method="QTYvalidation">QTYvalidation</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-DEMO_SUITE" title="Test.MOBFMyOrder" hash-for-method="QTYvalidation">QTYvalidation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -207,6 +216,38 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-DEMO_SUITE" class="panel DEMO_SUITE">
+          <div class="suite-DEMO_SUITE-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">Test.MOBFMyOrder</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="NARROWBY">
+                  </a> <!-- NARROWBY -->
+                  <span class="method-name">NARROWBY</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=47.0.2526.111)
+  (Driver info: chromedriver=2.20.353145 (343b531d31eeb933ec778dbcf7081628a1396067),platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 18 milliseconds
+Build info: version: &apos;2.48.2&apos;, revision: &apos;41bccdd&apos;, time: &apos;2015-10-09 19:59:12&apos;
+System info: host: &apos;SK-SYS-043&apos;, ip: &apos;192.168.2.187&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_05&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=true, chrome={userDataDir=C:\Users\SIVAKU~1.N\AppData\Local\Temp\scoped_dir1372_73}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=true, version=47.0.2526.111, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 4da6453846e8fe528792ece55d2a6801
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at Test.MOBFMyOrder.NARROWBY(MOBFMyOrder.java:51)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-DEMO_SUITE-class-failed -->
           <div class="suite-DEMO_SUITE-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -314,13 +355,6 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="NARROWBY">
-                  </a> <!-- NARROWBY -->
-                  <span class="method-name">NARROWBY</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="ORDERvalidation">
                   </a> <!-- ORDERvalidation -->
                   <span class="method-name">ORDERvalidation</span>
@@ -417,79 +451,79 @@ data.addRows(19);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Navigation')
 data.setCell(0, 2, 'Test.MOBFPendingOrder')
-data.setCell(0, 3, 21606);
+data.setCell(0, 3, 21141);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'NARROWBY')
+data.setCell(1, 1, 'GetOrder')
 data.setCell(1, 2, 'Test.MOBFPendingOrder')
-data.setCell(1, 3, 13468);
+data.setCell(1, 3, 14051);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'ViewOrder')
+data.setCell(2, 1, 'NARROWBY')
 data.setCell(2, 2, 'Test.MOBFPendingOrder')
-data.setCell(2, 3, 12574);
+data.setCell(2, 3, 13160);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'NARROWBY')
-data.setCell(3, 2, 'Test.MOBFMyOrder')
-data.setCell(3, 3, 8820);
+data.setCell(3, 1, 'ViewOrder')
+data.setCell(3, 2, 'Test.MOBFPendingOrder')
+data.setCell(3, 3, 12172);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'VIEWALL')
 data.setCell(4, 2, 'Test.MOBFMyOrder')
-data.setCell(4, 3, 7622);
+data.setCell(4, 3, 7259);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'SORTBY')
 data.setCell(5, 2, 'Test.MOBFMyOrder')
-data.setCell(5, 3, 6392);
+data.setCell(5, 3, 6250);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'GetOrder')
-data.setCell(6, 2, 'Test.MOBFPendingOrder')
-data.setCell(6, 3, 6277);
+data.setCell(6, 1, 'NARROWBY')
+data.setCell(6, 2, 'Test.MOBFMyOrder')
+data.setCell(6, 3, 6201);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'DATEvalidation')
+data.setCell(7, 1, 'QTYvalidation')
 data.setCell(7, 2, 'Test.MOBFPendingOrder')
-data.setCell(7, 3, 5107);
+data.setCell(7, 3, 4941);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'PRICEvalidation')
+data.setCell(8, 1, 'DATEvalidation')
 data.setCell(8, 2, 'Test.MOBFPendingOrder')
-data.setCell(8, 3, 5038);
+data.setCell(8, 3, 4933);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'QTYvalidation')
+data.setCell(9, 1, 'PRICEvalidation')
 data.setCell(9, 2, 'Test.MOBFPendingOrder')
-data.setCell(9, 3, 5003);
+data.setCell(9, 3, 4932);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'ORDERvalidation')
 data.setCell(10, 2, 'Test.MOBFPendingOrder')
-data.setCell(10, 3, 4927);
+data.setCell(10, 3, 4836);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'QTYvalidation')
+data.setCell(11, 1, 'ORDERvalidation')
 data.setCell(11, 2, 'Test.MOBFMyOrder')
-data.setCell(11, 3, 4692);
+data.setCell(11, 3, 4607);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'ORDERvalidation')
-data.setCell(12, 2, 'Test.MOBFMyOrder')
-data.setCell(12, 3, 4562);
+data.setCell(12, 1, 'SWIPE')
+data.setCell(12, 2, 'Test.MOBFPendingOrder')
+data.setCell(12, 3, 4456);
 data.setCell(13, 0, 13)
 data.setCell(13, 1, 'DATEvalidation')
 data.setCell(13, 2, 'Test.MOBFMyOrder')
-data.setCell(13, 3, 4525);
+data.setCell(13, 3, 4450);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'PRICEvalidation')
+data.setCell(14, 1, 'QTYvalidation')
 data.setCell(14, 2, 'Test.MOBFMyOrder')
-data.setCell(14, 3, 4515);
+data.setCell(14, 3, 4424);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'OrderCountPO')
-data.setCell(15, 2, 'Test.MOBFPendingOrder')
-data.setCell(15, 3, 4427);
+data.setCell(15, 1, 'PRICEvalidation')
+data.setCell(15, 2, 'Test.MOBFMyOrder')
+data.setCell(15, 3, 4396);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'SWIPE')
+data.setCell(16, 1, 'OrderCountPO')
 data.setCell(16, 2, 'Test.MOBFPendingOrder')
-data.setCell(16, 3, 4406);
+data.setCell(16, 3, 4352);
 data.setCell(17, 0, 17)
 data.setCell(17, 1, 'SORTBY')
 data.setCell(17, 2, 'Test.MOBFPendingOrder')
-data.setCell(17, 3, 3021);
+data.setCell(17, 3, 2925);
 data.setCell(18, 0, 18)
 data.setCell(18, 1, 'UrgentOrder')
 data.setCell(18, 2, 'Test.MOBFPendingOrder')
-data.setCell(18, 3, 126);
+data.setCell(18, 3, 130);
 window.suiteTableData['DEMO_SUITE']= { tableData: data, tableDiv: 'times-div-DEMO_SUITE'}
 return data;
 }
@@ -536,94 +570,96 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">GetOrder</span>
-                <span class="method-start">6703 ms</span>
+                <span class="method-start">1939 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ViewOrder</span>
-                <span class="method-start">12982 ms</span>
+                <span class="method-start">15993 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">UrgentOrder</span>
-                <span class="method-start">25557 ms</span>
+                <span class="method-start">28166 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ORDERvalidation</span>
-                <span class="method-start">25684 ms</span>
+                <span class="method-start">28297 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">QTYvalidation</span>
-                <span class="method-start">30612 ms</span>
+                <span class="method-start">33134 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">PRICEvalidation</span>
-                <span class="method-start">35616 ms</span>
+                <span class="method-start">38076 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">DATEvalidation</span>
-                <span class="method-start">40654 ms</span>
+                <span class="method-start">43009 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Navigation</span>
-                <span class="method-start">45762 ms</span>
+                <span class="method-start">47943 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SORTBY</span>
-                <span class="method-start">67369 ms</span>
+                <span class="method-start">69085 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">NARROWBY</span>
-                <span class="method-start">70391 ms</span>
+                <span class="method-start">72011 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SWIPE</span>
-                <span class="method-start">83860 ms</span>
+                <span class="method-start">85172 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">OrderCountPO</span>
-                <span class="method-start">88268 ms</span>
+                <span class="method-start">89629 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">EOPO</span>
-                <span class="method-start">92695 ms</span>
+                <span class="method-start">93982 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Test.MOBFMyOrder</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">Del1</span>
-                <span class="method-start">92696 ms</span>
+                <span class="method-start">93983 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">SORTBY</span>
-                <span class="method-start">92696 ms</span>
+                <span class="method-start">93983 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">NARROWBY</span>
-                <span class="method-start">99088 ms</span>
+                <span class="method-start">100233 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">VIEWALL</span>
-                <span class="method-start">107909 ms</span>
+                <span class="method-start">106440 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ORDERvalidation</span>
-                <span class="method-start">115532 ms</span>
+                <span class="method-start">113700 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">QTYvalidation</span>
-                <span class="method-start">120095 ms</span>
+                <span class="method-start">118308 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">PRICEvalidation</span>
-                <span class="method-start">124788 ms</span>
+                <span class="method-start">122733 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">DATEvalidation</span>
-                <span class="method-start">129303 ms</span>
+                <span class="method-start">127130 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">EOMO</span>
-                <span class="method-start">133828 ms</span>
+                <span class="method-start">131580 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
