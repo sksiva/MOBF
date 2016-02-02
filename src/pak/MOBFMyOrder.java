@@ -29,17 +29,14 @@ public class MOBFMyOrder extends Attributes{
 		  	highlightElement(By.className("skMobff_sortLabel")).click();
 		  	WebElement sort = dr.findElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[2]/div[2]/select"));
 		  	Select select = new Select(sort);
-			select.selectByVisibleText("Order #");
-			System.out.println("--------------------------------------------------------------");	
+			select.selectByVisibleText("Order #");	
 	  }
 	  
 	  @Test (priority=2)
 	  public void NARROWBY() throws Exception {
 		  	
-		  System.out.println("NARROWBY in MO 1");
 		  WebDriverWait wait1 = new WebDriverWait(dr, 30);
 	  	  highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[2]/div[3]/div[1]")).click();
-	  	System.out.println("NARROWBY in MO 2");
 	  	  //Random NARROW BY Selections
 	  	  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMob_filterOptions")));
 		  WebElement WM1 = dr.findElement(By.className("skMob_filterOptions"));
@@ -47,7 +44,7 @@ public class MOBFMyOrder extends Attributes{
 		  Random rand1 = new Random(System.currentTimeMillis());
 		  WebElement W1 = LWM1.get(rand1.nextInt(LWM1.size()));
 		  String Menu1 = W1.getText();
-		  System.out.println("Menu1 : "+Menu1);
+		  System.out.println("Menu Name : "+Menu1);
 		  W1.click();
 		  		  
 		  //Random Order Selection After Filter
@@ -60,8 +57,6 @@ public class MOBFMyOrder extends Attributes{
 		  {
 				  Random rand = new Random(System.currentTimeMillis());
 				  WebElement WK1 = WP1.get(rand.nextInt(WP1.size()));
-				  System.out.println("***** Rand Val ***** ");
-				  System.out.println(WK1.getText());
 				  WK1.click();
 				  
 				  // Items Count Validation
@@ -69,7 +64,6 @@ public class MOBFMyOrder extends Attributes{
 				  Q1 = dr.findElement(By.className("skMobff_pendingOrderItems"));
 				  LQ1 = Q1.findElements(By.className("skMobff_productDetails"));
 				  int LQ = LQ1.size();
-				  System.out.println("Size : "+LQ);
 				  int flag=0;
 				  if(Menu1!="Clear All")
 				  {
@@ -111,12 +105,12 @@ public class MOBFMyOrder extends Attributes{
 		  
 		  highlightElement(By.className("skMobff_viewAllItem")).click();
 		  String Mcount = dr.findElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[3]/div[1]/div[2]")).getText();
-		  System.out.println("MCount 1 : "+Mcount);
+		  System.out.println("View All list Count : "+Mcount);
 		  WebElement WE1 = dr.findElement(By.className("skMobff_pendingOrderItems"));
 		  List<WebElement> LWE1 = WE1.findElements(By.className("skMobff_productDetails"));
 		  int str = LWE1.size();
 		  String Mcount1 = Integer.toString(str);
-		  System.out.println("MCount 2 : "+Mcount1);
+		  System.out.println("View All Items Count "+Mcount1);
 		  if(Mcount.contains(Mcount1))
 		  {
 			  System.out.println("Count Matched with the Displayed Items Count "+Mcount);
@@ -134,13 +128,10 @@ public class MOBFMyOrder extends Attributes{
 		  highlightElement(By.id("id_menuListItem_1")).click();
 		  Thread.sleep(3000);
 		  highlightElement(orderAttr).click();
-		  
 		  Thread.sleep(3000);
-		  System.out.println("Scan 1");
 		  WebElement M1 = highlightElement(By.className("skMobff_pendingOrderItems"));
 		  List<WebElement> LM1 = M1.findElements(By.className("skMobff_productDetails"));
 		  int Ksize = LM1.size();
-		  System.out.println("menu Sizeeeeeeeeee : "+Ksize);		  
 		  String K1 = "id_skMobff_productDetails_";
 		  
 		  for(int i=0; i<Ksize;i++)
@@ -155,8 +146,8 @@ public class MOBFMyOrder extends Attributes{
 			  highlightElement(By.className("skMobff_scanOkBtn")).click();
 			  highlightElement(By.xpath("/html/body/div[6]/div[2]/div")).click();
 			  highlightElement(orderAttr).click();
-			  System.out.println("-----------------------------------------------");
-			  
+			  System.out.println("-----------------------------------------------");			  
 		  }
+		  highlightElement(By.className("skMobff_backBtnIcon")).click();
 	  }
 }

@@ -211,8 +211,7 @@ public class MOBFPendingOrder extends Attributes{
 	  	highlightElement(By.className("skMobff_sortLabel")).click();
 	  	WebElement sort = dr.findElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[2]/div[1]/select"));
 		Select select = new Select(sort);
-		select.selectByVisibleText(" Order # ");
-		System.out.println("--------------------------------------------------------------");		
+		select.selectByVisibleText(" Order # ");	
   }
   
   @Test (priority = 10)

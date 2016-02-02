@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-MOBF_PAK_TEST_SUITE">
-              <span class="suite-name border-failed">MOBF PAK TEST SUITE</span>
+              <span class="suite-name border-passed">MOBF PAK TEST SUITE</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">16 methods, 1 failed,   15 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-MOBF_PAK_TEST_SUITE" class="hide-methods failed suite-MOBF_PAK_TEST_SUITE"> (hide)</a> <!-- hide-methods failed suite-MOBF_PAK_TEST_SUITE -->
-                      <a href="#" panel-name="suite-MOBF_PAK_TEST_SUITE" class="show-methods failed suite-MOBF_PAK_TEST_SUITE"> (show)</a> <!-- show-methods failed suite-MOBF_PAK_TEST_SUITE -->
-                    </span>
-                    <div class="method-list-content failed suite-MOBF_PAK_TEST_SUITE">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-MOBF_PAK_TEST_SUITE" title="pak.MOBFMyOrder" hash-for-method="NARROWBY">NARROWBY</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-MOBF_PAK_TEST_SUITE -->
+                    <span class="method-stats">16 methods,   16 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -122,6 +108,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-MOBF_PAK_TEST_SUITE" title="pak.MOBFPendingOrder" hash-for-method="GetOrder">GetOrder</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-MOBF_PAK_TEST_SUITE" title="pak.MOBFMyOrder" hash-for-method="NARROWBY">NARROWBY</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -201,38 +192,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-MOBF_PAK_TEST_SUITE" class="panel MOBF_PAK_TEST_SUITE">
-          <div class="suite-MOBF_PAK_TEST_SUITE-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">pak.MOBFMyOrder</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="NARROWBY">
-                  </a> <!-- NARROWBY -->
-                  <span class="method-name">NARROWBY</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (77, 217). Other element would receive the click: &lt;img class=&quot;skMobff_image&quot; src=&quot;http://media.kohlsimg.com/is/image/kohls/2154841_Beige_Camp?wid=180&amp;amp;hei=180&amp;amp;op_sharpen=1&quot;&gt;
-  (Session info: chrome=48.0.2564.97)
-  (Driver info: chromedriver=2.20.353145 (343b531d31eeb933ec778dbcf7081628a1396067),platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30 milliseconds
-Build info: version: &apos;2.48.2&apos;, revision: &apos;41bccdd&apos;, time: &apos;2015-10-09 19:59:12&apos;
-System info: host: &apos;SK-SYS-043&apos;, ip: &apos;192.168.2.187&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_05&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=true, chrome={userDataDir=C:\Users\SIVAKU~1.N\AppData\Local\Temp\scoped_dir6876_27338}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=true, version=48.0.2564.97, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 29b482e1e42843bab2c673348f5e2384
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at pak.MOBFMyOrder.NARROWBY(MOBFMyOrder.java:50)
-... Removed 28 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-MOBF_PAK_TEST_SUITE-class-failed -->
           <div class="suite-MOBF_PAK_TEST_SUITE-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -333,6 +292,13 @@ Session ID: 29b482e1e42843bab2c673348f5e2384
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="NARROWBY">
+                  </a> <!-- NARROWBY -->
+                  <span class="method-name">NARROWBY</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="SORTBY">
                   </a> <!-- SORTBY -->
                   <span class="method-name">SORTBY</span>
@@ -413,69 +379,69 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(16);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Scan')
+data.setCell(0, 1, 'NARROWBY')
 data.setCell(0, 2, 'pak.MOBFMyOrder')
-data.setCell(0, 3, 34156);
+data.setCell(0, 3, 42133);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Navigation')
-data.setCell(1, 2, 'pak.MOBFPendingOrder')
-data.setCell(1, 3, 20960);
+data.setCell(1, 1, 'Scan')
+data.setCell(1, 2, 'pak.MOBFMyOrder')
+data.setCell(1, 3, 36804);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'GetOrder')
+data.setCell(2, 1, 'Navigation')
 data.setCell(2, 2, 'pak.MOBFPendingOrder')
-data.setCell(2, 3, 12392);
+data.setCell(2, 3, 21073);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'ViewOrder')
 data.setCell(3, 2, 'pak.MOBFPendingOrder')
-data.setCell(3, 3, 11907);
+data.setCell(3, 3, 12110);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'NARROWBY')
 data.setCell(4, 2, 'pak.MOBFPendingOrder')
-data.setCell(4, 3, 9076);
+data.setCell(4, 3, 9103);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'OrderCountPO')
+data.setCell(5, 1, 'GetOrder')
 data.setCell(5, 2, 'pak.MOBFPendingOrder')
-data.setCell(5, 3, 6361);
+data.setCell(5, 3, 8457);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'SORTBY')
-data.setCell(6, 2, 'pak.MOBFMyOrder')
-data.setCell(6, 3, 6221);
+data.setCell(6, 1, 'OrderCountPO')
+data.setCell(6, 2, 'pak.MOBFPendingOrder')
+data.setCell(6, 3, 6398);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'PRICEvalidation')
-data.setCell(7, 2, 'pak.MOBFPendingOrder')
-data.setCell(7, 3, 4901);
+data.setCell(7, 1, 'SORTBY')
+data.setCell(7, 2, 'pak.MOBFMyOrder')
+data.setCell(7, 3, 6233);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'QTYvalidation')
+data.setCell(8, 1, 'DATEvalidation')
 data.setCell(8, 2, 'pak.MOBFPendingOrder')
-data.setCell(8, 3, 4889);
+data.setCell(8, 3, 5012);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'DATEvalidation')
+data.setCell(9, 1, 'QTYvalidation')
 data.setCell(9, 2, 'pak.MOBFPendingOrder')
-data.setCell(9, 3, 4878);
+data.setCell(9, 3, 4941);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'ORDERvalidation')
+data.setCell(10, 1, 'PRICEvalidation')
 data.setCell(10, 2, 'pak.MOBFPendingOrder')
-data.setCell(10, 3, 4767);
+data.setCell(10, 3, 4919);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'SWIPE')
+data.setCell(11, 1, 'ORDERvalidation')
 data.setCell(11, 2, 'pak.MOBFPendingOrder')
-data.setCell(11, 3, 4278);
+data.setCell(11, 3, 4842);
 data.setCell(12, 0, 12)
 data.setCell(12, 1, 'VIEWALLCount')
 data.setCell(12, 2, 'pak.MOBFMyOrder')
-data.setCell(12, 3, 4268);
+data.setCell(12, 3, 4325);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'SORTBY')
+data.setCell(13, 1, 'SWIPE')
 data.setCell(13, 2, 'pak.MOBFPendingOrder')
-data.setCell(13, 3, 2899);
+data.setCell(13, 3, 4292);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'NARROWBY')
-data.setCell(14, 2, 'pak.MOBFMyOrder')
-data.setCell(14, 3, 2180);
+data.setCell(14, 1, 'SORTBY')
+data.setCell(14, 2, 'pak.MOBFPendingOrder')
+data.setCell(14, 3, 2925);
 data.setCell(15, 0, 15)
 data.setCell(15, 1, 'UrgentOrder')
 data.setCell(15, 2, 'pak.MOBFPendingOrder')
-data.setCell(15, 3, 131);
+data.setCell(15, 3, 134);
 window.suiteTableData['MOBF_PAK_TEST_SUITE']= { tableData: data, tableDiv: 'times-div-MOBF_PAK_TEST_SUITE'}
 return data;
 }
@@ -520,80 +486,74 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">GetOrder</span>
-                <span class="method-start">1950 ms</span>
+                <span class="method-start">1899 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ViewOrder</span>
-                <span class="method-start">14345 ms</span>
+                <span class="method-start">10358 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">UrgentOrder</span>
-                <span class="method-start">26253 ms</span>
+                <span class="method-start">22470 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ORDERvalidation</span>
-                <span class="method-start">26385 ms</span>
+                <span class="method-start">22604 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">QTYvalidation</span>
-                <span class="method-start">31154 ms</span>
+                <span class="method-start">27447 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">PRICEvalidation</span>
-                <span class="method-start">36044 ms</span>
+                <span class="method-start">32388 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">DATEvalidation</span>
-                <span class="method-start">40946 ms</span>
+                <span class="method-start">37308 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Navigation</span>
-                <span class="method-start">45825 ms</span>
+                <span class="method-start">42321 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SORTBY</span>
-                <span class="method-start">66786 ms</span>
+                <span class="method-start">63395 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">NARROWBY</span>
-                <span class="method-start">69686 ms</span>
+                <span class="method-start">66321 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SWIPE</span>
-                <span class="method-start">78763 ms</span>
+                <span class="method-start">75425 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">OrderCountPO</span>
-                <span class="method-start">83043 ms</span>
+                <span class="method-start">79719 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">EOPO</span>
-                <span class="method-start">89405 ms</span>
-              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">pak.MOBFMyOrder</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">Del1</span>
-                <span class="method-start">89405 ms</span>
+                <span class="method-start">86118 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">SORTBY</span>
-                <span class="method-start">89406 ms</span>
+                <span class="method-start">86119 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">NARROWBY</span>
-                <span class="method-start">95628 ms</span>
+                <span class="method-start">92353 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">VIEWALLCount</span>
-                <span class="method-start">97814 ms</span>
+                <span class="method-start">134488 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Scan</span>
-                <span class="method-start">102086 ms</span>
+                <span class="method-start">138813 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
