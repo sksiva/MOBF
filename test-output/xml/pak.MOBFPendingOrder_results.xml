@@ -4,21 +4,21 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="83.161">
+           time="87.439">
   <properties />
   
   
-            <testcase name="GetOrder" time="9.115" classname="pak.MOBFPendingOrder" />
-                <testcase name="SORTBY" time="2.927" classname="pak.MOBFPendingOrder" />
-                <testcase name="PRICEvalidation" time="4.911" classname="pak.MOBFPendingOrder" />
-                <testcase name="DATEvalidation" time="4.996" classname="pak.MOBFPendingOrder" />
-                <testcase name="ORDERvalidation" time="4.808" classname="pak.MOBFPendingOrder" />
-                <testcase name="OrderCountPO" time="4.354" classname="pak.MOBFPendingOrder" />
-                <testcase name="SWIPE" time="4.451" classname="pak.MOBFPendingOrder" />
-                <testcase name="ViewOrder" time="12.183" classname="pak.MOBFPendingOrder" />
-                <testcase name="QTYvalidation" time="4.933" classname="pak.MOBFPendingOrder" />
-                <testcase name="Navigation" time="21.091" classname="pak.MOBFPendingOrder" />
-                <testcase name="NARROWBY" time="9.267" classname="pak.MOBFPendingOrder" />
-                <testcase name="UrgentOrder" time="0.125" classname="pak.MOBFPendingOrder" />
+            <testcase name="DATEvalidation" time="4.878" classname="pak.MOBFPendingOrder" />
+                <testcase name="OrderCountPO" time="6.361" classname="pak.MOBFPendingOrder" />
+                <testcase name="UrgentOrder" time="0.131" classname="pak.MOBFPendingOrder" />
+                <testcase name="PRICEvalidation" time="4.901" classname="pak.MOBFPendingOrder" />
+                <testcase name="SORTBY" time="2.899" classname="pak.MOBFPendingOrder" />
+                <testcase name="ORDERvalidation" time="4.767" classname="pak.MOBFPendingOrder" />
+                <testcase name="SWIPE" time="4.278" classname="pak.MOBFPendingOrder" />
+                <testcase name="Navigation" time="20.960" classname="pak.MOBFPendingOrder" />
+                <testcase name="NARROWBY" time="9.076" classname="pak.MOBFPendingOrder" />
+                <testcase name="QTYvalidation" time="4.889" classname="pak.MOBFPendingOrder" />
+                <testcase name="GetOrder" time="12.392" classname="pak.MOBFPendingOrder" />
+                <testcase name="ViewOrder" time="11.907" classname="pak.MOBFPendingOrder" />
       
 </testsuite>

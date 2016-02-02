@@ -321,11 +321,6 @@ public class MOBFPendingOrder extends Attributes{
       r.mousePress(InputEvent.BUTTON1_MASK); 
       r.mouseMove(FX2, FY); 
       r.mouseRelease(InputEvent.BUTTON1_MASK);
-      
-      /*//Click My Orders
-	  highlightElement(By.xpath(".//*[@class='skMobff_headerMenuIcon']")).click();
-	  highlightElement(By.name("myOrder")).click();	 */
-	  System.out.println("--------------------------------------------------------------");
   }
   
   @Test (enabled = false)

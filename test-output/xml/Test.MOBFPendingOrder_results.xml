@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="16.843">
+           time="16.598">
   <properties />
   
   
-            <testcase name="GetOrder" time="8.574" classname="Test.MOBFPendingOrder" />
-                <testcase name="SWIPE" time="8.269" classname="Test.MOBFPendingOrder" />
+            <testcase name="SWIPE" time="8.302" classname="Test.MOBFPendingOrder" />
+                <testcase name="GetOrder" time="8.296" classname="Test.MOBFPendingOrder" />
       
 </testsuite>

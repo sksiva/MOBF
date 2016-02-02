@@ -12,7 +12,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class MOBFMyOrder extends Attributes{
+public class MOScan extends Attributes{
 	
 	public static WebElement Q1;
 	public static List<WebElement> LQ1;
@@ -264,5 +264,30 @@ public class MOBFMyOrder extends Attributes{
 			  System.out.println("-----------------------------------------------");
 			  
 		  }
+		  
+		  
+		  
+		  /*for(WebElement LM : LM1)
+		  {
+			  Thread.sleep(3000);
+			  System.out.println("For Loop Item Name: "+LM.getText());
+			  //highlightElement(By.className("skMobff_backBtnIcon")).click();
+			  //highlightElement(orderAttr).click();
+			  System.out.println("B4 LM Click");
+			  Thread.sleep(4000);
+			  LM.click();
+			  System.out.println("After LM Click");
+			  //String SM1 = highlightElement(By.className("skMobff_Value")).getText();
+			  String SM1 = highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[1]/div[3]/div/div[2]/div[2]/div[2]")).getText();
+			  System.out.println("SKU : "+SM1);
+			  highlightElement(By.className("skMobff_backBtnIcon")).click();
+			  highlightElement(By.className("skMobff_backBtnIcon")).click();
+			  Thread.sleep(3000);
+			  highlightElement(By.className("skMobff_orderIdTxt")).sendKeys(SM1);
+			  highlightElement(By.className("skMobff_scanOkBtn")).click();
+			  highlightElement(By.xpath("/html/body/div[6]/div[2]/div")).click();
+			  highlightElement(orderAttr).click();
+			  System.out.println("-----------------------------------------------");
+		  }*/
 	  }
 }

@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="56.452">
+           time="56.545">
   <properties />
   
   
-            <testcase name="Scan" time="56.452" classname="Test.MOBFMyOrder" />
+            <testcase name="Scan" time="56.545" classname="Test.MOBFMyOrder" />
       
 </testsuite>

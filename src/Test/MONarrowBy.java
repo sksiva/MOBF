@@ -15,7 +15,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class NarrowBy {
+public class MONarrowBy {
 	public static WebDriver dr;
 	public static WebElement WB1;
 	public static String Str1, Str2, Str3;

@@ -12,7 +12,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 public class MOBFPendingOrder extends Attributes{
@@ -42,16 +41,16 @@ public class MOBFPendingOrder extends Attributes{
   @Test (priority = 2)
   public void ViewOrder() throws Exception {
 	  
-	  	dr.findElement(orderAttr).click();
-	  	WebDriverWait wait1 = new WebDriverWait(dr, 50);
-		//Go to Item Details page
+		  dr.findElement(orderAttr).click();
+		  WebDriverWait wait1 = new WebDriverWait(dr, 50);
+	  	  //Go to Item Details page
 		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.id("id_skMobff_productDetails_0")));
 		  highlightElement(By.id("id_skMobff_productDetails_0")).click();
-		// Back to PO Items
+		  // Back to PO Items
 		  Thread.sleep(5000);		
 		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
-		// Back to PO
+		  // Back to PO
 		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
 		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
 		  System.out.println("Order "+Str2+" Viewed Successfully");
@@ -61,8 +60,7 @@ public class MOBFPendingOrder extends Attributes{
   @Test (priority = 3)
   public void UrgentOrder() throws Exception {
 	  
-	  String Str4 = "/div[4]";		  
-	  //String UrgOrder = dr.findElement(By.xpath(Str1+Str2+Str3+"/div[2]/div[1]")).getText();
+	  String Str4 = "/div[4]";
 	  if(dr.findElements(By.xpath(Str1+Str2+Str3+Str4)).size() != 0){
 		  System.out.println("Selected Order "+Str2+" is An Urgent Order");
 		}
@@ -141,10 +139,10 @@ public class MOBFPendingOrder extends Attributes{
 	  {
 		  System.out.println("Selected Order Price page in PLP is Same in PO Items page for the Order "+P1);
 	  }
-	  else
-	  {
-		  System.out.println("Selected Order in PLP is: "+P1+" But Opened Order Price is : "+P2);
-	  }	  
+		  else
+		  {
+			  System.out.println("Selected Order in PLP is: "+P1+" But Opened Order Price is : "+P2);
+		  }	  
 	  
 	  // Back to PO
 	  wait1.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@class='skMobff_backBtnIcon']")));
@@ -178,8 +176,6 @@ public class MOBFPendingOrder extends Attributes{
 	  System.out.println("Order Date is Validated for "+Str2+" Successfully");
 	  System.out.println("--------------------------------------------------------------");
   }
-  
-  
   
   @Test (priority = 8)
   public void Navigation() throws Exception {
@@ -301,7 +297,6 @@ public class MOBFPendingOrder extends Attributes{
 	  System.out.println("Swiped Order Numb : "+draggable.findElement(By.className("skMobff_OrderId")).getText());
 	  
 	  WebElement FW = dr.findElement(By.id("id_skMobff_ordersList_0"));
-	  //int FX = FW.getLocation().getX();
 	  int FY = FW.getLocation().getY()+150;
 	    
 	  //X-Axis From
@@ -321,10 +316,6 @@ public class MOBFPendingOrder extends Attributes{
       r.mousePress(InputEvent.BUTTON1_MASK); 
       r.mouseMove(FX2, FY); 
       r.mouseRelease(InputEvent.BUTTON1_MASK);
-      
-      /*//Click My Orders
-	  highlightElement(By.xpath(".//*[@class='skMobff_headerMenuIcon']")).click();
-	  highlightElement(By.name("myOrder")).click();	 */
 	  System.out.println("--------------------------------------------------------------");
   }
   
@@ -333,7 +324,7 @@ public class MOBFPendingOrder extends Attributes{
 	  
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
 	  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_OrderMainList")));
-	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));
+	  WebElement W1 = highlightElement(By.className("skMobff_OrderMainList"));
 	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
 	  // Get Order count from Pending Order page
 	  int X1 = WB1.size();
@@ -354,10 +345,5 @@ public class MOBFPendingOrder extends Attributes{
 	  highlightElement(By.name("myOrder")).click();
 	  
 	  System.out.println("--------------------------------------------------------------");
-  }
-
-  @AfterClass
-  public void EOPO() throws Exception {
-	  System.out.println("************************* End of Pending Orders *************************");  	  
   }
 }

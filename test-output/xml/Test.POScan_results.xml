@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DEMO TEST"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="11.833">
+  <properties />
+  
+  
+            <testcase name="GetOrder" time="3.596" classname="Test.POScan" />
+                <testcase name="SWIPE" time="8.237" classname="Test.POScan" />
+      
+</testsuite>
