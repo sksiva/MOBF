@@ -1,24 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="DEMO TEST"
-           tests="12"
+           tests="2"
            failures="0"
            errors="0"
            skipped="0"
-           time="81.173">
+           time="16.843">
   <properties />
   
   
-            <testcase name="SORTBY" time="2.935" classname="Test.MOBFPendingOrder" />
-                <testcase name="GetOrder" time="7.142" classname="Test.MOBFPendingOrder" />
-                <testcase name="ViewOrder" time="12.193" classname="Test.MOBFPendingOrder" />
-                <testcase name="UrgentOrder" time="0.121" classname="Test.MOBFPendingOrder" />
-                <testcase name="NARROWBY" time="9.115" classname="Test.MOBFPendingOrder" />
-                <testcase name="QTYvalidation" time="4.906" classname="Test.MOBFPendingOrder" />
-                <testcase name="PRICEvalidation" time="4.901" classname="Test.MOBFPendingOrder" />
-                <testcase name="SWIPE" time="4.564" classname="Test.MOBFPendingOrder" />
-                <testcase name="Navigation" time="21.085" classname="Test.MOBFPendingOrder" />
-                <testcase name="DATEvalidation" time="5.011" classname="Test.MOBFPendingOrder" />
-                <testcase name="ORDERvalidation" time="4.857" classname="Test.MOBFPendingOrder" />
-                <testcase name="OrderCountPO" time="4.343" classname="Test.MOBFPendingOrder" />
+            <testcase name="GetOrder" time="8.574" classname="Test.MOBFPendingOrder" />
+                <testcase name="SWIPE" time="8.269" classname="Test.MOBFPendingOrder" />
       
 </testsuite>

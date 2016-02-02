@@ -18,13 +18,13 @@ import org.testng.annotations.Test;
 public class MOBFPendingOrder extends Attributes{
 	
   @Test (priority = 1)
-  public void GetOrder() throws InterruptedException {
+  public void GetOrder() throws Exception {
 	  
 	  System.out.println("************************* Pending Orders *************************");
 	  dr.get("https://skavapoc:skava123@mobilestage.skavaone.com/skavastream/studio/reader/stg/mobileFulfillment");
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
 	  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_OrderMainList")));
-	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));	
+	  WebElement W1 = highlightElement(By.className("skMobff_OrderMainList"));	
 	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
 	 
 	  //Random Selection to PDP
@@ -39,10 +39,10 @@ public class MOBFPendingOrder extends Attributes{
 	  orderAttr = By.xpath(Str1+Str2+Str3);	  
   }
   
-  @Test (priority = 2)
+  @Test (enabled = false)
   public void ViewOrder() throws Exception {
 	  
-	  	dr.findElement(orderAttr).click();
+	  highlightElement(orderAttr).click();
 	  	WebDriverWait wait1 = new WebDriverWait(dr, 50);
 		//Go to Item Details page
 		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.id("id_skMobff_productDetails_0")));
@@ -58,7 +58,7 @@ public class MOBFPendingOrder extends Attributes{
 		  System.out.println("--------------------------------------------------------------");
   }
   
-  @Test (priority = 3)
+  @Test (enabled = false)
   public void UrgentOrder() throws Exception {
 	  
 	  String Str4 = "/div[4]";		  
@@ -73,7 +73,7 @@ public class MOBFPendingOrder extends Attributes{
 	  System.out.println("--------------------------------------------------------------");
   }
   
-  @Test (priority = 4)
+  @Test (enabled = false)
   public void ORDERvalidation() throws Exception {
 	  
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -82,7 +82,7 @@ public class MOBFPendingOrder extends Attributes{
 	  WB1.click();
 	  wait1.until(ExpectedConditions.presenceOfElementLocated(By.id("skMobff_orderId")));
 	  
-	  String S2 = dr.findElement(By.id("skMobff_orderId")).getText();
+	  String S2 = highlightElement(By.id("skMobff_orderId")).getText();
 	  if(S2.contains(S1))
 	  {
 		  System.out.println("Selected Order Number in PLP is Same in PO Items page for the Order "+S1);
@@ -99,7 +99,7 @@ public class MOBFPendingOrder extends Attributes{
 	  System.out.println("--------------------------------------------------------------");
   }
   
-  @Test (priority = 5)
+  @Test (enabled = false)
   public void QTYvalidation() throws Exception {
 	  
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -108,7 +108,7 @@ public class MOBFPendingOrder extends Attributes{
 	  WB1.click();
 	  //Get Number of Items in the Order
 	  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_orderItems")));
-	  WebElement WM1 = dr.findElement(By.className("skMobff_orderItems"));
+	  WebElement WM1 = highlightElement(By.className("skMobff_orderItems"));
 	  List<WebElement> LL1 = WM1.findElements(By.className("skMobff_productDetails"));
 	  int i = LL1.size();
 	  String Q2 = String.valueOf(i);
@@ -128,7 +128,7 @@ public class MOBFPendingOrder extends Attributes{
 	  System.out.println("--------------------------------------------------------------");
   }
   
-  @Test (priority = 6)
+  @Test (enabled = false)
   public void PRICEvalidation() throws Exception {
 	  
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -136,7 +136,7 @@ public class MOBFPendingOrder extends Attributes{
 	  String P1 = WB1.findElement(By.className("skMobff_TotalPrice")).getText();
 	  WB1.click();
 	  wait1.until(ExpectedConditions.presenceOfElementLocated(By.id("skMobff_orderValue")));
-	  String P2 = dr.findElement(By.id("skMobff_orderValue")).getText();
+	  String P2 = highlightElement(By.id("skMobff_orderValue")).getText();
 	  if(P2.contains(P1))
 	  {
 		  System.out.println("Selected Order Price page in PLP is Same in PO Items page for the Order "+P1);
@@ -153,7 +153,7 @@ public class MOBFPendingOrder extends Attributes{
 	  System.out.println("--------------------------------------------------------------");
   }
   
-  @Test (priority = 7)
+  @Test (enabled = false)
   public void DATEvalidation() throws Exception {
 	  
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -162,7 +162,7 @@ public class MOBFPendingOrder extends Attributes{
 	  WB1.click();
 	  
 	  wait1.until(ExpectedConditions.presenceOfElementLocated(By.id("skMobff_orderDate")));
-	  String D2 = dr.findElement(By.id("skMobff_orderDate")).getText();
+	  String D2 = highlightElement(By.id("skMobff_orderDate")).getText();
 	  if(D1.contains(D2))
 	  {
 		  System.out.println("Selected Order Date in PLP is Same in PO Items page for the Order "+D1);
@@ -181,7 +181,7 @@ public class MOBFPendingOrder extends Attributes{
   
   
   
-  @Test (priority = 8)
+  @Test (enabled = false)
   public void Navigation() throws Exception {
 	  
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -207,19 +207,19 @@ public class MOBFPendingOrder extends Attributes{
 	  highlightElement(By.name("pendingOrder")).click();	  
   }
   
-  @Test (priority = 9)
+  @Test (enabled = false)
   public void SORTBY() throws Exception {
 	  
 	  	WebDriverWait wait1 = new WebDriverWait(dr, 30);
 	  	wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_sortLabel")));
 	  	highlightElement(By.className("skMobff_sortLabel")).click();
-	  	WebElement sort = dr.findElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[2]/div[1]/select"));
+	  	WebElement sort = highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[2]/div[1]/select"));
 		Select select = new Select(sort);
 		select.selectByVisibleText(" Order # ");
 		System.out.println("--------------------------------------------------------------");		
   }
   
-  @Test (priority = 10)
+  @Test (enabled = false)
   public void NARROWBY() throws Exception {
 	  
 	  Thread.sleep(4000);
@@ -228,7 +228,7 @@ public class MOBFPendingOrder extends Attributes{
   	  
   	  //Random NARROW BY Selections
 	  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMob_filterOptions")));
-	  WebElement WM1 = dr.findElement(By.className("skMob_filterOptions"));
+	  WebElement WM1 = highlightElement(By.className("skMob_filterOptions"));
 	  List<WebElement> LWM1 = WM1.findElements(By.className("skMobff_filter "));
 	  Random rand1 = new Random(System.currentTimeMillis());
 	  WebElement W1 = LWM1.get(rand1.nextInt(LWM1.size()));
@@ -238,7 +238,7 @@ public class MOBFPendingOrder extends Attributes{
 	  		  
 	  //Random Order Selection After Filter
 	  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_OrderMainList")));
-	  WebElement WO1 = dr.findElement(By.className("skMobff_OrderMainList"));
+	  WebElement WO1 = highlightElement(By.className("skMobff_OrderMainList"));
 	  List<WebElement> WP1 = WO1.findElements(By.className("skMobff_orders"));
 	  int sizeMO = WP1.size();
 	  
@@ -252,7 +252,7 @@ public class MOBFPendingOrder extends Attributes{
 			  
 			  // Items Count Validation
 			  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_pendingOrderItems")));
-			  WebElement Q1 = dr.findElement(By.className("skMobff_pendingOrderItems"));
+			  WebElement Q1 = highlightElement(By.className("skMobff_pendingOrderItems"));
 			  List<WebElement> LQ1 = Q1.findElements(By.className("skMobff_productDetails"));
 			  int LQ = LQ1.size();
 			  System.out.println("Size : "+LQ);
@@ -263,7 +263,7 @@ public class MOBFPendingOrder extends Attributes{
 					  {
 						  String Z1 = "//*[@id='id_skMobff_productDetails_";
 						  String Z2 = "']/div[1]/div/div[2]";
-						  String NM = dr.findElement(By.xpath(Z1+i+Z2)).getText();
+						  String NM = highlightElement(By.xpath(Z1+i+Z2)).getText();
 						  System.out.println(i+" : "+NM);
 						  
 						  if(Menu1.equals(NM))
@@ -297,10 +297,10 @@ public class MOBFPendingOrder extends Attributes{
 	  
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
 	  wait1.until(ExpectedConditions.presenceOfElementLocated(orderAttr));
-	  WebElement draggable = dr.findElement(orderAttr);
+	  WebElement draggable = highlightElement(orderAttr);
 	  System.out.println("Swiped Order Numb : "+draggable.findElement(By.className("skMobff_OrderId")).getText());
 	  
-	  WebElement FW = dr.findElement(By.id("id_skMobff_ordersList_0"));
+	  WebElement FW = highlightElement(By.id("id_skMobff_ordersList_0"));
 	  //int FX = FW.getLocation().getX();
 	  int FY = FW.getLocation().getY()+150;
 	    
@@ -328,12 +328,12 @@ public class MOBFPendingOrder extends Attributes{
 	  System.out.println("--------------------------------------------------------------");
   }
   
-  @Test (priority = 12)
+  @Test (enabled = false)
   public void OrderCountPO() throws Exception {
 	  
 	  WebDriverWait wait1 = new WebDriverWait(dr, 30);
 	  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_OrderMainList")));
-	  WebElement W1 = dr.findElement(By.className("skMobff_OrderMainList"));
+	  WebElement W1 = highlightElement(By.className("skMobff_OrderMainList"));
 	  List<WebElement> WB1 = W1.findElements(By.className("skMobff_orders"));
 	  // Get Order count from Pending Order page
 	  int X1 = WB1.size();
@@ -342,7 +342,7 @@ public class MOBFPendingOrder extends Attributes{
 	  
 	  highlightElement(By.xpath(".//*[@class='skMobff_headerMenuIcon']")).click();
 	  //Get PO icon Count 
-	  String POcount = dr.findElement(By.id("id_menuListItemCount_0")).getText();
+	  String POcount = highlightElement(By.id("id_menuListItemCount_0")).getText();
 	  if(numOrders.equals(POcount))
 	  {
 		  System.out.println("Order Count in PO screen is same as PO icon count : "+numOrders);
@@ -354,10 +354,5 @@ public class MOBFPendingOrder extends Attributes{
 	  highlightElement(By.name("myOrder")).click();
 	  
 	  System.out.println("--------------------------------------------------------------");
-  }
-
-  @AfterClass
-  public void EOPO() throws Exception {
-	  System.out.println("************************* End of Pending Orders *************************");  	  
   }
 }

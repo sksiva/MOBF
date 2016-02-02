@@ -14,24 +14,26 @@ import org.testng.annotations.Test;
 
 public class MOBFMyOrder extends Attributes{
 	
+	public static WebElement Q1;
+	public static List<WebElement> LQ1;
+	
 	  @BeforeClass
 	  public void Del1() throws Exception {
 		System.out.println("************************* My Orders *************************");
 	  }
 	  
-	  @Test (priority=1)
+	  @Test (enabled = false)
 	  public void SORTBY() throws Exception {
 		  	WebDriverWait wait1 = new WebDriverWait(dr, 40);
 		  	Thread.sleep(4000);
 		  	wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_sortLabel")));
 		  	highlightElement(By.className("skMobff_sortLabel")).click();
-		  	WebElement sort = dr.findElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[2]/div[2]/select"));
+		  	WebElement sort = highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[2]/div[2]/select"));
 		  	Select select = new Select(sort);
-			select.selectByVisibleText("Order #");
-			System.out.println("--------------------------------------------------------------");	
+			select.selectByVisibleText("Order #");	
 	  }
 	  
-	  @Test (priority=2)
+	  @Test (enabled = false)
 	  public void NARROWBY() throws Exception {
 		  	
 		  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -39,7 +41,7 @@ public class MOBFMyOrder extends Attributes{
 	  	  
 	  	  //Random NARROW BY Selections
 	  	  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMob_filterOptions")));
-		  WebElement WM1 = dr.findElement(By.className("skMob_filterOptions"));
+		  WebElement WM1 = highlightElement(By.className("skMob_filterOptions"));
 		  List<WebElement> LWM1 = WM1.findElements(By.className("skMobff_filter "));
 		  Random rand1 = new Random(System.currentTimeMillis());
 		  WebElement W1 = LWM1.get(rand1.nextInt(LWM1.size()));
@@ -49,7 +51,7 @@ public class MOBFMyOrder extends Attributes{
 		  		  
 		  //Random Order Selection After Filter
 		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_OrderMainList")));
-		  WebElement WO1 = dr.findElement(By.className("skMobff_OrderMainList"));
+		  WebElement WO1 = highlightElement(By.className("skMobff_OrderMainList"));
 		  List<WebElement> WP1 = WO1.findElements(By.className("skMobff_orders"));
 		  int sizeMO = WP1.size();
 		  
@@ -63,8 +65,8 @@ public class MOBFMyOrder extends Attributes{
 				  
 				  // Items Count Validation
 				  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_pendingOrderItems")));
-				  WebElement Q1 = dr.findElement(By.className("skMobff_pendingOrderItems"));
-				  List<WebElement> LQ1 = Q1.findElements(By.className("skMobff_productDetails"));
+				  Q1 = highlightElement(By.className("skMobff_pendingOrderItems"));
+				  LQ1 = Q1.findElements(By.className("skMobff_productDetails"));
 				  int LQ = LQ1.size();
 				  System.out.println("Size : "+LQ);
 				  int flag=0;
@@ -74,7 +76,7 @@ public class MOBFMyOrder extends Attributes{
 						  {
 							  String Z1 = "//*[@id='id_skMobff_productDetails_";
 							  String Z2 = "']/div[1]/div/div[2]";
-							  String NM = dr.findElement(By.xpath(Z1+i+Z2)).getText();
+							  String NM = highlightElement(By.xpath(Z1+i+Z2)).getText();
 							  System.out.println(i+" : "+NM);
 							  
 							  if(Menu1.equals(NM))
@@ -103,15 +105,15 @@ public class MOBFMyOrder extends Attributes{
 		  }			  
 	  }
 	  
-	  @Test (priority=3)
+	  @Test (enabled = false)
 	  public void VIEWALL() throws Exception {
 		  
 		  highlightElement(By.className("skMobff_viewAllItem")).click();
-		  //Thread.sleep(3000);
-		  String Mcount = dr.findElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[3]/div[1]/div[2]")).getText();
+		  Thread.sleep(3000);
+		  String Mcount = highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[3]/div[1]/div[2]")).getText();
 		  System.out.println("MCount 1 : "+Mcount);
 		  WebElement WE1 = dr.findElement(By.className("skMobff_pendingOrderItems"));
-		  List<WebElement> LWE1 = WE1.findElements(By.className("skMobff_productDetails"));
+		  List<WebElement> LWE1 = Q1.findElements(By.className("skMobff_productDetails"));
 		  int str = LWE1.size();
 		  //int i = 1234;
 		  String Mcount1 = Integer.toString(str);
@@ -127,7 +129,7 @@ public class MOBFMyOrder extends Attributes{
 		  highlightElement(By.className("skMobff_backBtnIcon")).click();
 	  }
 	  
-	  @Test (priority = 4)
+	  @Test (enabled = false)
 	  public void ORDERvalidation() throws Exception {
 		  
 		  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -136,7 +138,7 @@ public class MOBFMyOrder extends Attributes{
 		  WB1.click();
 		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.id("skMobff_orderId")));
 		  
-		  String S2 = dr.findElement(By.id("skMobff_orderId")).getText();
+		  String S2 = highlightElement(By.id("skMobff_orderId")).getText();
 		  if(S2.contains(S1))
 		  {
 			  System.out.println("Selected Order Number in PLP is Same in PO Items page for the Order "+S1);
@@ -153,7 +155,7 @@ public class MOBFMyOrder extends Attributes{
 		  System.out.println("--------------------------------------------------------------");
 	  }
 	  
-	  @Test (priority = 5)
+	  @Test (enabled = false)
 	  public void QTYvalidation() throws Exception {
 		  
 		  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -162,7 +164,7 @@ public class MOBFMyOrder extends Attributes{
 		  WB1.click();
 		  //Get Number of Items in the Order
 		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_orderItems")));
-		  WebElement WM1 = dr.findElement(By.className("skMobff_orderItems"));
+		  WebElement WM1 = highlightElement(By.className("skMobff_orderItems"));
 		  List<WebElement> LL1 = WM1.findElements(By.className("skMobff_productDetails"));
 		  int i = LL1.size();
 		  String Q2 = String.valueOf(i);
@@ -182,7 +184,7 @@ public class MOBFMyOrder extends Attributes{
 		  System.out.println("--------------------------------------------------------------");
 	  }
 	  
-	  @Test (priority = 6)
+	  @Test (enabled = false)
 	  public void PRICEvalidation() throws Exception {
 		  
 		  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -190,7 +192,7 @@ public class MOBFMyOrder extends Attributes{
 		  String P1 = WB1.findElement(By.className("skMobff_TotalPrice")).getText();
 		  WB1.click();
 		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.id("skMobff_orderValue")));
-		  String P2 = dr.findElement(By.id("skMobff_orderValue")).getText();
+		  String P2 = highlightElement(By.id("skMobff_orderValue")).getText();
 		  if(P2.contains(P1))
 		  {
 			  System.out.println("Selected Order Price page in PLP is Same in PO Items page for the Order "+P1);
@@ -207,7 +209,7 @@ public class MOBFMyOrder extends Attributes{
 		  System.out.println("--------------------------------------------------------------");
 	  }
 	  
-	  @Test (priority = 7)
+	  @Test (enabled = false)
 	  public void DATEvalidation() throws Exception {
 		  
 		  WebDriverWait wait1 = new WebDriverWait(dr, 30);
@@ -216,7 +218,7 @@ public class MOBFMyOrder extends Attributes{
 		  WB1.click();
 		  
 		  wait1.until(ExpectedConditions.presenceOfElementLocated(By.id("skMobff_orderDate")));
-		  String D2 = dr.findElement(By.id("skMobff_orderDate")).getText();
+		  String D2 = highlightElement(By.id("skMobff_orderDate")).getText();
 		  if(D1.contains(D2))
 		  {
 			  System.out.println("Selected Order Date in PLP is Same in PO Items page for the Order "+D1);
@@ -232,10 +234,60 @@ public class MOBFMyOrder extends Attributes{
 		  System.out.println("Order Date is Validated for "+Str2+" Successfully");
 		  System.out.println("--------------------------------------------------------------");
 	  }
-	  @Test (priority = 8)
+	  @Test (priority = 1)
 	  public void Scan() throws Exception {
+		  highlightElement(By.className("skMobff_headerIconContainer")).click();
+		  highlightElement(By.id("id_menuListItem_1")).click();
+		  Thread.sleep(3000);
+		  highlightElement(orderAttr).click();
+		  
+		  Thread.sleep(3000);
+		  System.out.println("Scan 1");
+		  WebElement M1 = highlightElement(By.className("skMobff_pendingOrderItems"));
+		  List<WebElement> LM1 = M1.findElements(By.className("skMobff_productDetails"));
+		  int Ksize = LM1.size();
+		  System.out.println("menu Sizeeeeeeeeee : "+Ksize);		  
+		  String K1 = "id_skMobff_productDetails_";
+		  
+		  for(int i=0; i<Ksize;i++)
+		  {
+			  highlightElement(By.id(K1+i)).click();
+			  String SM1 = highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[1]/div[3]/div/div[2]/div[2]/div[2]")).getText();
+			  System.out.println("SKU : "+SM1);
+			  highlightElement(By.className("skMobff_backBtnIcon")).click();
+			  highlightElement(By.className("skMobff_backBtnIcon")).click();
+			  Thread.sleep(3000);
+			  highlightElement(By.className("skMobff_orderIdTxt")).sendKeys(SM1);
+			  highlightElement(By.className("skMobff_scanOkBtn")).click();
+			  highlightElement(By.xpath("/html/body/div[6]/div[2]/div")).click();
+			  highlightElement(orderAttr).click();
+			  System.out.println("-----------------------------------------------");
+			  
+		  }
 		  
 		  
 		  
+		  /*for(WebElement LM : LM1)
+		  {
+			  Thread.sleep(3000);
+			  System.out.println("For Loop Item Name: "+LM.getText());
+			  //highlightElement(By.className("skMobff_backBtnIcon")).click();
+			  //highlightElement(orderAttr).click();
+			  System.out.println("B4 LM Click");
+			  Thread.sleep(4000);
+			  LM.click();
+			  System.out.println("After LM Click");
+			  //String SM1 = highlightElement(By.className("skMobff_Value")).getText();
+			  String SM1 = highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[1]/div[3]/div/div[2]/div[2]/div[2]")).getText();
+			  System.out.println("SKU : "+SM1);
+			  highlightElement(By.className("skMobff_backBtnIcon")).click();
+			  highlightElement(By.className("skMobff_backBtnIcon")).click();
+			  Thread.sleep(3000);
+			  highlightElement(By.className("skMobff_orderIdTxt")).sendKeys(SM1);
+			  highlightElement(By.className("skMobff_scanOkBtn")).click();
+			  highlightElement(By.xpath("/html/body/div[6]/div[2]/div")).click();
+			  highlightElement(orderAttr).click();
+			  System.out.println("-----------------------------------------------");
+		  }*/
 	  }
 }

@@ -10,12 +10,9 @@
     <classes>
       <class name="Test.MOBFMyOrder">
         <methods>
-          <include name="EOMO"/>
-          <include name="NARROWBY"/>
+          <include name="Scan"/>
           <include name="Emulator"/>
-          <include name="SORTBY"/>
           <include name="Del1"/>
-          <include name="VIEWALL"/>
         </methods>
       </class> <!-- Test.MOBFMyOrder -->
     </classes>

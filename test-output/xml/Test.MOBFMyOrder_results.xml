@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="DEMO TEST"
-           tests="7"
+           tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="48.044">
+           time="56.452">
   <properties />
   
   
-            <testcase name="NARROWBY" time="16.654" classname="Test.MOBFMyOrder" />
-                <testcase name="ORDERvalidation" time="4.404" classname="Test.MOBFMyOrder" />
-                <testcase name="QTYvalidation" time="4.403" classname="Test.MOBFMyOrder" />
-                <testcase name="PRICEvalidation" time="4.389" classname="Test.MOBFMyOrder" />
-                <testcase name="VIEWALL" time="7.419" classname="Test.MOBFMyOrder" />
-                <testcase name="SORTBY" time="6.232" classname="Test.MOBFMyOrder" />
-                <testcase name="DATEvalidation" time="4.543" classname="Test.MOBFMyOrder" />
+            <testcase name="Scan" time="56.452" classname="Test.MOBFMyOrder" />
       
 </testsuite>

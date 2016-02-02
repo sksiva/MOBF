@@ -8,11 +8,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class MOBFMyOrder extends Attributes{
+	
+	public static WebElement Q1;
+	public static List<WebElement> LQ1;
 	
 	  @BeforeClass
 	  public void Del1() throws Exception {
@@ -63,8 +65,8 @@ public class MOBFMyOrder extends Attributes{
 				  
 				  // Items Count Validation
 				  wait1.until(ExpectedConditions.presenceOfElementLocated(By.className("skMobff_pendingOrderItems")));
-				  WebElement Q1 = dr.findElement(By.className("skMobff_pendingOrderItems"));
-				  List<WebElement> LQ1 = Q1.findElements(By.className("skMobff_productDetails"));
+				  Q1 = dr.findElement(By.className("skMobff_pendingOrderItems"));
+				  LQ1 = Q1.findElements(By.className("skMobff_productDetails"));
 				  int LQ = LQ1.size();
 				  System.out.println("Size : "+LQ);
 				  int flag=0;
@@ -100,7 +102,7 @@ public class MOBFMyOrder extends Attributes{
 		  else
 		  {
 			  System.out.println("After Narrow By filter applied NO ITEMS DISPLAYED");
-		  }			  
+		  }
 	  }
 	  
 	  @Test (priority=3)
@@ -231,5 +233,30 @@ public class MOBFMyOrder extends Attributes{
 		  highlightElement(By.xpath(".//*[@class='skMobff_backBtnIcon']")).click();
 		  System.out.println("Order Date is Validated for "+Str2+" Successfully");
 		  System.out.println("--------------------------------------------------------------");
+	  }
+	  
+	  @Test (priority = 8)
+	  public void Scan() throws Exception {
+		  
+		  highlightElement(orderAttr).click();
+		  
+		  Thread.sleep(3000);
+		  WebElement M1 = highlightElement(By.className("skMobff_pendingOrderItems"));
+		  List<WebElement> LM1 = M1.findElements(By.className("skMobff_productDetails"));
+		  
+		  for(WebElement LM : LM1)
+		  {
+			  Thread.sleep(3000);
+			  LM.click();
+			  //String SM1 = highlightElement(By.className("skMobff_Value")).getText();
+			  String SM1 = highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[1]/div[3]/div/div[2]/div[2]/div[2]")).getText();
+			  System.out.println(LM+" : "+SM1);
+			  highlightElement(By.className("skMobff_backBtnIcon")).click();
+			  highlightElement(By.className("skMobff_backBtnIcon")).click();
+			  Thread.sleep(3000);
+			  highlightElement(By.className("skMobff_orderIdTxt")).sendKeys(SM1);
+			  highlightElement(By.className("skMobff_scanOkBtn")).click();
+			  highlightElement(By.xpath("/html/body/div[6]/div[2]/div")).click();
+		  }
 	  }
 }

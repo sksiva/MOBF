@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="MOBF PAK TEST NAME"
-           tests="7"
+           tests="8"
            failures="0"
            errors="0"
            skipped="0"
-           time="33.196">
+           time="57.053">
   <properties />
   
   
-            <testcase name="DATEvalidation" time="4.423" classname="pak.MOBFMyOrder" />
-                <testcase name="PRICEvalidation" time="4.553" classname="pak.MOBFMyOrder" />
-                <testcase name="VIEWALL" time="4.457" classname="pak.MOBFMyOrder" />
-                <testcase name="ORDERvalidation" time="4.420" classname="pak.MOBFMyOrder" />
-                <testcase name="SORTBY" time="6.264" classname="pak.MOBFMyOrder" />
-                <testcase name="NARROWBY" time="4.654" classname="pak.MOBFMyOrder" />
-                <testcase name="QTYvalidation" time="4.425" classname="pak.MOBFMyOrder" />
+            <testcase name="Scan" time="23.799" classname="pak.MOBFMyOrder" />
+                <testcase name="QTYvalidation" time="4.437" classname="pak.MOBFMyOrder" />
+                <testcase name="NARROWBY" time="4.671" classname="pak.MOBFMyOrder" />
+                <testcase name="ORDERvalidation" time="4.448" classname="pak.MOBFMyOrder" />
+                <testcase name="SORTBY" time="6.256" classname="pak.MOBFMyOrder" />
+                <testcase name="PRICEvalidation" time="4.405" classname="pak.MOBFMyOrder" />
+                <testcase name="VIEWALL" time="4.462" classname="pak.MOBFMyOrder" />
+                <testcase name="DATEvalidation" time="4.575" classname="pak.MOBFMyOrder" />
       
 </testsuite>

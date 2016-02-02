@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [DEMO SUITE]]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="DEMO TEST">
+    <classes>
+      <class name="Test.MOBFPendingOrder"/>
+      <class name="Test.MOBFMyOrder"/>
+    </classes>
+  </test> <!-- DEMO TEST -->
+  <test name="DEMO TEST(failed)">
+    <classes>
+      <class name="Test.MOBFPendingOrder">
+        <methods>
+          <include name="Emulator"/>
+          <include name="EOPO"/>
+        </methods>
+      </class> <!-- Test.MOBFPendingOrder -->
+      <class name="Test.MOBFMyOrder">
+        <methods>
+          <include name="Scan"/>
+          <include name="Del1"/>
+          <include name="VIEWALL"/>
+        </methods>
+      </class> <!-- Test.MOBFMyOrder -->
+    </classes>
+  </test> <!-- DEMO TEST(failed) -->
+  <test name="DEMO TEST(failed)">
+    <classes>
+      <class name="Test.MOBFMyOrder">
+        <methods>
+          <include name="Scan"/>
+          <include name="Del1"/>
+          <include name="Del1"/>
+          <include name="VIEWALL"/>
+        </methods>
+      </class> <!-- Test.MOBFMyOrder -->
+      <class name="Test.MOBFPendingOrder">
+        <methods>
+          <include name="Emulator"/>
+          <include name="EOPO"/>
+        </methods>
+      </class> <!-- Test.MOBFPendingOrder -->
+    </classes>
+  </test> <!-- DEMO TEST(failed) -->
+  <test name="DEMO TEST(failed)(failed)">
+    <classes>
+      <class name="Test.MOBFMyOrder">
+        <methods>
+          <include name="Scan"/>
+          <include name="Del1"/>
+          <include name="Del1"/>
+          <include name="VIEWALL"/>
+        </methods>
+      </class> <!-- Test.MOBFMyOrder -->
+      <class name="Test.MOBFPendingOrder">
+        <methods>
+          <include name="Emulator"/>
+          <include name="EOPO"/>
+        </methods>
+      </class> <!-- Test.MOBFPendingOrder -->
+    </classes>
+  </test> <!-- DEMO TEST(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [DEMO SUITE]] -->

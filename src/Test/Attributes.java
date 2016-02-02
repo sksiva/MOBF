@@ -19,7 +19,7 @@ public class Attributes {
 	public static String Str1, Str2, Str3;
 	public static By orderAttr;
 	public static WebElement element;
-	
+		
 	@BeforeSuite
 	public static void Emulator() {
 	      
