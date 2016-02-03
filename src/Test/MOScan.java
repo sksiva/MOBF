@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -113,9 +112,8 @@ public class MOScan extends Attributes{
 		  String Mcount = highlightElement(By.xpath("//*[@id='skPageLayoutCell_1_id-2']/div/div/div/div[3]/div[1]/div[2]")).getText();
 		  System.out.println("MCount 1 : "+Mcount);
 		  WebElement WE1 = dr.findElement(By.className("skMobff_pendingOrderItems"));
-		  List<WebElement> LWE1 = Q1.findElements(By.className("skMobff_productDetails"));
+		  List<WebElement> LWE1 = WE1.findElements(By.className("skMobff_productDetails"));
 		  int str = LWE1.size();
-		  //int i = 1234;
 		  String Mcount1 = Integer.toString(str);
 		  System.out.println("MCount 2 : "+Mcount1);
 		  if(Mcount.contains(Mcount1))

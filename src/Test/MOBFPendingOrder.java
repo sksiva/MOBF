@@ -12,7 +12,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 public class MOBFPendingOrder extends Attributes{
@@ -36,7 +35,9 @@ public class MOBFPendingOrder extends Attributes{
 	  Str3 = "']";
 	  System.out.println("Selected Order Number To Be Manipulate : "+Str2);
 	  System.out.println("--------------------------------------------------------------");
-	  orderAttr = By.xpath(Str1+Str2+Str3);	  
+	  //orderAttr = By.xpath(Str1+Str2+Str3);
+	  orderAttr = By.xpath(Str1+"07516364-00006"+Str3);	 
+	  
   }
   
   @Test (enabled = false)
@@ -219,8 +220,8 @@ public class MOBFPendingOrder extends Attributes{
 		System.out.println("--------------------------------------------------------------");		
   }
   
-  @Test (enabled = false)
-  public void NARROWBY() throws Exception {
+	  @Test (enabled = false)
+	  public void NARROWBY() throws Exception {
 	  
 	  Thread.sleep(4000);
       WebDriverWait wait1 = new WebDriverWait(dr, 30);

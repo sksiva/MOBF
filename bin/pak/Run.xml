@@ -4,10 +4,13 @@
       <listener class-name="org.uncommons.reportng.HTMLReporter"/>
       <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
+  
   <test name="MOBF PAK TEST NAME" >
     <classes>
-      <class name="pak.MOBFPendingOrder" />
-      <class name="pak.MOBFMyOrder" />
+      <class name="pak.MOBFPendingOrder"/>
+      <class name="pak.MOBFMyOrder"/>
+      <class name="pak.MOBFCompleteOrder"/>
+      <class name="pak.MOBFArchieveOrder"/>
    </classes>
   </test>
 </suite>

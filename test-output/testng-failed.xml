@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [MOBF PAK TEST SUITE]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [DEMO SUITE]">
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
-  <test name="MOBF PAK TEST NAME">
+  <test name="DEMO TEST">
     <classes>
-      <class name="pak.MOBFPendingOrder"/>
-      <class name="pak.MOBFMyOrder"/>
+      <class name="Test.MOBFPendingOrder"/>
+      <class name="Test.MOBFMyOrder"/>
+      <class name="Test.MOBFCompleteOrder"/>
+      <class name="Test.MOBFArchieveOrder"/>
     </classes>
-  </test> <!-- MOBF PAK TEST NAME -->
-</suite> <!-- Failed suite [MOBF PAK TEST SUITE] -->
+  </test> <!-- DEMO TEST -->
+</suite> <!-- Failed suite [DEMO SUITE] -->

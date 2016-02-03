@@ -4,21 +4,21 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="84.206">
+           time="87.787">
   <properties />
   
   
-            <testcase name="GetOrder" time="8.457" classname="pak.MOBFPendingOrder" />
-                <testcase name="SORTBY" time="2.925" classname="pak.MOBFPendingOrder" />
-                <testcase name="PRICEvalidation" time="4.919" classname="pak.MOBFPendingOrder" />
-                <testcase name="DATEvalidation" time="5.012" classname="pak.MOBFPendingOrder" />
-                <testcase name="ORDERvalidation" time="4.842" classname="pak.MOBFPendingOrder" />
-                <testcase name="ViewOrder" time="12.110" classname="pak.MOBFPendingOrder" />
-                <testcase name="NARROWBY" time="9.103" classname="pak.MOBFPendingOrder" />
-                <testcase name="QTYvalidation" time="4.941" classname="pak.MOBFPendingOrder" />
-                <testcase name="Navigation" time="21.073" classname="pak.MOBFPendingOrder" />
-                <testcase name="SWIPE" time="4.292" classname="pak.MOBFPendingOrder" />
-                <testcase name="OrderCountPO" time="6.398" classname="pak.MOBFPendingOrder" />
-                <testcase name="UrgentOrder" time="0.134" classname="pak.MOBFPendingOrder" />
+            <testcase name="PRICEvalidation" time="4.951" classname="pak.MOBFPendingOrder" />
+                <testcase name="ORDERvalidation" time="4.830" classname="pak.MOBFPendingOrder" />
+                <testcase name="ViewOrder" time="12.213" classname="pak.MOBFPendingOrder" />
+                <testcase name="QTYvalidation" time="4.962" classname="pak.MOBFPendingOrder" />
+                <testcase name="NARROWBY" time="9.305" classname="pak.MOBFPendingOrder" />
+                <testcase name="DATEvalidation" time="4.990" classname="pak.MOBFPendingOrder" />
+                <testcase name="Navigation" time="21.289" classname="pak.MOBFPendingOrder" />
+                <testcase name="SORTBY" time="2.919" classname="pak.MOBFPendingOrder" />
+                <testcase name="SWIPE" time="4.510" classname="pak.MOBFPendingOrder" />
+                <testcase name="UrgentOrder" time="0.151" classname="pak.MOBFPendingOrder" />
+                <testcase name="GetOrder" time="11.234" classname="pak.MOBFPendingOrder" />
+                <testcase name="OrderCountPO" time="6.433" classname="pak.MOBFPendingOrder" />
       
 </testsuite>

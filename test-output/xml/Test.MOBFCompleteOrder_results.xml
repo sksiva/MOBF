@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DEMO TEST"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="19.672">
+  <properties />
+  
+  
+            <testcase name="SWIPE" time="8.317" classname="Test.MOBFCompleteOrder" />
+                <testcase name="OrderCountPO" time="11.355" classname="Test.MOBFCompleteOrder" />
+      
+</testsuite>

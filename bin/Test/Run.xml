@@ -8,6 +8,8 @@
     <classes>
       <class name="Test.MOBFPendingOrder" />
       <class name="Test.MOBFMyOrder" />
+      <class name="Test.MOBFCompleteOrder" />
+      <class name="Test.MOBFArchieveOrder" />
    </classes>
   </test>
 </suite>
