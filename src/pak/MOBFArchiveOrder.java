@@ -1,4 +1,4 @@
-package Test;
+package pak;
 
 import java.awt.Robot;
 import java.awt.event.InputEvent;
@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class MOBFArchieveOrder extends Attributes{
+public class MOBFArchiveOrder extends Attributes{
 	  @Test
  public void REVERSESWIPE() throws Exception {
 		  
