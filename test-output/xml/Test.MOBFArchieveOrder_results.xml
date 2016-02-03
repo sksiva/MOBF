@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="8.623">
+           time="8.628">
   <properties />
   
   
-            <testcase name="REVERSESWIPE" time="8.623" classname="Test.MOBFArchieveOrder" />
+            <testcase name="REVERSESWIPE" time="8.628" classname="Test.MOBFArchieveOrder" />
       
 </testsuite>

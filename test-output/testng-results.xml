@@ -2,50 +2,50 @@
 <testng-results skipped="0" failed="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="DEMO SUITE" duration-ms="153849" started-at="2016-02-03T10:26:49Z" finished-at="2016-02-03T10:29:23Z">
+  <suite name="DEMO SUITE" duration-ms="155833" started-at="2016-02-03T10:32:32Z" finished-at="2016-02-03T10:35:07Z">
     <groups>
     </groups>
-    <test name="DEMO TEST" duration-ms="153849" started-at="2016-02-03T10:26:49Z" finished-at="2016-02-03T10:29:23Z">
+    <test name="DEMO TEST" duration-ms="155833" started-at="2016-02-03T10:32:32Z" finished-at="2016-02-03T10:35:07Z">
       <class name="Test.MOBFPendingOrder">
-        <test-method status="PASS" signature="Emulator()[pri:0, instance:Test.MOBFPendingOrder@531be3c5]" name="Emulator" is-config="true" duration-ms="2171" started-at="2016-02-03T15:56:47Z" finished-at="2016-02-03T15:56:49Z">
+        <test-method status="PASS" signature="Emulator()[pri:0, instance:Test.MOBFPendingOrder@531be3c5]" name="Emulator" is-config="true" duration-ms="1891" started-at="2016-02-03T16:02:30Z" finished-at="2016-02-03T16:02:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Emulator -->
-        <test-method status="PASS" signature="GetOrder()[pri:1, instance:Test.MOBFPendingOrder@531be3c5]" name="GetOrder" duration-ms="11686" started-at="2016-02-03T15:56:49Z" finished-at="2016-02-03T15:57:01Z">
+        <test-method status="PASS" signature="GetOrder()[pri:1, instance:Test.MOBFPendingOrder@531be3c5]" name="GetOrder" duration-ms="14208" started-at="2016-02-03T16:02:32Z" finished-at="2016-02-03T16:02:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetOrder -->
-        <test-method status="PASS" signature="SWIPE()[pri:11, instance:Test.MOBFPendingOrder@531be3c5]" name="SWIPE" duration-ms="8295" started-at="2016-02-03T15:57:01Z" finished-at="2016-02-03T15:57:09Z">
+        <test-method status="PASS" signature="SWIPE()[pri:11, instance:Test.MOBFPendingOrder@531be3c5]" name="SWIPE" duration-ms="8283" started-at="2016-02-03T16:02:46Z" finished-at="2016-02-03T16:02:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SWIPE -->
       </class> <!-- Test.MOBFPendingOrder -->
       <class name="Test.MOBFArchieveOrder">
-        <test-method status="PASS" signature="REVERSESWIPE()[pri:0, instance:Test.MOBFArchieveOrder@2c9f9fb0]" name="REVERSESWIPE" duration-ms="8623" started-at="2016-02-03T15:59:15Z" finished-at="2016-02-03T15:59:23Z">
+        <test-method status="PASS" signature="REVERSESWIPE()[pri:0, instance:Test.MOBFArchieveOrder@2c9f9fb0]" name="REVERSESWIPE" duration-ms="8628" started-at="2016-02-03T16:04:59Z" finished-at="2016-02-03T16:05:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- REVERSESWIPE -->
       </class> <!-- Test.MOBFArchieveOrder -->
       <class name="Test.MOBFMyOrder">
-        <test-method status="PASS" signature="Del1()[pri:0, instance:Test.MOBFMyOrder@52af6cff]" name="Del1" is-config="true" duration-ms="1" started-at="2016-02-03T15:57:09Z" finished-at="2016-02-03T15:57:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Del1 -->
-        <test-method status="PASS" signature="Scan()[pri:1, instance:Test.MOBFMyOrder@52af6cff]" name="Scan" duration-ms="101115" started-at="2016-02-03T15:57:09Z" finished-at="2016-02-03T15:58:50Z">
+        <test-method status="PASS" signature="Scan()[pri:1, instance:Test.MOBFMyOrder@52af6cff]" name="Scan" duration-ms="100631" started-at="2016-02-03T16:02:54Z" finished-at="2016-02-03T16:04:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Scan -->
-        <test-method status="PASS" signature="SWIPE()[pri:2, instance:Test.MOBFMyOrder@52af6cff]" name="SWIPE" duration-ms="4441" started-at="2016-02-03T15:58:50Z" finished-at="2016-02-03T15:58:55Z">
+        <test-method status="PASS" signature="Del1()[pri:0, instance:Test.MOBFMyOrder@52af6cff]" name="Del1" is-config="true" duration-ms="0" started-at="2016-02-03T16:02:54Z" finished-at="2016-02-03T16:02:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Del1 -->
+        <test-method status="PASS" signature="SWIPE()[pri:2, instance:Test.MOBFMyOrder@52af6cff]" name="SWIPE" duration-ms="4374" started-at="2016-02-03T16:04:35Z" finished-at="2016-02-03T16:04:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SWIPE -->
       </class> <!-- Test.MOBFMyOrder -->
       <class name="Test.MOBFCompleteOrder">
-        <test-method status="PASS" signature="OrderCountPO()[pri:1, instance:Test.MOBFCompleteOrder@735b478]" name="OrderCountPO" duration-ms="11355" started-at="2016-02-03T15:58:55Z" finished-at="2016-02-03T15:59:06Z">
+        <test-method status="PASS" signature="OrderCountPO()[pri:1, instance:Test.MOBFCompleteOrder@735b478]" name="OrderCountPO" duration-ms="11352" started-at="2016-02-03T16:04:39Z" finished-at="2016-02-03T16:04:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OrderCountPO -->
-        <test-method status="PASS" signature="SWIPE()[pri:2, instance:Test.MOBFCompleteOrder@735b478]" name="SWIPE" duration-ms="8317" started-at="2016-02-03T15:59:06Z" finished-at="2016-02-03T15:59:15Z">
+        <test-method status="PASS" signature="SWIPE()[pri:2, instance:Test.MOBFCompleteOrder@735b478]" name="SWIPE" duration-ms="8339" started-at="2016-02-03T16:04:50Z" finished-at="2016-02-03T16:04:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SWIPE -->
